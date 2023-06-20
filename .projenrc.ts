@@ -1,12 +1,13 @@
-import { cdk } from "projen";
+import { cdk, javascript } from "projen";
 
 const project = new cdk.JsiiProject({
-  name: "wingen",
+  name: "@skyrpex/wingen",
   author: "Cristian Pallarés",
   authorAddress: "cristian@pallares.pro",
   defaultReleaseBranch: "main",
   repository: "github:skyrpex/wingen",
   repositoryUrl: "https://github.com/skyrpex/wingen.git",
+  npmAccess: javascript.NpmAccess.PUBLIC,
   projenrcTs: true,
   peerDeps: ["projen"],
   devDeps: ["projen"],
