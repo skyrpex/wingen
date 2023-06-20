@@ -4,6 +4,7 @@ import { JsonFile, YamlFile } from "projen";
 import { Editorconfig } from "./editorconfig";
 import { NodeProject } from "./node-project";
 import { TypescriptConfig } from "./typescript-config";
+import { ProjenrcTs } from "./projenrc-ts";
 
 export interface MonorepoProjectOptions {
   readonly name: string;
@@ -22,8 +23,6 @@ export class MonorepoProject extends NodeProject {
       ...options,
       projenCommand: "pnpm exec tsx .projenrc.ts",
     });
-
-    this.addDeps("wingen");
 
     this.addFields({
       private: true,
@@ -82,6 +81,8 @@ export class MonorepoProject extends NodeProject {
         },
       }),
     });
+
+    new ProjenrcTs(this);
   }
 
   private getVscodeReadonlyInclude() {

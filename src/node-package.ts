@@ -221,6 +221,8 @@ export class NodePackage extends Component {
   }
 
   private getInstalledVersions = (deps: string[]): Record<string, string> => {
+    deps = deps.filter((dep) => dep.startsWith(".") === false);
+
     if (deps.length === 0) {
       return {};
     }
@@ -229,11 +231,13 @@ export class NodePackage extends Component {
       return {};
     }
 
-    const [{ dependencies, devDependencies }] = JSON.parse(
+    const why = JSON.parse(
       spawnSync("pnpm", ["why", "--json", ...deps], {
         cwd: this.project.outdir,
       }).stdout.toString()
-    ) as [
+    );
+
+    const [{ dependencies, devDependencies }] = why as [
       {
         dependencies: Record<string, { version: string }>;
         devDependencies: Record<string, { version: string }>;

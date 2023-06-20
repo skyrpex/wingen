@@ -58,6 +58,12 @@
   "peerDependencies": {
     "projen": "^0.71.101"
   },
+  "dependencies": {
+    "case": "^1.6.3"
+  },
+  "bundledDependencies": [
+    "case"
+  ],
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
     "@types/prettier": "2.6.0"
