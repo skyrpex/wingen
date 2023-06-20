@@ -7,7 +7,10 @@ import { TypescriptConfig } from "./typescript-config";
 
 export interface MonorepoProjectOptions {
   readonly name: string;
+  readonly description?: string;
   readonly outdir?: string;
+  readonly deps?: string[];
+  readonly devDeps?: string[];
 }
 
 /**

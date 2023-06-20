@@ -1,20 +1,19 @@
-import { SampleFile } from "projen";
+import { Project, SampleFile } from "projen";
 
-import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
 
 export interface NodeCjsProjectOptions {
   readonly name: string;
+  readonly parent?: Project;
   readonly outdir?: string;
   readonly deps?: string[];
   readonly devDeps?: string[];
 }
 
 export class NodeCjsProject extends NodeProject {
-  constructor(parent: MonorepoProject, options: NodeCjsProjectOptions) {
+  constructor(options: NodeCjsProjectOptions) {
     super({
       ...options,
-      parent,
       outdir: options.outdir ?? `packages/${options.name}`,
     });
 

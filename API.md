@@ -47,6 +47,9 @@ const monorepoProjectOptions: MonorepoProjectOptions = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -58,6 +61,36 @@ public readonly name: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.MonorepoProjectOptions.property.deps"></a>
+
+```typescript
+public readonly deps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@skyrpex/wingen.MonorepoProjectOptions.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.MonorepoProjectOptions.property.devDeps"></a>
+
+```typescript
+public readonly devDeps: string[];
+```
+
+- *Type:* string[]
 
 ---
 
@@ -89,6 +122,7 @@ const nodeCjsProjectOptions: NodeCjsProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
 
 ---
 
@@ -129,6 +163,16 @@ public readonly outdir: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `parent`<sup>Optional</sup> <a name="parent" id="@skyrpex/wingen.NodeCjsProjectOptions.property.parent"></a>
+
+```typescript
+public readonly parent: Project;
+```
+
+- *Type:* projen.Project
 
 ---
 
@@ -1205,19 +1249,12 @@ this task should synthesize the project files.
 ```typescript
 import { NodeCjsProject } from '@skyrpex/wingen'
 
-new NodeCjsProject(parent: MonorepoProject, options: NodeCjsProjectOptions)
+new NodeCjsProject(options: NodeCjsProjectOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@skyrpex/wingen.NodeCjsProject.Initializer.parameter.parent">parent</a></code> | <code><a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a></code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.Initializer.parameter.options">options</a></code> | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions">NodeCjsProjectOptions</a></code> | *No description.* |
-
----
-
-##### `parent`<sup>Required</sup> <a name="parent" id="@skyrpex/wingen.NodeCjsProject.Initializer.parameter.parent"></a>
-
-- *Type:* <a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a>
 
 ---
 
