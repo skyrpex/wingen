@@ -10,6 +10,9 @@ export interface MonorepoProjectOptions {
   readonly outdir?: string;
 }
 
+/**
+ * @pjid monorepo-project
+ */
 export class MonorepoProject extends NodeProject {
   constructor(options: MonorepoProjectOptions) {
     super({
