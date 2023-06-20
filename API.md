@@ -328,6 +328,7 @@ const typescriptProjectOptions: TypescriptProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.eslint">eslint</a></code> | <code><a href="#@skyrpex/wingen.EslintOptions">EslintOptions</a></code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
 
 ---
 
@@ -378,6 +379,16 @@ public readonly outdir: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `parent`<sup>Optional</sup> <a name="parent" id="@skyrpex/wingen.TypescriptProjectOptions.property.parent"></a>
+
+```typescript
+public readonly parent: Project;
+```
+
+- *Type:* projen.Project
 
 ---
 
@@ -3502,19 +3513,12 @@ public readonly project: Project;
 ```typescript
 import { TypescriptProject } from '@skyrpex/wingen'
 
-new TypescriptProject(parent: MonorepoProject, options: TypescriptProjectOptions)
+new TypescriptProject(options: TypescriptProjectOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@skyrpex/wingen.TypescriptProject.Initializer.parameter.parent">parent</a></code> | <code><a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a></code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.Initializer.parameter.options">options</a></code> | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions">TypescriptProjectOptions</a></code> | *No description.* |
-
----
-
-##### `parent`<sup>Required</sup> <a name="parent" id="@skyrpex/wingen.TypescriptProject.Initializer.parameter.parent"></a>
-
-- *Type:* <a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a>
 
 ---
 

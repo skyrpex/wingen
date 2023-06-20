@@ -1,7 +1,6 @@
-import { SampleFile, TextFile } from "projen";
+import { Project, SampleFile, TextFile } from "projen";
 
 import { Eslint, EslintOptions } from "./eslint";
-import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
 import { TypescriptConfig } from "./typescript-config";
 
@@ -10,16 +9,16 @@ export { NodeProject } from "./node-project";
 export interface TypescriptProjectOptions {
   readonly name: string;
   readonly outdir?: string;
+  readonly parent?: Project;
   readonly deps?: string[];
   readonly devDeps?: string[];
   readonly eslint?: EslintOptions;
 }
 
 export class TypescriptProject extends NodeProject {
-  constructor(parent: MonorepoProject, options: TypescriptProjectOptions) {
+  constructor(options: TypescriptProjectOptions) {
     super({
       ...options,
-      parent,
       outdir: options.outdir ?? `packages/${options.name}`,
     });
 
