@@ -10,7 +10,6 @@ const project = new cdk.JsiiProject({
   projenrcTs: true,
   peerDeps: ["projen"],
   devDeps: ["projen"],
-  commitGenerated: false,
   prettier: true,
 });
 
