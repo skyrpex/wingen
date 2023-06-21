@@ -73,3 +73,14 @@ export function sorted<T>(x: T) {
     return x;
   }
 }
+
+/**
+ * Returns false if value is unset or a falsey value, and true otherwise.
+ * @param value an environment variable
+ */
+export function isTruthy(value: string | undefined): boolean {
+  return !(
+    value === undefined ||
+    ["null", "undefined", "0", "false", ""].includes(value.toLocaleLowerCase())
+  );
+}

@@ -3,8 +3,8 @@ import { JsonFile, YamlFile } from "projen";
 
 import { Editorconfig } from "./editorconfig";
 import { NodeProject } from "./node-project";
-import { TypescriptConfig } from "./typescript-config";
 import { ProjenrcTs } from "./projenrc-ts";
+import { TypescriptConfig } from "./typescript-config";
 
 export interface MonorepoProjectOptions {
   readonly name: string;
@@ -21,7 +21,8 @@ export class MonorepoProject extends NodeProject {
   constructor(options: MonorepoProjectOptions) {
     super({
       ...options,
-      projenCommand: "pnpm exec tsx .projenrc.ts",
+      // projenCommand: "pnpm exec tsx .projenrc.ts",
+      projenCommand: "tsx .projenrc.ts",
     });
 
     this.addFields({
@@ -86,9 +87,6 @@ export class MonorepoProject extends NodeProject {
 
     new ProjenrcTs(this);
 
-    // this.addScript("default", "projen default");
-    // this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
-    // this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
     this.defaultTask?.reset("tsx .projenrc.ts");
     this.addScript("default", "tsx .projenrc.ts");
   }

@@ -1,9 +1,16 @@
 import { spawnSync } from "child_process";
 import { existsSync, readFileSync } from "fs";
 import * as path from "path";
-import { Component, JsonFile, Project, javascript } from "projen";
+import {
+  Component,
+  JsonFile,
+  Project,
+  Task,
+  TaskRuntime,
+  javascript,
+} from "projen";
 import { parseDesiredSemver } from "./semver";
-import { sorted, writeFile } from "./util";
+import { isTruthy, sorted, writeFile } from "./util";
 
 const getDesiredVersions = (
   deps: string[]
@@ -71,6 +78,10 @@ export class NodePackage extends Component {
 
   private jsonFile: JsonFile;
 
+  private installTask: Task;
+
+  private installCiTask: Task;
+
   public constructor(project: Project, options?: NodePackageOptions) {
     super(project);
 
@@ -90,6 +101,17 @@ export class NodePackage extends Component {
     this.jsonFile = new JsonFile(project, "package.json", {
       obj: this.packageObject,
       newline: true,
+    });
+
+    this.installTask = project.addTask("install", {
+      description:
+        "Install project dependencies and update lockfile (non-frozen)",
+      exec: "pnpm install --no-frozen-lockfile",
+    });
+
+    this.installCiTask = project.addTask("install:ci", {
+      description: "Install project dependencies using frozen lockfile",
+      exec: "pnpm install --frozen-lockfile",
     });
   }
 
@@ -131,11 +153,27 @@ export class NodePackage extends Component {
     this.packageObject.devDependencies = preInstallDevDeps;
   }
 
+  // private installDependencies() {
+  //   spawnSync("pnpm", ["install"], {
+  //     cwd: this.project.outdir,
+  //     stdio: "inherit",
+  //   });
+  // }
+
+  /**
+   * Returns `true` if we are running within a CI build.
+   */
+  private get isAutomatedBuild(): boolean {
+    return isTruthy(process.env.CI);
+  }
+
   private installDependencies() {
-    spawnSync("pnpm", ["install"], {
-      cwd: this.project.outdir,
-      stdio: "inherit",
-    });
+    this.project.logger.info("Installing dependencies...");
+    const runtime = new TaskRuntime(this.project.outdir);
+    const taskToRun = this.isAutomatedBuild
+      ? this.installCiTask
+      : this.installTask;
+    runtime.runTask(taskToRun.name);
   }
 
   private resolveDepsAndWritePackageJson(): boolean {
