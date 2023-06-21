@@ -1,4 +1,5 @@
-# replace this
+# `@skyrpex/wingen`
+
 # API Reference <a name="API Reference" id="api-reference"></a>
 
 
@@ -306,6 +307,34 @@ public readonly projenCommand: string;
 ```
 
 - *Type:* string
+
+---
+
+### TypescriptConfigOptions <a name="TypescriptConfigOptions" id="@skyrpex/wingen.TypescriptConfigOptions"></a>
+
+#### Initializer <a name="Initializer" id="@skyrpex/wingen.TypescriptConfigOptions.Initializer"></a>
+
+```typescript
+import { TypescriptConfigOptions } from '@skyrpex/wingen'
+
+const typescriptConfigOptions: TypescriptConfigOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.TypescriptConfigOptions.property.include">include</a></code> | <code>string[]</code> | *No description.* |
+
+---
+
+##### `include`<sup>Optional</sup> <a name="include" id="@skyrpex/wingen.TypescriptConfigOptions.property.include"></a>
+
+```typescript
+public readonly include: string[];
+```
+
+- *Type:* string[]
 
 ---
 
@@ -3435,18 +3464,25 @@ this task should synthesize the project files.
 ```typescript
 import { TypescriptConfig } from '@skyrpex/wingen'
 
-new TypescriptConfig(project: Project)
+new TypescriptConfig(project: Project, options?: TypescriptConfigOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.Initializer.parameter.project">project</a></code> | <code>projen.Project</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptConfig.Initializer.parameter.options">options</a></code> | <code><a href="#@skyrpex/wingen.TypescriptConfigOptions">TypescriptConfigOptions</a></code> | *No description.* |
 
 ---
 
 ##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.TypescriptConfig.Initializer.parameter.project"></a>
 
 - *Type:* projen.Project
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="@skyrpex/wingen.TypescriptConfig.Initializer.parameter.options"></a>
+
+- *Type:* <a href="#@skyrpex/wingen.TypescriptConfigOptions">TypescriptConfigOptions</a>
 
 ---
 
@@ -3891,6 +3927,7 @@ public addScript(name: string, command: string): void
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.TypescriptProject.property.tsConfig">tsConfig</a></code> | <code><a href="#@skyrpex/wingen.TypescriptConfig">TypescriptConfig</a></code> | *No description.* |
 
 ---
 
@@ -4176,6 +4213,16 @@ public readonly parent: Project;
 A parent project.
 
 If undefined, this is the root project.
+
+---
+
+##### `tsConfig`<sup>Required</sup> <a name="tsConfig" id="@skyrpex/wingen.TypescriptProject.property.tsConfig"></a>
+
+```typescript
+public readonly tsConfig: TypescriptConfig;
+```
+
+- *Type:* <a href="#@skyrpex/wingen.TypescriptConfig">TypescriptConfig</a>
 
 ---
 
