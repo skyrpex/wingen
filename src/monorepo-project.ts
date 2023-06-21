@@ -21,8 +21,7 @@ export class MonorepoProject extends NodeProject {
   constructor(options: MonorepoProjectOptions) {
     super({
       ...options,
-      // projenCommand: "pnpm exec tsx .projenrc.ts",
-      projenCommand: "tsx .projenrc.ts",
+      projenCommand: "pnpm exec tsx .projenrc.ts",
     });
 
     this.addFields({
