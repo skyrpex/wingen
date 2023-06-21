@@ -1,8 +1,16 @@
 import { Component, JsonFile, Project } from "projen";
 
+export interface TypescriptConfigOptions {
+  readonly include?: string[];
+}
+
 export class TypescriptConfig extends Component {
-  constructor(project: Project) {
+  private include: string[];
+
+  constructor(project: Project, options?: TypescriptConfigOptions) {
     super(project);
+
+    this.include = options?.include ?? [];
 
     new JsonFile(this.project, "tsconfig.json", {
       allowComments: true,
@@ -22,10 +30,7 @@ export class TypescriptConfig extends Component {
           downlevelIteration: true,
         },
         include: () => {
-          if (this.project.parent === undefined) {
-            return [".projenrc.ts"];
-          }
-          return ["src/**/*"];
+          return this.include;
         },
       },
     });

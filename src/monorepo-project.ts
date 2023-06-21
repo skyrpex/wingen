@@ -29,7 +29,9 @@ export class MonorepoProject extends NodeProject {
     });
 
     this.addDevDeps("typescript", "tsx", "@types/node");
-    new TypescriptConfig(this);
+    new TypescriptConfig(this, {
+      include: [".projenrc.ts"],
+    });
 
     new YamlFile(this, "pnpm-workspace.yaml", {
       committed: false,
@@ -83,6 +85,12 @@ export class MonorepoProject extends NodeProject {
     });
 
     new ProjenrcTs(this);
+
+    // this.addScript("default", "projen default");
+    // this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
+    // this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
+    this.defaultTask?.reset("tsx .projenrc.ts");
+    this.addScript("default", "tsx .projenrc.ts");
   }
 
   private getVscodeReadonlyInclude() {

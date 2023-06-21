@@ -16,6 +16,8 @@ export interface TypescriptProjectOptions {
 }
 
 export class TypescriptProject extends NodeProject {
+  public readonly tsConfig: TypescriptConfig;
+
   constructor(options: TypescriptProjectOptions) {
     super({
       ...options,
@@ -31,7 +33,9 @@ export class TypescriptProject extends NodeProject {
     });
 
     this.addDevDeps("typescript", "tsx", "@types/node");
-    new TypescriptConfig(this);
+    this.tsConfig = new TypescriptConfig(this, {
+      include: ["src/**/*"],
+    });
 
     new SampleFile(this, "src/index.ts", {
       contents: [

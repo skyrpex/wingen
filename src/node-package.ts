@@ -166,7 +166,7 @@ export class NodePackage extends Component {
   }
 
   private *findSubNodePackages() {
-    for (const subproject of this.project.subprojects) {
+    for (const subproject of [this.project, ...this.project.subprojects]) {
       for (const component of subproject.components) {
         if (component instanceof NodePackage) {
           yield component;

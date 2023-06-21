@@ -46,7 +46,8 @@ export class ProjenrcTs extends ProjenrcFile {
     this.filePath = options.filename ?? ".projenrc.ts";
 
     // Use npx since project's deps manager is not guaranteed to be JS-based
-    project.defaultTask?.exec(`npx -y tsx ${this.filePath}`);
+    // project.defaultTask?.exec(`pnpm dlx tsx ${this.filePath}`);
+    project.defaultTask?.exec(`tsx ${this.filePath}`);
 
     this.generateProjenrc();
   }
