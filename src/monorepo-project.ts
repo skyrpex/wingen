@@ -75,35 +75,35 @@ export class MonorepoProject extends NodeProject {
 
     new Editorconfig(this);
 
-    new JsonFile(this, ".vscode/settings.json", {
-      allowComments: true,
-      obj: () => ({
-        "files.readonlyInclude": {
-          ...this.getVscodeReadonlyInclude(),
-        },
-      }),
-    });
+    // new JsonFile(this, ".vscode/settings.json", {
+    //   allowComments: true,
+    //   obj: () => ({
+    //     "files.readonlyInclude": {
+    //       ...this.getVscodeReadonlyInclude(),
+    //     },
+    //   }),
+    // });
 
     new ProjenrcTs(this);
 
-    this.defaultTask?.reset("tsx .projenrc.ts");
+    this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
     this.addScript("default", "tsx .projenrc.ts");
   }
 
-  private getVscodeReadonlyInclude() {
-    const include: Record<string, boolean> = {};
-    for (const subproject of [this, ...this.subprojects]) {
-      const outdir = path.relative(this.outdir, subproject.outdir);
-      include[path.join(outdir, ".projen/**")] = true;
-      include[path.join(outdir, ".turbo/**")] = true;
-      include[path.join(outdir, "dist/**")] = true;
-      include[path.join(outdir, "node_modules/**")] = true;
-      for (const file of subproject.files) {
-        if (file.readonly) {
-          include[path.join(outdir, file.path)] = true;
-        }
-      }
-    }
-    return include;
-  }
+  // private getVscodeReadonlyInclude() {
+  //   const include: Record<string, boolean> = {};
+  //   for (const subproject of [this, ...this.subprojects]) {
+  //     const outdir = path.relative(this.outdir, subproject.outdir);
+  //     include[path.join(outdir, ".projen/**")] = true;
+  //     include[path.join(outdir, ".turbo/**")] = true;
+  //     include[path.join(outdir, "dist/**")] = true;
+  //     include[path.join(outdir, "node_modules/**")] = true;
+  //     for (const file of subproject.files) {
+  //       if (file.readonly) {
+  //         include[path.join(outdir, file.path)] = true;
+  //       }
+  //     }
+  //   }
+  //   return include;
+  // }
 }

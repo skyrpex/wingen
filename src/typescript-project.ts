@@ -25,10 +25,15 @@ export class TypescriptProject extends NodeProject {
     });
 
     this.addFields({
-      main: "./src/index.ts",
-      types: "./src/index.ts",
+      // main: "./src/index.ts",
+      // types: "./src/index.ts",
       exports: {
         ".": "./src/index.ts",
+      },
+      publishConfig: {
+        exports: {
+          ".": "./dist/index.js",
+        },
       },
     });
 
@@ -62,7 +67,7 @@ export class TypescriptProject extends NodeProject {
         '  target: "node18",',
         "  dts: true,",
         "  bundle: false,",
-        "  sourcemap: true,",
+        // "  bundle: true,",
         "  clean: true,",
         "});",
         "",
