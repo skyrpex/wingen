@@ -28,6 +28,8 @@ export class MonorepoProject extends NodeProject {
       private: true,
     });
 
+    this.addDevDeps("projen");
+
     this.addDevDeps("typescript", "tsx", "@types/node");
     new TypescriptConfig(this, {
       include: [".projenrc.ts"],
@@ -56,7 +58,7 @@ export class MonorepoProject extends NodeProject {
           },
           compile: {
             dependsOn: ["^compile"],
-            outputs: ["dist/**"],
+            outputs: ["lib/**"],
           },
         },
       },
@@ -88,6 +90,9 @@ export class MonorepoProject extends NodeProject {
 
     this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
     this.addScript("default", "tsx .projenrc.ts");
+
+    this.compileTask.reset("turbo compile");
+    this.addScript("compile", "turbo compile");
   }
 
   // private getVscodeReadonlyInclude() {

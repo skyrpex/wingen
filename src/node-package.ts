@@ -7,7 +7,7 @@ import {
   Project,
   Task,
   TaskRuntime,
-  javascript,
+  // javascript,
 } from "projen";
 import { parseDesiredSemver } from "./semver";
 import { isTruthy, sorted, writeFile } from "./util";
@@ -57,7 +57,10 @@ const getPostInstallVersions = (
 export interface NodePackageOptions {
   readonly deps?: string[];
   readonly devDeps?: string[];
-  readonly packageManager?: javascript.NodePackageManager;
+  readonly peerDeps?: string[];
+  readonly bundledDeps?: string[];
+  // readonly packageManager?: javascript.NodePackageManager;
+  readonly bin?: Record<string, string>;
 }
 
 // interface PackageJson {
@@ -73,6 +76,10 @@ export class NodePackage extends Component {
 
   private devDeps: string[];
 
+  // private peerDeps: string[];
+
+  private bundledDeps: string[];
+
   // private packageObject: PackageJson;
   private packageObject: Record<string, any>;
 
@@ -85,22 +92,44 @@ export class NodePackage extends Component {
   public constructor(project: Project, options?: NodePackageOptions) {
     super(project);
 
-    this.deps = options?.deps ?? [];
+    this.deps = [...(options?.deps ?? []), ...(options?.bundledDeps ?? [])];
 
     this.devDeps = options?.devDeps ?? [];
+
+    // this.peerDeps = options?.peerDeps ?? [];
+
+    this.bundledDeps = options?.bundledDeps ?? [];
 
     this.packageObject = {
       name: project.name,
       version: "0.0.0",
       type: "module",
       sideEffects: false,
+      bin: options?.bin,
       dependencies: {},
       devDependencies: {},
+      peerDependencies: {},
+      bundledDependencies: () => {
+        return this.bundledDeps.map((dep) => {
+          const [name] = parseDesiredSemver(dep);
+          return name;
+        });
+      },
+      tasks: () => {
+        const tasks: Record<string, string> = {};
+        for (const task of this.project.tasks.all) {
+          if (task.name === "install" || task.name === "install:ci") {
+            continue;
+          }
+
+          tasks[task.name] = `projen ${task.name}`;
+        }
+        return tasks;
+      },
     };
 
     this.jsonFile = new JsonFile(project, "package.json", {
       obj: this.packageObject,
-      newline: true,
     });
 
     this.installTask = project.addTask("install", {
@@ -153,13 +182,6 @@ export class NodePackage extends Component {
     this.packageObject.devDependencies = preInstallDevDeps;
   }
 
-  // private installDependencies() {
-  //   spawnSync("pnpm", ["install"], {
-  //     cwd: this.project.outdir,
-  //     stdio: "inherit",
-  //   });
-  // }
-
   /**
    * Returns `true` if we are running within a CI build.
    */
@@ -203,7 +225,7 @@ export class NodePackage extends Component {
     return true;
   }
 
-  private *findSubNodePackages() {
+  private *findAllNodePackages() {
     for (const subproject of [this.project, ...this.project.subprojects]) {
       for (const component of subproject.components) {
         if (component instanceof NodePackage) {
@@ -214,7 +236,7 @@ export class NodePackage extends Component {
   }
 
   private packageJsonFilesChanged(): boolean {
-    for (const subpackage of this.findSubNodePackages()) {
+    for (const subpackage of this.findAllNodePackages()) {
       if (subpackage.jsonFile.changed) {
         return true;
       }
@@ -223,7 +245,7 @@ export class NodePackage extends Component {
   }
 
   private missingNodeModules(): boolean {
-    for (const subpackage of this.findSubNodePackages()) {
+    for (const subpackage of this.findAllNodePackages()) {
       if (!existsSync(path.join(subpackage.project.outdir, "node_modules"))) {
         return true;
       }
@@ -233,7 +255,7 @@ export class NodePackage extends Component {
 
   private resolveDepsAndWritePackageJsonFiles(): boolean {
     let packageJsonsChanged = false;
-    for (const subpackage of this.findSubNodePackages()) {
+    for (const subpackage of this.findAllNodePackages()) {
       packageJsonsChanged =
         subpackage.resolveDepsAndWritePackageJson() || packageJsonsChanged;
     }
@@ -269,11 +291,10 @@ export class NodePackage extends Component {
       return {};
     }
 
-    const why = JSON.parse(
-      spawnSync("pnpm", ["why", "--json", ...deps], {
-        cwd: this.project.outdir,
-      }).stdout.toString()
-    );
+    const json = spawnSync("pnpm", ["ls", "--json"], {
+      cwd: this.project.outdir,
+    }).stdout.toString();
+    const why = JSON.parse(json);
 
     const [{ dependencies, devDependencies }] = why as [
       {
@@ -285,7 +306,9 @@ export class NodePackage extends Component {
       ...dependencies,
       ...devDependencies,
     }).reduce((acc, [name, { version }]) => {
-      acc[name] = version.startsWith("link:") ? "workspace:^" : version;
+      if (deps.includes(name)) {
+        acc[name] = version.startsWith("link:") ? "workspace:^" : version;
+      }
       return acc;
     }, {} as Record<string, string>);
   };

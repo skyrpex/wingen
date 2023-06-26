@@ -1,18 +1,42 @@
-import { Project, SampleFile, TextFile } from "projen";
+import { SampleFile } from "projen";
 
-import { Eslint, EslintOptions } from "./eslint";
+import {
+  Eslint,
+  // EslintOptions
+} from "./eslint";
+import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
+import { Tsup } from "./tsup";
 import { TypescriptConfig } from "./typescript-config";
+import { Vitest } from "./vitest";
 
 export { NodeProject } from "./node-project";
 
 export interface TypescriptProjectOptions {
   readonly name: string;
+  readonly description?: string;
   readonly outdir?: string;
-  readonly parent?: Project;
+  readonly monorepo: MonorepoProject;
   readonly deps?: string[];
   readonly devDeps?: string[];
-  readonly eslint?: EslintOptions;
+  readonly peerDeps?: string[];
+  readonly bundledDeps?: string[];
+  // readonly eslint?: EslintOptions;
+  readonly bin?: Record<string, string>;
+  /**
+   * The name of the library author.
+   * @default $GIT_USER_NAME
+   */
+  readonly author?: string;
+  /**
+   * Email of the library author.
+   * @default $GIT_USER_EMAIL
+   */
+  readonly authorEmail?: string;
+  /**
+   * Whether the author is an organization.
+   */
+  readonly authorOrganization?: boolean;
 }
 
 export class TypescriptProject extends NodeProject {
@@ -21,6 +45,7 @@ export class TypescriptProject extends NodeProject {
   constructor(options: TypescriptProjectOptions) {
     super({
       ...options,
+      parent: options.monorepo,
       outdir: options.outdir ?? `packages/${options.name}`,
     });
 
@@ -32,7 +57,7 @@ export class TypescriptProject extends NodeProject {
       },
       publishConfig: {
         exports: {
-          ".": "./dist/index.js",
+          ".": "./lib/index.js",
         },
       },
     });
@@ -51,33 +76,14 @@ export class TypescriptProject extends NodeProject {
       ].join("\n"),
     });
 
-    this.addDevDeps("tsup");
-    this.addGitIgnore("/dist");
-    this.addGitIgnore("/.turbo");
-    this.addScript("dev", "tsup --watch");
-    this.addScript("compile", "tsup");
-    new TextFile(this, "tsup.config.ts", {
-      committed: false,
-      lines: [
-        'import { defineConfig } from "tsup";',
-        "",
-        "export default defineConfig({",
-        '  entry: ["src/index.ts"],',
-        '  format: ["esm"],',
-        '  target: "node18",',
-        "  dts: true,",
-        "  bundle: false,",
-        // "  bundle: true,",
-        "  clean: true,",
-        "});",
-        "",
-      ],
-    });
+    new Tsup(this);
+    new Vitest(this);
 
-    if (options.eslint) {
-      new Eslint(this, {
-        extends: options.eslint.extends,
-      });
-    }
+    new Eslint(this);
+    // // if (options.eslint) {
+    // new Eslint(this, {
+    //   // extends: options.eslint.extends,
+    // });
+    // // }
   }
 }
