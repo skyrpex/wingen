@@ -8,7 +8,8 @@ export class Tsup extends Component {
     project.addDevDeps("tsup");
     project.addGitIgnore("/lib");
     project.addScript("dev", "tsup --watch");
-    project.addScript("compile", "tsup");
+    // project.addScript("compile", "tsup");
+    project.compileTask.exec("tsup");
     new TextFile(project, "tsup.config.ts", {
       committed: false,
       lines: [

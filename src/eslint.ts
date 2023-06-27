@@ -11,7 +11,7 @@ export class Eslint extends Component {
   ) {
     super(project);
 
-    project.addScript("lint", "eslint --fix --ext .ts,.tsx .");
+    project.lintTask.exec("eslint --fix --ext .ts,.tsx .");
     project.addDevDeps(
       "@cloudy-ts/eslint-plugin",
       "@typescript-eslint/eslint-plugin",

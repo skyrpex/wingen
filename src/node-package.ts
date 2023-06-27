@@ -89,6 +89,8 @@ export class NodePackage extends Component {
 
   private installCiTask: Task;
 
+  private scripts: Record<string, string>;
+
   public constructor(project: Project, options?: NodePackageOptions) {
     super(project);
 
@@ -100,6 +102,8 @@ export class NodePackage extends Component {
 
     this.bundledDeps = options?.bundledDeps ?? [];
 
+    this.scripts = {};
+
     this.packageObject = {
       name: project.name,
       version: "0.0.0",
@@ -108,23 +112,33 @@ export class NodePackage extends Component {
       bin: options?.bin,
       dependencies: {},
       devDependencies: {},
-      peerDependencies: {},
+      peerDependencies: () => undefined,
       bundledDependencies: () => {
+        if (this.bundledDeps.length === 0) {
+          return undefined;
+        }
+
         return this.bundledDeps.map((dep) => {
           const [name] = parseDesiredSemver(dep);
           return name;
         });
       },
-      tasks: () => {
-        const tasks: Record<string, string> = {};
+      scripts: () => {
+        const scripts: Record<string, string> = {
+          ...this.scripts,
+        };
         for (const task of this.project.tasks.all) {
           if (task.name === "install" || task.name === "install:ci") {
             continue;
           }
 
-          tasks[task.name] = `projen ${task.name}`;
+          if (task.steps.length === 0) {
+            continue;
+          }
+
+          scripts[task.name] = `projen ${task.name}`;
         }
-        return tasks;
+        return scripts;
       },
     };
 
@@ -142,6 +156,8 @@ export class NodePackage extends Component {
       description: "Install project dependencies using frozen lockfile",
       exec: "pnpm install --frozen-lockfile",
     });
+
+    this.setScript("preinstall", "npx only-allow pnpm");
   }
 
   public addDeps(...deps: string[]) {
@@ -157,8 +173,8 @@ export class NodePackage extends Component {
   }
 
   public setScript(name: string, script: string) {
-    this.packageObject.scripts = {
-      ...this.packageObject.scripts,
+    this.scripts = {
+      ...this.scripts,
       [name]: script,
     };
   }
@@ -178,8 +194,8 @@ export class NodePackage extends Component {
       installedDevDeps
     );
 
-    this.packageObject.dependencies = preInstallDeps;
-    this.packageObject.devDependencies = preInstallDevDeps;
+    this.packageObject.dependencies = sorted(preInstallDeps);
+    this.packageObject.devDependencies = sorted(preInstallDevDeps);
   }
 
   /**
@@ -208,6 +224,7 @@ export class NodePackage extends Component {
     const postInstallDevDeps = sorted(
       getPostInstallVersions(installedDevDeps, getDesiredVersions(this.devDeps))
     );
+    // console.log({ postInstallDevDeps });
 
     const pkg = JSON.parse(readFileSync(this.jsonFile.absolutePath, "utf-8"));
     if (
@@ -219,9 +236,18 @@ export class NodePackage extends Component {
       return false;
     }
 
-    pkg.dependencies = { ...postInstallDeps };
-    pkg.devDependencies = { ...postInstallDevDeps };
-    writeFile(this.jsonFile.absolutePath, `${JSON.stringify(pkg, null, 2)}\n`);
+    // pkg.dependencies = { ...postInstallDeps };
+    // pkg.devDependencies = { ...postInstallDevDeps };
+    // pkg.dependencies = postInstallDeps;
+    // pkg.devDependencies = postInstallDevDeps;
+    Object.assign(pkg, {
+      dependencies: postInstallDeps,
+      devDependencies: postInstallDevDeps,
+    });
+    writeFile(this.jsonFile.absolutePath, `${JSON.stringify(pkg, null, 2)}\n`, {
+      executable: this.jsonFile.executable,
+      readonly: this.jsonFile.readonly,
+    });
     return true;
   }
 

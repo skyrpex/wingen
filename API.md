@@ -5,34 +5,6 @@
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### EslintOptions <a name="EslintOptions" id="@skyrpex/wingen.EslintOptions"></a>
-
-#### Initializer <a name="Initializer" id="@skyrpex/wingen.EslintOptions.Initializer"></a>
-
-```typescript
-import { EslintOptions } from '@skyrpex/wingen'
-
-const eslintOptions: EslintOptions = { ... }
-```
-
-#### Properties <a name="Properties" id="Properties"></a>
-
-| **Name** | **Type** | **Description** |
-| --- | --- | --- |
-| <code><a href="#@skyrpex/wingen.EslintOptions.property.extends">extends</a></code> | <code>string[]</code> | *No description.* |
-
----
-
-##### `extends`<sup>Required</sup> <a name="extends" id="@skyrpex/wingen.EslintOptions.property.extends"></a>
-
-```typescript
-public readonly extends: string[];
-```
-
-- *Type:* string[]
-
----
-
 ### MonorepoProjectOptions <a name="MonorepoProjectOptions" id="@skyrpex/wingen.MonorepoProjectOptions"></a>
 
 #### Initializer <a name="Initializer" id="@skyrpex/wingen.MonorepoProjectOptions.Initializer"></a>
@@ -48,9 +20,15 @@ const monorepoProjectOptions: MonorepoProjectOptions = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.author">author</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.copyrightOwner">copyrightOwner</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.copyrightPeriod">copyrightPeriod</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.license">license</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.MonorepoProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -59,6 +37,56 @@ const monorepoProjectOptions: MonorepoProjectOptions = { ... }
 
 ```typescript
 public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `author`<sup>Optional</sup> <a name="author" id="@skyrpex/wingen.MonorepoProjectOptions.property.author"></a>
+
+```typescript
+public readonly author: string;
+```
+
+- *Type:* string
+
+---
+
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@skyrpex/wingen.MonorepoProjectOptions.property.authorEmail"></a>
+
+```typescript
+public readonly authorEmail: string;
+```
+
+- *Type:* string
+
+---
+
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@skyrpex/wingen.MonorepoProjectOptions.property.authorOrganization"></a>
+
+```typescript
+public readonly authorOrganization: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `copyrightOwner`<sup>Optional</sup> <a name="copyrightOwner" id="@skyrpex/wingen.MonorepoProjectOptions.property.copyrightOwner"></a>
+
+```typescript
+public readonly copyrightOwner: string;
+```
+
+- *Type:* string
+
+---
+
+##### `copyrightPeriod`<sup>Optional</sup> <a name="copyrightPeriod" id="@skyrpex/wingen.MonorepoProjectOptions.property.copyrightPeriod"></a>
+
+```typescript
+public readonly copyrightPeriod: string;
 ```
 
 - *Type:* string
@@ -95,6 +123,16 @@ public readonly devDeps: string[];
 
 ---
 
+##### `license`<sup>Optional</sup> <a name="license" id="@skyrpex/wingen.MonorepoProjectOptions.property.license"></a>
+
+```typescript
+public readonly license: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `outdir`<sup>Optional</sup> <a name="outdir" id="@skyrpex/wingen.MonorepoProjectOptions.property.outdir"></a>
 
 ```typescript
@@ -120,10 +158,18 @@ const nodeCjsProjectOptions: NodeCjsProjectOptions = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.author">author</a></code> | <code>string</code> | The name of the library author. |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Email of the library author. |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | *No description.* |
 
 ---
 
@@ -137,6 +183,64 @@ public readonly name: string;
 
 ---
 
+##### `author`<sup>Optional</sup> <a name="author" id="@skyrpex/wingen.NodeCjsProjectOptions.property.author"></a>
+
+```typescript
+public readonly author: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_NAME
+
+The name of the library author.
+
+---
+
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@skyrpex/wingen.NodeCjsProjectOptions.property.authorEmail"></a>
+
+```typescript
+public readonly authorEmail: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_EMAIL
+
+Email of the library author.
+
+---
+
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@skyrpex/wingen.NodeCjsProjectOptions.property.authorOrganization"></a>
+
+```typescript
+public readonly authorOrganization: boolean;
+```
+
+- *Type:* boolean
+
+Whether the author is an organization.
+
+---
+
+##### `bin`<sup>Optional</sup> <a name="bin" id="@skyrpex/wingen.NodeCjsProjectOptions.property.bin"></a>
+
+```typescript
+public readonly bin: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.bundledDeps"></a>
+
+```typescript
+public readonly bundledDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.deps"></a>
 
 ```typescript
@@ -144,6 +248,16 @@ public readonly deps: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@skyrpex/wingen.NodeCjsProjectOptions.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -177,6 +291,26 @@ public readonly parent: Project;
 
 ---
 
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps"></a>
+
+```typescript
+public readonly peerDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="@skyrpex/wingen.NodeCjsProjectOptions.property.projenCommand"></a>
+
+```typescript
+public readonly projenCommand: string;
+```
+
+- *Type:* string
+
+---
+
 ### NodePackageOptions <a name="NodePackageOptions" id="@skyrpex/wingen.NodePackageOptions"></a>
 
 #### Initializer <a name="Initializer" id="@skyrpex/wingen.NodePackageOptions.Initializer"></a>
@@ -191,9 +325,31 @@ const nodePackageOptions: NodePackageOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.NodePackageOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodePackageOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodePackageOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodePackageOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodePackageOptions.property.packageManager">packageManager</a></code> | <code>projen.javascript.NodePackageManager</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodePackageOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+
+---
+
+##### `bin`<sup>Optional</sup> <a name="bin" id="@skyrpex/wingen.NodePackageOptions.property.bin"></a>
+
+```typescript
+public readonly bin: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@skyrpex/wingen.NodePackageOptions.property.bundledDeps"></a>
+
+```typescript
+public readonly bundledDeps: string[];
+```
+
+- *Type:* string[]
 
 ---
 
@@ -217,13 +373,13 @@ public readonly devDeps: string[];
 
 ---
 
-##### `packageManager`<sup>Optional</sup> <a name="packageManager" id="@skyrpex/wingen.NodePackageOptions.property.packageManager"></a>
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodePackageOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly packageManager: NodePackageManager;
+public readonly peerDeps: string[];
 ```
 
-- *Type:* projen.javascript.NodePackageManager
+- *Type:* string[]
 
 ---
 
@@ -242,10 +398,17 @@ const nodeProjectOptions: NodeProjectOptions = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.author">author</a></code> | <code>string</code> | The name of the library author. |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Email of the library author. |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -260,6 +423,64 @@ public readonly name: string;
 
 ---
 
+##### `author`<sup>Optional</sup> <a name="author" id="@skyrpex/wingen.NodeProjectOptions.property.author"></a>
+
+```typescript
+public readonly author: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_NAME
+
+The name of the library author.
+
+---
+
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@skyrpex/wingen.NodeProjectOptions.property.authorEmail"></a>
+
+```typescript
+public readonly authorEmail: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_EMAIL
+
+Email of the library author.
+
+---
+
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@skyrpex/wingen.NodeProjectOptions.property.authorOrganization"></a>
+
+```typescript
+public readonly authorOrganization: boolean;
+```
+
+- *Type:* boolean
+
+Whether the author is an organization.
+
+---
+
+##### `bin`<sup>Optional</sup> <a name="bin" id="@skyrpex/wingen.NodeProjectOptions.property.bin"></a>
+
+```typescript
+public readonly bin: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@skyrpex/wingen.NodeProjectOptions.property.bundledDeps"></a>
+
+```typescript
+public readonly bundledDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeProjectOptions.property.deps"></a>
 
 ```typescript
@@ -267,6 +488,16 @@ public readonly deps: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@skyrpex/wingen.NodeProjectOptions.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -300,7 +531,185 @@ public readonly parent: Project;
 
 ---
 
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeProjectOptions.property.peerDeps"></a>
+
+```typescript
+public readonly peerDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
 ##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="@skyrpex/wingen.NodeProjectOptions.property.projenCommand"></a>
+
+```typescript
+public readonly projenCommand: string;
+```
+
+- *Type:* string
+
+---
+
+### ProjectOptions <a name="ProjectOptions" id="@skyrpex/wingen.ProjectOptions"></a>
+
+#### Initializer <a name="Initializer" id="@skyrpex/wingen.ProjectOptions.Initializer"></a>
+
+```typescript
+import { ProjectOptions } from '@skyrpex/wingen'
+
+const projectOptions: ProjectOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.author">author</a></code> | <code>string</code> | The name of the library author. |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Email of the library author. |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.ProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@skyrpex/wingen.ProjectOptions.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `author`<sup>Optional</sup> <a name="author" id="@skyrpex/wingen.ProjectOptions.property.author"></a>
+
+```typescript
+public readonly author: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_NAME
+
+The name of the library author.
+
+---
+
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@skyrpex/wingen.ProjectOptions.property.authorEmail"></a>
+
+```typescript
+public readonly authorEmail: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_EMAIL
+
+Email of the library author.
+
+---
+
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@skyrpex/wingen.ProjectOptions.property.authorOrganization"></a>
+
+```typescript
+public readonly authorOrganization: boolean;
+```
+
+- *Type:* boolean
+
+Whether the author is an organization.
+
+---
+
+##### `bin`<sup>Optional</sup> <a name="bin" id="@skyrpex/wingen.ProjectOptions.property.bin"></a>
+
+```typescript
+public readonly bin: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@skyrpex/wingen.ProjectOptions.property.bundledDeps"></a>
+
+```typescript
+public readonly bundledDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.ProjectOptions.property.deps"></a>
+
+```typescript
+public readonly deps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@skyrpex/wingen.ProjectOptions.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.ProjectOptions.property.devDeps"></a>
+
+```typescript
+public readonly devDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `outdir`<sup>Optional</sup> <a name="outdir" id="@skyrpex/wingen.ProjectOptions.property.outdir"></a>
+
+```typescript
+public readonly outdir: string;
+```
+
+- *Type:* string
+
+---
+
+##### `parent`<sup>Optional</sup> <a name="parent" id="@skyrpex/wingen.ProjectOptions.property.parent"></a>
+
+```typescript
+public readonly parent: Project;
+```
+
+- *Type:* projen.Project
+
+---
+
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.ProjectOptions.property.peerDeps"></a>
+
+```typescript
+public readonly peerDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `projenCommand`<sup>Optional</sup> <a name="projenCommand" id="@skyrpex/wingen.ProjectOptions.property.projenCommand"></a>
 
 ```typescript
 public readonly projenCommand: string;
@@ -352,12 +761,28 @@ const typescriptProjectOptions: TypescriptProjectOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.monorepo">monorepo</a></code> | <code><a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a></code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.author">author</a></code> | <code>string</code> | The name of the library author. |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.authorEmail">authorEmail</a></code> | <code>string</code> | Email of the library author. |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.eslint">eslint</a></code> | <code><a href="#@skyrpex/wingen.EslintOptions">EslintOptions</a></code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.parent">parent</a></code> | <code>projen.Project</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+
+---
+
+##### `monorepo`<sup>Required</sup> <a name="monorepo" id="@skyrpex/wingen.TypescriptProjectOptions.property.monorepo"></a>
+
+```typescript
+public readonly monorepo: MonorepoProject;
+```
+
+- *Type:* <a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a>
 
 ---
 
@@ -371,6 +796,64 @@ public readonly name: string;
 
 ---
 
+##### `author`<sup>Optional</sup> <a name="author" id="@skyrpex/wingen.TypescriptProjectOptions.property.author"></a>
+
+```typescript
+public readonly author: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_NAME
+
+The name of the library author.
+
+---
+
+##### `authorEmail`<sup>Optional</sup> <a name="authorEmail" id="@skyrpex/wingen.TypescriptProjectOptions.property.authorEmail"></a>
+
+```typescript
+public readonly authorEmail: string;
+```
+
+- *Type:* string
+- *Default:* $GIT_USER_EMAIL
+
+Email of the library author.
+
+---
+
+##### `authorOrganization`<sup>Optional</sup> <a name="authorOrganization" id="@skyrpex/wingen.TypescriptProjectOptions.property.authorOrganization"></a>
+
+```typescript
+public readonly authorOrganization: boolean;
+```
+
+- *Type:* boolean
+
+Whether the author is an organization.
+
+---
+
+##### `bin`<sup>Optional</sup> <a name="bin" id="@skyrpex/wingen.TypescriptProjectOptions.property.bin"></a>
+
+```typescript
+public readonly bin: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+---
+
+##### `bundledDeps`<sup>Optional</sup> <a name="bundledDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.bundledDeps"></a>
+
+```typescript
+public readonly bundledDeps: string[];
+```
+
+- *Type:* string[]
+
+---
+
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.TypescriptProjectOptions.property.deps"></a>
 
 ```typescript
@@ -378,6 +861,16 @@ public readonly deps: string[];
 ```
 
 - *Type:* string[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="@skyrpex/wingen.TypescriptProjectOptions.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -391,16 +884,6 @@ public readonly devDeps: string[];
 
 ---
 
-##### `eslint`<sup>Optional</sup> <a name="eslint" id="@skyrpex/wingen.TypescriptProjectOptions.property.eslint"></a>
-
-```typescript
-public readonly eslint: EslintOptions;
-```
-
-- *Type:* <a href="#@skyrpex/wingen.EslintOptions">EslintOptions</a>
-
----
-
 ##### `outdir`<sup>Optional</sup> <a name="outdir" id="@skyrpex/wingen.TypescriptProjectOptions.property.outdir"></a>
 
 ```typescript
@@ -411,13 +894,13 @@ public readonly outdir: string;
 
 ---
 
-##### `parent`<sup>Optional</sup> <a name="parent" id="@skyrpex/wingen.TypescriptProjectOptions.property.parent"></a>
+##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly parent: Project;
+public readonly peerDeps: string[];
 ```
 
-- *Type:* projen.Project
+- *Type:* string[]
 
 ---
 
@@ -508,25 +991,18 @@ public readonly project: Project;
 ```typescript
 import { Eslint } from '@skyrpex/wingen'
 
-new Eslint(project: NodeProject, options: EslintOptions)
+new Eslint(project: NodeProject)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.Eslint.Initializer.parameter.project">project</a></code> | <code><a href="#@skyrpex/wingen.NodeProject">NodeProject</a></code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.Eslint.Initializer.parameter.options">options</a></code> | <code><a href="#@skyrpex/wingen.EslintOptions">EslintOptions</a></code> | *No description.* |
 
 ---
 
 ##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.Eslint.Initializer.parameter.project"></a>
 
 - *Type:* <a href="#@skyrpex/wingen.NodeProject">NodeProject</a>
-
----
-
-##### `options`<sup>Required</sup> <a name="options" id="@skyrpex/wingen.Eslint.Initializer.parameter.options"></a>
-
-- *Type:* <a href="#@skyrpex/wingen.EslintOptions">EslintOptions</a>
 
 ---
 
@@ -971,6 +1447,9 @@ public addScript(name: string, command: string): void
 | <code><a href="#@skyrpex/wingen.MonorepoProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.MonorepoProject.property.devTask">devTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProject.property.lintTask">lintTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.MonorepoProject.property.postInstallTask">postInstallTask</a></code> | <code>projen.Task</code> | *No description.* |
 
 ---
 
@@ -1256,6 +1735,36 @@ public readonly parent: Project;
 A parent project.
 
 If undefined, this is the root project.
+
+---
+
+##### `devTask`<sup>Required</sup> <a name="devTask" id="@skyrpex/wingen.MonorepoProject.property.devTask"></a>
+
+```typescript
+public readonly devTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `lintTask`<sup>Required</sup> <a name="lintTask" id="@skyrpex/wingen.MonorepoProject.property.lintTask"></a>
+
+```typescript
+public readonly lintTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `postInstallTask`<sup>Required</sup> <a name="postInstallTask" id="@skyrpex/wingen.MonorepoProject.property.postInstallTask"></a>
+
+```typescript
+public readonly postInstallTask: Task;
+```
+
+- *Type:* projen.Task
 
 ---
 
@@ -1667,6 +2176,9 @@ public addScript(name: string, command: string): void
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.NodeCjsProject.property.devTask">devTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProject.property.lintTask">lintTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProject.property.postInstallTask">postInstallTask</a></code> | <code>projen.Task</code> | *No description.* |
 
 ---
 
@@ -1952,6 +2464,36 @@ public readonly parent: Project;
 A parent project.
 
 If undefined, this is the root project.
+
+---
+
+##### `devTask`<sup>Required</sup> <a name="devTask" id="@skyrpex/wingen.NodeCjsProject.property.devTask"></a>
+
+```typescript
+public readonly devTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `lintTask`<sup>Required</sup> <a name="lintTask" id="@skyrpex/wingen.NodeCjsProject.property.lintTask"></a>
+
+```typescript
+public readonly lintTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `postInstallTask`<sup>Required</sup> <a name="postInstallTask" id="@skyrpex/wingen.NodeCjsProject.property.postInstallTask"></a>
+
+```typescript
+public readonly postInstallTask: Task;
+```
+
+- *Type:* projen.Task
 
 ---
 
@@ -2506,6 +3048,9 @@ public addScript(name: string, command: string): void
 | <code><a href="#@skyrpex/wingen.NodeProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.NodeProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.NodeProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.NodeProject.property.devTask">devTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProject.property.lintTask">lintTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProject.property.postInstallTask">postInstallTask</a></code> | <code>projen.Task</code> | *No description.* |
 
 ---
 
@@ -2794,6 +3339,36 @@ If undefined, this is the root project.
 
 ---
 
+##### `devTask`<sup>Required</sup> <a name="devTask" id="@skyrpex/wingen.NodeProject.property.devTask"></a>
+
+```typescript
+public readonly devTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `lintTask`<sup>Required</sup> <a name="lintTask" id="@skyrpex/wingen.NodeProject.property.lintTask"></a>
+
+```typescript
+public readonly lintTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `postInstallTask`<sup>Required</sup> <a name="postInstallTask" id="@skyrpex/wingen.NodeProject.property.postInstallTask"></a>
+
+```typescript
+public readonly postInstallTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -2819,8 +3394,6 @@ this task should synthesize the project files.
 
 ### Project <a name="Project" id="@skyrpex/wingen.Project"></a>
 
-Base project.
-
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Project.Initializer"></a>
 
 ```typescript
@@ -2831,13 +3404,13 @@ new Project(options: ProjectOptions)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@skyrpex/wingen.Project.Initializer.parameter.options">options</a></code> | <code>projen.ProjectOptions</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.Initializer.parameter.options">options</a></code> | <code><a href="#@skyrpex/wingen.ProjectOptions">ProjectOptions</a></code> | *No description.* |
 
 ---
 
 ##### `options`<sup>Required</sup> <a name="options" id="@skyrpex/wingen.Project.Initializer.parameter.options"></a>
 
-- *Type:* projen.ProjectOptions
+- *Type:* <a href="#@skyrpex/wingen.ProjectOptions">ProjectOptions</a>
 
 ---
 
@@ -2860,6 +3433,10 @@ new Project(options: ProjectOptions)
 | <code><a href="#@skyrpex/wingen.Project.tryFindJsonFile">tryFindJsonFile</a></code> | Finds a json file by name. |
 | <code><a href="#@skyrpex/wingen.Project.tryFindObjectFile">tryFindObjectFile</a></code> | Finds an object file (like JsonFile, YamlFile, etc.) by name. |
 | <code><a href="#@skyrpex/wingen.Project.tryRemoveFile">tryRemoveFile</a></code> | Finds a file at the specified relative path within this project and removes it. |
+| <code><a href="#@skyrpex/wingen.Project.addDeps">addDeps</a></code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.addDevDeps">addDevDeps</a></code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.addFields">addFields</a></code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.addScript">addScript</a></code> | *No description.* |
 
 ---
 
@@ -3117,6 +3694,60 @@ resolved from the root of _this_ project.
 
 ---
 
+##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.Project.addDeps"></a>
+
+```typescript
+public addDeps(deps: string): void
+```
+
+###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.Project.addDeps.parameter.deps"></a>
+
+- *Type:* string
+
+---
+
+##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.Project.addDevDeps"></a>
+
+```typescript
+public addDevDeps(devDeps: string): void
+```
+
+###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.Project.addDevDeps.parameter.devDeps"></a>
+
+- *Type:* string
+
+---
+
+##### `addFields` <a name="addFields" id="@skyrpex/wingen.Project.addFields"></a>
+
+```typescript
+public addFields(fields: {[ key: string ]: any}): void
+```
+
+###### `fields`<sup>Required</sup> <a name="fields" id="@skyrpex/wingen.Project.addFields.parameter.fields"></a>
+
+- *Type:* {[ key: string ]: any}
+
+---
+
+##### `addScript` <a name="addScript" id="@skyrpex/wingen.Project.addScript"></a>
+
+```typescript
+public addScript(name: string, command: string): void
+```
+
+###### `name`<sup>Required</sup> <a name="name" id="@skyrpex/wingen.Project.addScript.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+###### `command`<sup>Required</sup> <a name="command" id="@skyrpex/wingen.Project.addScript.parameter.command"></a>
+
+- *Type:* string
+
+---
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -3146,6 +3777,9 @@ resolved from the root of _this_ project.
 | <code><a href="#@skyrpex/wingen.Project.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.Project.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.Project.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.Project.property.devTask">devTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.property.lintTask">lintTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Project.property.postInstallTask">postInstallTask</a></code> | <code>projen.Task</code> | *No description.* |
 
 ---
 
@@ -3431,6 +4065,36 @@ public readonly parent: Project;
 A parent project.
 
 If undefined, this is the root project.
+
+---
+
+##### `devTask`<sup>Required</sup> <a name="devTask" id="@skyrpex/wingen.Project.property.devTask"></a>
+
+```typescript
+public readonly devTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `lintTask`<sup>Required</sup> <a name="lintTask" id="@skyrpex/wingen.Project.property.lintTask"></a>
+
+```typescript
+public readonly lintTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `postInstallTask`<sup>Required</sup> <a name="postInstallTask" id="@skyrpex/wingen.Project.property.postInstallTask"></a>
+
+```typescript
+public readonly postInstallTask: Task;
+```
+
+- *Type:* projen.Task
 
 ---
 
@@ -3927,6 +4591,9 @@ public addScript(name: string, command: string): void
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.defaultTask">defaultTask</a></code> | <code>projen.Task</code> | This is the "default" task, the one that executes "projen". |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.initProject">initProject</a></code> | <code>projen.InitProject</code> | The options used when this project is bootstrapped via `projen new`. |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.parent">parent</a></code> | <code>projen.Project</code> | A parent project. |
+| <code><a href="#@skyrpex/wingen.TypescriptProject.property.devTask">devTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProject.property.lintTask">lintTask</a></code> | <code>projen.Task</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProject.property.postInstallTask">postInstallTask</a></code> | <code>projen.Task</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.property.tsConfig">tsConfig</a></code> | <code><a href="#@skyrpex/wingen.TypescriptConfig">TypescriptConfig</a></code> | *No description.* |
 
 ---
@@ -4213,6 +4880,36 @@ public readonly parent: Project;
 A parent project.
 
 If undefined, this is the root project.
+
+---
+
+##### `devTask`<sup>Required</sup> <a name="devTask" id="@skyrpex/wingen.TypescriptProject.property.devTask"></a>
+
+```typescript
+public readonly devTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `lintTask`<sup>Required</sup> <a name="lintTask" id="@skyrpex/wingen.TypescriptProject.property.lintTask"></a>
+
+```typescript
+public readonly lintTask: Task;
+```
+
+- *Type:* projen.Task
+
+---
+
+##### `postInstallTask`<sup>Required</sup> <a name="postInstallTask" id="@skyrpex/wingen.TypescriptProject.property.postInstallTask"></a>
+
+```typescript
+public readonly postInstallTask: Task;
+```
+
+- *Type:* projen.Task
 
 ---
 

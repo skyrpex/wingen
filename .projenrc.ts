@@ -1,4 +1,4 @@
-import { cdk, javascript } from "projen";
+import { cdk, github, javascript } from "projen";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
@@ -13,6 +13,12 @@ const project = new cdk.JsiiProject({
   devDeps: ["projen"],
   bundledDeps: ["case"],
   prettier: true,
+  autoApproveOptions: {
+    allowedUsernames: ["skyrpex", "skyrpex-bot[bot]"],
+  },
+  githubOptions: {
+    projenCredentials: github.GithubCredentials.fromApp(),
+  },
 });
 
 project.addDevDeps("vitest");

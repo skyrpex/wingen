@@ -1,8 +1,8 @@
 import * as path from "node:path";
-import { JsonFile, YamlFile } from "projen";
+import { JsonFile, License, YamlFile } from "projen";
 
 import { Editorconfig } from "./editorconfig";
-import { NodeProject } from "./node-project";
+import { Project } from "./project";
 import { ProjenrcTs } from "./projenrc-ts";
 import { TypescriptConfig } from "./typescript-config";
 
@@ -12,12 +12,19 @@ export interface MonorepoProjectOptions {
   readonly outdir?: string;
   readonly deps?: string[];
   readonly devDeps?: string[];
+
+  readonly license?: string;
+  readonly author?: string;
+  readonly authorEmail?: string;
+  readonly authorOrganization?: boolean;
+  readonly copyrightOwner?: string;
+  readonly copyrightPeriod?: string;
 }
 
 /**
  * @pjid monorepo-project
  */
-export class MonorepoProject extends NodeProject {
+export class MonorepoProject extends Project {
   constructor(options: MonorepoProjectOptions) {
     super({
       ...options,
@@ -60,11 +67,13 @@ export class MonorepoProject extends NodeProject {
             dependsOn: ["^compile"],
             outputs: ["lib/**"],
           },
+          lint: {},
+          test: {},
         },
       },
     });
 
-    this.addDeps("prettier");
+    this.addDevDeps("prettier");
     new JsonFile(this, ".prettierrc.json", {
       committed: false,
       marker: false,
@@ -89,10 +98,21 @@ export class MonorepoProject extends NodeProject {
     new ProjenrcTs(this);
 
     this.defaultTask?.reset("pnpm exec tsx .projenrc.ts");
-    this.addScript("default", "tsx .projenrc.ts");
 
-    this.compileTask.reset("turbo compile");
-    this.addScript("compile", "turbo compile");
+    this.compileTask.exec("turbo compile");
+    this.devTask.exec("turbo dev");
+    this.testTask.exec("turbo test");
+
+    if (options.license) {
+      this.addFields({
+        license: options.license,
+      });
+      new License(this, {
+        spdx: options.license,
+        copyrightOwner: options.copyrightOwner,
+        copyrightPeriod: options.copyrightPeriod,
+      });
+    }
   }
 
   // private getVscodeReadonlyInclude() {
