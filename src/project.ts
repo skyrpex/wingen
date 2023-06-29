@@ -3,7 +3,7 @@ import { Project as ProjenProject, Task } from "projen";
 import { NodePackage } from "./node-package";
 
 /**
- * @private
+ * @internal
  */
 export interface ProjectOptions {
   readonly name: string;
@@ -33,7 +33,7 @@ export interface ProjectOptions {
 }
 
 /**
- * @private
+ * @internal
  */
 export class Project extends ProjenProject {
   private nodePackage: NodePackage;

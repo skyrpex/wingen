@@ -13,6 +13,7 @@ const project = new cdk.JsiiProject({
   devDeps: ["projen"],
   bundledDeps: ["case"],
   prettier: true,
+  autoApproveUpgrades: true,
   autoApproveOptions: {
     allowedUsernames: ["skyrpex", "skyrpex-bot[bot]"],
   },

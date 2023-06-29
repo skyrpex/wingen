@@ -25,6 +25,13 @@ export interface MonorepoProjectOptions {
  * @pjid monorepo-project
  */
 export class MonorepoProject extends Project {
+  readonly license?: string;
+  readonly author?: string;
+  readonly authorEmail?: string;
+  readonly authorOrganization?: boolean;
+  readonly copyrightOwner?: string;
+  readonly copyrightPeriod?: string;
+
   constructor(options: MonorepoProjectOptions) {
     super({
       ...options,
@@ -103,6 +110,12 @@ export class MonorepoProject extends Project {
     this.devTask.exec("turbo dev");
     this.testTask.exec("turbo test");
 
+    this.license = options.license;
+    this.author = options.author;
+    this.authorEmail = options.authorEmail;
+    this.authorOrganization = options.authorOrganization;
+    this.copyrightOwner = options.copyrightOwner;
+    this.copyrightPeriod = options.copyrightPeriod;
     if (options.license) {
       this.addFields({
         license: options.license,
