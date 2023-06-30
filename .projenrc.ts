@@ -1,4 +1,8 @@
-import { cdk, github, javascript } from "projen";
+import {
+  cdk,
+  // github,
+  javascript,
+} from "projen";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
@@ -13,13 +17,12 @@ const project = new cdk.JsiiProject({
   devDeps: ["projen"],
   bundledDeps: ["case"],
   prettier: true,
-  autoApproveUpgrades: true,
-  autoApproveOptions: {
-    allowedUsernames: ["skyrpex", "skyrpex-bot[bot]"],
-  },
-  githubOptions: {
-    projenCredentials: github.GithubCredentials.fromApp(),
-  },
+  // autoMerge: false,
+  dependabot: true,
+  depsUpgrade: false,
+  // githubOptions: {
+  //   projenCredentials: github.GithubCredentials.fromApp(),
+  // },
 });
 
 project.addDevDeps("vitest");
@@ -28,5 +31,7 @@ project.deps.removeDependency("ts-jest");
 project.deps.removeDependency("jest-junit");
 project.deps.removeDependency("jest");
 project.deps.removeDependency("@types/jest");
+
+// project.autoMerge.
 
 project.synth();
