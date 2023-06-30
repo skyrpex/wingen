@@ -1,8 +1,4 @@
-import {
-  cdk,
-  // github,
-  javascript,
-} from "projen";
+import { cdk, github, javascript } from "projen";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
@@ -17,12 +13,10 @@ const project = new cdk.JsiiProject({
   devDeps: ["projen"],
   bundledDeps: ["case"],
   prettier: true,
-  // autoMerge: false,
-  dependabot: true,
-  depsUpgrade: false,
-  // githubOptions: {
-  //   projenCredentials: github.GithubCredentials.fromApp(),
-  // },
+  autoMerge: false,
+  githubOptions: {
+    projenCredentials: github.GithubCredentials.fromApp(),
+  },
 });
 
 project.addDevDeps("vitest");
@@ -32,6 +26,7 @@ project.deps.removeDependency("jest-junit");
 project.deps.removeDependency("jest");
 project.deps.removeDependency("@types/jest");
 
-// project.autoMerge.
+project.gitattributes.addAttributes("/.mergify.yml", "linguist-generated");
+project.gitignore.addPatterns("!/.mergify.yml");
 
 project.synth();
