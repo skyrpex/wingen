@@ -3489,9 +3489,9 @@ minipass@^5.0.0:
   integrity sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==
 
 "minipass@^5.0.0 || ^6.0.2 || ^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.0.1.tgz#dff63464407cd8b83d7f008c0f116fa8c9b77ebf"
-  integrity sha512-NQ8MCKimInjVlaIqx51RKJJB7mINVkLTJbsZKmto4UAAOC/CWXES8PGaOgoBZyqoUsUA/U3DToGK7GJkkHbjJw==
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-7.0.2.tgz#58a82b7d81c7010da5bd4b2c0c85ac4b4ec5131e"
+  integrity sha512-eL79dXrE1q9dBbDCLg7xfn/vl7MS4F1gvJAgjJrQli/jbQWdUttuVawphqpffoIYfRdq78LHx6GP4bU/EQ2ATA==
 
 minizlib@^2.1.1, minizlib@^2.1.2:
   version "2.1.2"
@@ -4042,7 +4042,7 @@ pkg-types@^1.0.3:
     mlly "^1.2.0"
     pathe "^1.1.0"
 
-postcss@^8.4.24:
+postcss@^8.4.25:
   version "8.4.25"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.25.tgz#4a133f5e379eda7f61e906c3b1aaa9b81292726f"
   integrity sha512-7taJ/8t2av0Z+sQEvNzCkpDynl0tX3uJMCODi6nT3PfASC7dYCWV9aQ+uiCf+KBD4SEFcu+GvJdGdwzQ6OSjCw==
@@ -4092,10 +4092,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.71.131:
-  version "0.71.131"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.131.tgz#87e7b3c1982c19c400f9b9c1ddb1f3482912ed60"
-  integrity sha512-X9KOSFo+R/wTCdMgkfqEQGlvEL3vtmVXEbpmDpW97jSiRnUcTpjPOfcWFCyqLorXNnhAa2Qb5t0XOsG4R5aNbg==
+projen@^0.71.133:
+  version "0.71.133"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.133.tgz#82ba898128dd991bc6db06adebf8a1f2ed98c034"
+  integrity sha512-q0ZUrcPB7VSZamuos9nIn1gzjXL4KiOHLGmKqTOJWcNTv5VIju+yT205fLA9lkcbnGEY5PyfUdRs53YBUmUsag==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -5202,12 +5202,12 @@ vite-node@0.33.0:
     vite "^3.0.0 || ^4.0.0"
 
 "vite@^3.0.0 || ^4.0.0":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.2.tgz#acd47de771c498aec80e4900f30133d9529b278a"
-  integrity sha512-zUcsJN+UvdSyHhYa277UHhiJ3iq4hUBwHavOpsNUGsTgjBeoBlK8eDt+iT09pBq0h9/knhG/SPrZiM7cGmg7NA==
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.3.tgz#dfaf86f4cba3058bf2724e2e2c88254fb0f21a5a"
+  integrity sha512-IMnXQXXWgLi5brBQx/4WzDxdzW0X3pjO4nqFJAuNvwKtxzAmPzFE1wszW3VDpAGQJm3RZkm/brzRdyGsnwgJIA==
   dependencies:
     esbuild "^0.18.10"
-    postcss "^8.4.24"
+    postcss "^8.4.25"
     rollup "^3.25.2"
   optionalDependencies:
     fsevents "~2.3.2"
