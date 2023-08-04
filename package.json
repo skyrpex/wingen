@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "eslint": "^8",
-    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.28.0",
@@ -50,14 +50,14 @@
     "jsii-rosetta": "1.x",
     "npm-check-updates": "^16",
     "prettier": "^2.8.8",
-    "projen": "^0.71.161",
+    "projen": "^0.72.1",
     "standard-version": "^9",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   },
   "peerDependencies": {
-    "projen": "^0.71.161"
+    "projen": "^0.72.1"
   },
   "dependencies": {
     "case": "^1.6.3"

@@ -261,25 +261,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='jsii-rosetta,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='jsii-rosetta,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='jsii-rosetta,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='jsii-rosetta,jsii'"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='jsii-rosetta,jsii'"
+          "exec": "npm-check-updates --upgrade --target=minor --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,prettier,projen,standard-version,ts-node,typescript,vitest,case"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jsii-diff jsii-docgen jsii-pacmak jsii-rosetta jsii npm-check-updates prettier projen standard-version ts-node typescript vitest case projen"
+          "exec": "yarn upgrade @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jsii-diff jsii-docgen jsii-pacmak npm-check-updates prettier projen standard-version ts-node typescript vitest case"
         },
         {
           "exec": "npx projen"
