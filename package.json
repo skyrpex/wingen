@@ -65,9 +65,11 @@
   "bundledDependencies": [
     "case"
   ],
-  "resolutions": {
-    "@types/babel__traverse": "7.18.2",
-    "@types/prettier": "2.6.0"
+  "pnpm": {
+    "overrides": {
+      "@types/babel__traverse": "7.18.2",
+      "@types/prettier": "2.6.0"
+    }
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

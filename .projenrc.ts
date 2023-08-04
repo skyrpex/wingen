@@ -7,6 +7,8 @@ const project = new cdk.JsiiProject({
   defaultReleaseBranch: "main",
   repository: "github:skyrpex/wingen",
   repositoryUrl: "https://github.com/skyrpex/wingen.git",
+  packageManager: javascript.NodePackageManager.PNPM,
+  pnpmVersion: "8",
   npmAccess: javascript.NpmAccess.PUBLIC,
   projenrcTs: true,
   peerDeps: ["projen"],
