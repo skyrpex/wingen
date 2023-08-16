@@ -3956,9 +3956,9 @@ pkg-types@^1.0.3:
     pathe "^1.1.0"
 
 postcss@^8.4.27:
-  version "8.4.27"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.27.tgz#234d7e4b72e34ba5a92c29636734349e0d9c3057"
-  integrity sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==
+  version "8.4.28"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.28.tgz#c6cc681ed00109072816e1557f889ef51cf950a5"
+  integrity sha512-Z7V5j0cq8oEKyejIKfpD8b4eBy9cwW2JWPk0+fB1HOAMsfHbnAXLLS+PfVWlzMSLQaWttKDt607I0XHmpE67Vw==
   dependencies:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
@@ -4005,10 +4005,10 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.72.12:
-  version "0.72.12"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.72.12.tgz#8e04e50658dd578c2c3fd2492fe99a20cd311600"
-  integrity sha512-kYXLrYkYfk+VbVd9wTTA5aW37kC4iQzV4RLl2vPqSAfJpOiqyKwJHhY6PIF8VgugGahCIXbBCVVHR8FVTcaEnQ==
+projen@^0.72.13:
+  version "0.72.13"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.72.13.tgz#f645eb8699159c5bd7309b5f68f8935d3e459b13"
+  integrity sha512-k0d/w5W+C4d7rqfh+aB4/0h4oNXyG2zlBGYrghrYZUo0YaxdIrHMjn+PiBOq2HWeNMnNemEqe/kFc2bix4tp6w==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
