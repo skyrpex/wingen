@@ -44,7 +44,7 @@ export class MonorepoProject extends Project {
 
     this.addDevDeps("projen");
 
-    this.addDevDeps("typescript", "tsx", "@types/node");
+    this.addDevDeps("typescript", "tsx", "@types/node@18");
     new TypescriptConfig(this, {
       include: [".projenrc.ts"],
     });
