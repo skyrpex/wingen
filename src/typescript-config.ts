@@ -30,6 +30,7 @@ export class TypescriptConfig extends Component {
           noUncheckedIndexedAccess: true,
           noEmit: true,
           downlevelIteration: true,
+          verbatimModuleSyntax: true,
         },
         include: () => {
           return this.include;
