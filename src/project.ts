@@ -49,7 +49,6 @@ export class Project extends ProjenProject {
       commitGenerated: false,
     });
 
-    this.addGitIgnore("/.projen");
     this.addGitIgnore("/.turbo");
 
     this.nodePackage = new NodePackage(this, {
