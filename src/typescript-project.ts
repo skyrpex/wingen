@@ -51,7 +51,7 @@ export class TypescriptProject extends NodeProject {
 
     this.addFields({
       // main: "./src/index.ts",
-      // types: "./src/index.ts",
+      types: "./src/index.ts",
       exports: {
         ".": "./src/index.ts",
       },
