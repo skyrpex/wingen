@@ -68,12 +68,7 @@ export class TypescriptProject extends NodeProject {
     });
 
     new SampleFile(this, "src/index.ts", {
-      contents: [
-        'import { version } from "../package.json" assert { type: "json" };',
-        "",
-        "export { version };",
-        "",
-      ].join("\n"),
+      contents: ["export {};", ""].join("\n"),
     });
 
     new Tsup(this);
