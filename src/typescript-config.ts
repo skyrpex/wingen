@@ -18,11 +18,11 @@ export class TypescriptConfig extends Component {
       obj: {
         compilerOptions: {
           module: "ESNext",
-          moduleResolution: "bundler",
+          moduleResolution: "Bundler",
           lib: ["ESNext"],
           target: "ESNext",
           allowArbitraryExtensions: true,
-          allowImportingTsExtensions: true,
+          allowImportingTsExtensions: false,
           strict: true,
           forceConsistentCasingInFileNames: true,
           isolatedModules: true,
