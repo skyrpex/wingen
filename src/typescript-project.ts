@@ -51,7 +51,7 @@ export class TypescriptProject extends NodeProject {
 
     this.addFields({
       // main: "./src/index.ts",
-      // types: "./src/index.ts",
+      types: "./src/index.ts",
       exports: {
         ".": "./src/index.ts",
       },
@@ -62,18 +62,13 @@ export class TypescriptProject extends NodeProject {
       },
     });
 
-    this.addDevDeps("typescript", "tsx", "@types/node");
+    this.addDevDeps("typescript", "tsx", "@types/node@18");
     this.tsConfig = new TypescriptConfig(this, {
       include: ["src/**/*"],
     });
 
     new SampleFile(this, "src/index.ts", {
-      contents: [
-        'import { version } from "../package.json" assert { type: "json" };',
-        "",
-        "export { version };",
-        "",
-      ].join("\n"),
+      contents: ["export {};", ""].join("\n"),
     });
 
     new Tsup(this);
