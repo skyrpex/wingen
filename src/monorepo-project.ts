@@ -50,6 +50,7 @@ export class MonorepoProject extends Project {
     });
 
     new YamlFile(this, "pnpm-workspace.yaml", {
+      committed: true,
       obj: {
         packages: () =>
           this.subprojects.map((subproject) =>
