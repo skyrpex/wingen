@@ -62,7 +62,7 @@ export class TypescriptProject extends NodeProject {
       },
     });
 
-    this.addDevDeps("typescript", "tsx", "@types/node");
+    this.addDevDeps("typescript", "tsx", "@types/node@18");
     this.tsConfig = new TypescriptConfig(this, {
       include: ["src/**/*"],
     });
