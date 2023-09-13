@@ -6,7 +6,7 @@ import {
 } from "./eslint";
 import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
-import { Tsup } from "./tsup";
+import { Tsup, TsupOptions } from "./tsup";
 import { TypescriptConfig } from "./typescript-config";
 import { Vitest } from "./vitest";
 
@@ -37,6 +37,8 @@ export interface TypescriptProjectOptions {
    * Whether the author is an organization.
    */
   readonly authorOrganization?: boolean;
+
+  readonly tsup?: TsupOptions;
 }
 
 export class TypescriptProject extends NodeProject {
@@ -71,7 +73,7 @@ export class TypescriptProject extends NodeProject {
       contents: ["export {};", ""].join("\n"),
     });
 
-    new Tsup(this);
+    new Tsup(this, options.tsup);
     new Vitest(this);
 
     new Eslint(this);
