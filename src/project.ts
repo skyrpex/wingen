@@ -44,10 +44,7 @@ export class Project extends ProjenProject {
   public readonly lintTask: Task;
 
   constructor(options: ProjectOptions) {
-    super({
-      ...options,
-      commitGenerated: false,
-    });
+    super(options);
 
     this.addGitIgnore("/.turbo");
 
