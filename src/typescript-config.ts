@@ -14,7 +14,6 @@ export class TypescriptConfig extends Component {
 
     new JsonFile(this.project, "tsconfig.json", {
       allowComments: true,
-      committed: false,
       obj: {
         compilerOptions: {
           module: "ESNext",
