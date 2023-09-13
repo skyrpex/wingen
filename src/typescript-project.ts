@@ -73,7 +73,9 @@ export class TypescriptProject extends NodeProject {
       contents: ["export {};", ""].join("\n"),
     });
 
-    new Tsup(this, options.tsup);
+    if (options.tsup) {
+      new Tsup(this, options.tsup);
+    }
     new Vitest(this);
 
     new Eslint(this);
