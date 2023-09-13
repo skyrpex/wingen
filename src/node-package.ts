@@ -13,7 +13,7 @@ import { parseDesiredSemver } from "./semver";
 import { isTruthy, sorted, writeFile } from "./util";
 
 const getDesiredVersions = (
-  deps: string[],
+  deps: string[]
 ): Record<string, string | undefined> => {
   const desiredDeps: Record<string, string | undefined> = {};
   for (const dep of deps) {
@@ -25,7 +25,7 @@ const getDesiredVersions = (
 
 const getPreInstallVersions = (
   desiredVersions: Record<string, string | undefined>,
-  installedVersions: Record<string, string>,
+  installedVersions: Record<string, string>
 ): Record<string, string> => {
   const deps: Record<string, string> = {};
   for (const [name, desiredVersion] of Object.entries(desiredVersions)) {
@@ -40,7 +40,7 @@ const getPreInstallVersions = (
 
 const getPostInstallVersions = (
   installedVersions: Record<string, string>,
-  desiredVersions: Record<string, string | undefined>,
+  desiredVersions: Record<string, string | undefined>
 ): Record<string, string> => {
   const deps: Record<string, string> = {};
   for (const [name, version] of Object.entries(installedVersions)) {
@@ -192,7 +192,7 @@ export class NodePackage extends Component {
     const preInstallDeps = getPreInstallVersions(desiredDeps, installedDeps);
     const preInstallDevDeps = getPreInstallVersions(
       desiredDevDeps,
-      installedDevDeps,
+      installedDevDeps
     );
 
     this.packageObject.dependencies = sorted(preInstallDeps);
@@ -220,13 +220,10 @@ export class NodePackage extends Component {
     const installedDevDeps = this.getInstalledVersions(this.devDeps);
 
     const postInstallDeps = sorted(
-      getPostInstallVersions(installedDeps, getDesiredVersions(this.deps)),
+      getPostInstallVersions(installedDeps, getDesiredVersions(this.deps))
     );
     const postInstallDevDeps = sorted(
-      getPostInstallVersions(
-        installedDevDeps,
-        getDesiredVersions(this.devDeps),
-      ),
+      getPostInstallVersions(installedDevDeps, getDesiredVersions(this.devDeps))
     );
     // console.log({ postInstallDevDeps });
 
@@ -330,19 +327,16 @@ export class NodePackage extends Component {
       {
         dependencies: Record<string, { version: string }>;
         devDependencies: Record<string, { version: string }>;
-      },
+      }
     ];
     return Object.entries({
       ...dependencies,
       ...devDependencies,
-    }).reduce(
-      (acc, [name, { version }]) => {
-        if (deps.includes(name)) {
-          acc[name] = version.startsWith("link:") ? "workspace:^" : version;
-        }
-        return acc;
-      },
-      {} as Record<string, string>,
-    );
+    }).reduce((acc, [name, { version }]) => {
+      if (deps.includes(name)) {
+        acc[name] = version.startsWith("link:") ? "workspace:^" : version;
+      }
+      return acc;
+    }, {} as Record<string, string>);
   };
 }

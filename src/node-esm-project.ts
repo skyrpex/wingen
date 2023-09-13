@@ -1,9 +1,8 @@
 import { SampleFile } from "projen";
-
 import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
 
-export interface NodeCjsProjectOptions {
+export interface NodeEsmProjectOptions {
   readonly name: string;
   readonly description?: string;
   readonly outdir?: string;
@@ -30,25 +29,22 @@ export interface NodeCjsProjectOptions {
   readonly authorOrganization?: boolean;
 }
 
-export class NodeCjsProject extends NodeProject {
-  constructor(options: NodeCjsProjectOptions) {
+export class NodeEsmProject extends NodeProject {
+  constructor(options: NodeEsmProjectOptions) {
     super({
-      outdir: options.outdir ?? `packages/${options.name}`,
+      outdir: `packages/${options.name}`,
       ...options,
       parent: options.monorepo,
     });
 
     this.addFields({
-      type: "commonjs",
-      main: "./src/index.cjs",
-      // types: "./src/index.cjs",
-      // exports: {
-      //   ".": "./src/index.cjs",
-      // },
+      type: "module",
+      exports: { ".": "./src/index.js" },
+      // types: "./src/index.d.ts",
     });
 
-    new SampleFile(this, "src/index.cjs", {
-      contents: ["module.exports = {};", ""].join("\n"),
+    new SampleFile(this, "src/index.js", {
+      contents: ["export default {};", ""].join("\n"),
     });
   }
 }
