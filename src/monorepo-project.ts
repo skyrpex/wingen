@@ -61,7 +61,6 @@ export class MonorepoProject extends Project {
 
     this.addDeps("turbo");
     new JsonFile(this, "turbo.json", {
-      committed: false,
       marker: false,
       obj: {
         $schema: "https://turborepo.org/schema.json",
@@ -82,7 +81,6 @@ export class MonorepoProject extends Project {
 
     this.addDevDeps("prettier");
     new JsonFile(this, ".prettierrc.json", {
-      committed: false,
       marker: false,
       obj: {
         tabWidth: 2,
