@@ -32,7 +32,6 @@ export class Tsup extends Component {
     // project.addScript("compile", "tsup");
     project.compileTask.exec("tsup");
     new TextFile(project, "tsup.config.ts", {
-      committed: false,
       lines: [
         "/* eslint-disable */",
         'import { defineConfig } from "tsup";',
