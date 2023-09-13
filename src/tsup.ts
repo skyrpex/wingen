@@ -16,6 +16,7 @@ const defaultOptions: TsupOptions = {
   outDir: "lib",
   format: ["esm"],
   target: "node18",
+
   dts: true,
   bundle: false,
   clean: true,
@@ -33,6 +34,7 @@ export class Tsup extends Component {
     new TextFile(project, "tsup.config.ts", {
       committed: false,
       lines: [
+        "/* eslint-disable */",
         'import { defineConfig } from "tsup";',
         "",
         `export default defineConfig(${JSON.stringify(
