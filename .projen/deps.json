@@ -85,10 +85,6 @@
       "type": "build"
     },
     {
-      "name": "tsup",
-      "type": "build"
-    },
-    {
       "name": "typescript",
       "type": "build"
     },

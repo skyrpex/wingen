@@ -261,13 +261,13 @@
           "exec": "pnpm update npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,prettier,projen,standard-version,ts-node,tsup,typescript,vitest,case"
+          "exec": "npm-check-updates --upgrade --target=minor --filter=@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,prettier,projen,standard-version,ts-node,typescript,vitest,case"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jsii-diff jsii-docgen jsii-pacmak npm-check-updates prettier projen standard-version ts-node tsup typescript vitest case"
+          "exec": "pnpm update @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jsii-diff jsii-docgen jsii-pacmak npm-check-updates prettier projen standard-version ts-node typescript vitest case"
         },
         {
           "exec": "npx projen"
