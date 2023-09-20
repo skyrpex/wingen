@@ -38,6 +38,8 @@ export class Eslint extends Component {
           sourceType: "module",
         },
         extends: [
+          "plugin:@typescript-eslint/strict-type-checked",
+          "plugin:@typescript-eslint/stylistic-type-checked",
           "plugin:import/typescript",
           "prettier",
           "plugin:prettier/recommended",
