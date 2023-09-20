@@ -33,7 +33,7 @@ export class Tsup extends Component {
     project.compileTask.exec("tsup");
     new TextFile(project, "tsup.config.ts", {
       lines: [
-        "/* eslint-disable */",
+        "/* eslint-disable prettier/prettier */",
         'import { defineConfig } from "tsup";',
         "",
         `export default defineConfig(${JSON.stringify(
