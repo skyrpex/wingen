@@ -7,7 +7,7 @@ export interface TurboWorkspaceProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#persistent
    */
-  persistent?: boolean;
+  readonly persistent?: boolean;
   /**
    * Whether or not to cache the outputs of the task.
    *
@@ -15,7 +15,7 @@ export interface TurboWorkspaceProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#cache
    */
-  cache?: boolean;
+  readonly cache?: boolean;
   /**
    * The list of tasks that this task depends on.
    *
@@ -25,7 +25,7 @@ export interface TurboWorkspaceProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#dependson
    */
-  dependsOn?: string[];
+  readonly dependsOn?: string[];
   /**
    * The set of glob patterns to consider as inputs to this task.
    *
@@ -37,7 +37,7 @@ export interface TurboWorkspaceProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#inputs
    */
-  inputs?: string[];
+  readonly inputs?: string[];
   /**
    * The set of glob patterns indicating a task's cacheable filesystem outputs.
    *
@@ -45,13 +45,13 @@ export interface TurboWorkspaceProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#outputs
    */
-  outputs?: string[];
+  readonly outputs?: string[];
   /**
    * A list of environment variables that this task depends on.
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#env
    */
-  env?: string[];
+  readonly env?: string[];
 }
 
 export interface TurboProps {
@@ -62,14 +62,14 @@ export interface TurboProps {
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#globalenv
    */
-  globalEnv?: string[];
+  readonly globalEnv?: string[];
 
   /**
    * An object representing the task dependency graph of your project. turbo interprets these conventions to schedule, execute, and cache the outputs of tasks in your project.
    *
    * Documentation: https://turbo.build/repo/docs/reference/configuration#pipeline
    */
-  pipeline?: Record<string, TurboWorkspaceProps>;
+  readonly pipeline?: Record<string, TurboWorkspaceProps>;
 }
 
 export class Turbo extends Component {
