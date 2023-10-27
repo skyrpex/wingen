@@ -19,6 +19,9 @@ const project = new cdk.JsiiProject({
   githubOptions: {
     projenCredentials: github.GithubCredentials.fromApp(),
   },
+  minNodeVersion: "18.17.1",
+  jsiiVersion: "*",
+  projenVersion: "^0.72.1"
 });
 
 project.addDevDeps("vitest");

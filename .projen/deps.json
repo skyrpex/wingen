@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@types/node",
-      "version": "^16",
+      "version": "^18",
       "type": "build"
     },
     {
@@ -41,6 +41,10 @@
       "type": "build"
     },
     {
+      "name": "jsii",
+      "type": "build"
+    },
+    {
       "name": "jsii-diff",
       "type": "build"
     },
@@ -54,12 +58,6 @@
     },
     {
       "name": "jsii-rosetta",
-      "version": "1.x",
-      "type": "build"
-    },
-    {
-      "name": "jsii",
-      "version": "1.x",
       "type": "build"
     },
     {
@@ -95,16 +93,6 @@
     {
       "name": "case",
       "type": "bundled"
-    },
-    {
-      "name": "@types/babel__traverse",
-      "version": "7.18.2",
-      "type": "override"
-    },
-    {
-      "name": "@types/prettier",
-      "version": "2.6.0",
-      "type": "override"
     },
     {
       "name": "projen",
