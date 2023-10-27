@@ -819,6 +819,180 @@ public readonly target: string;
 
 ---
 
+### TurboProps <a name="TurboProps" id="@skyrpex/wingen.TurboProps"></a>
+
+#### Initializer <a name="Initializer" id="@skyrpex/wingen.TurboProps.Initializer"></a>
+
+```typescript
+import { TurboProps } from '@skyrpex/wingen'
+
+const turboProps: TurboProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.TurboProps.property.globalEnv">globalEnv</a></code> | <code>string[]</code> | A list of environment variables for implicit global hash dependencies. |
+| <code><a href="#@skyrpex/wingen.TurboProps.property.pipeline">pipeline</a></code> | <code>{[ key: string ]: <a href="#@skyrpex/wingen.TurboWorkspaceProps">TurboWorkspaceProps</a>}</code> | An object representing the task dependency graph of your project. |
+
+---
+
+##### `globalEnv`<sup>Optional</sup> <a name="globalEnv" id="@skyrpex/wingen.TurboProps.property.globalEnv"></a>
+
+```typescript
+public readonly globalEnv: string[];
+```
+
+- *Type:* string[]
+
+A list of environment variables for implicit global hash dependencies.
+
+The variables included in this list will affect all task hashes.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#globalenv
+
+---
+
+##### `pipeline`<sup>Optional</sup> <a name="pipeline" id="@skyrpex/wingen.TurboProps.property.pipeline"></a>
+
+```typescript
+public readonly pipeline: {[ key: string ]: TurboWorkspaceProps};
+```
+
+- *Type:* {[ key: string ]: <a href="#@skyrpex/wingen.TurboWorkspaceProps">TurboWorkspaceProps</a>}
+
+An object representing the task dependency graph of your project.
+
+turbo interprets these conventions to schedule, execute, and cache the outputs of tasks in your project.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#pipeline
+
+---
+
+### TurboWorkspaceProps <a name="TurboWorkspaceProps" id="@skyrpex/wingen.TurboWorkspaceProps"></a>
+
+#### Initializer <a name="Initializer" id="@skyrpex/wingen.TurboWorkspaceProps.Initializer"></a>
+
+```typescript
+import { TurboWorkspaceProps } from '@skyrpex/wingen'
+
+const turboWorkspaceProps: TurboWorkspaceProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.cache">cache</a></code> | <code>boolean</code> | Whether or not to cache the outputs of the task. |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | The list of tasks that this task depends on. |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.env">env</a></code> | <code>string[]</code> | A list of environment variables that this task depends on. |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.inputs">inputs</a></code> | <code>string[]</code> | The set of glob patterns to consider as inputs to this task. |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.outputs">outputs</a></code> | <code>string[]</code> | The set of glob patterns indicating a task's cacheable filesystem outputs. |
+| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.persistent">persistent</a></code> | <code>boolean</code> | Indicates whether the task exits or not. |
+
+---
+
+##### `cache`<sup>Optional</sup> <a name="cache" id="@skyrpex/wingen.TurboWorkspaceProps.property.cache"></a>
+
+```typescript
+public readonly cache: boolean;
+```
+
+- *Type:* boolean
+
+Whether or not to cache the outputs of the task.
+
+Setting cache to false is useful for long-running "watch" or development mode tasks.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#cache
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="@skyrpex/wingen.TurboWorkspaceProps.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: string[];
+```
+
+- *Type:* string[]
+
+The list of tasks that this task depends on.
+
+Prefixing an item in dependsOn with a ^ prefix tells turbo that this task depends on the package's topological dependencies completing the task first. (e.g. "A package's build tasks should only run once all of its workspace dependencies have completed their own build commands.")
+
+Items in dependsOn without a ^ prefix express the relationships between tasks within the same package (e.g. "A package's test and lint commands depend on its own build being completed first.")
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#dependson
+
+---
+
+##### `env`<sup>Optional</sup> <a name="env" id="@skyrpex/wingen.TurboWorkspaceProps.property.env"></a>
+
+```typescript
+public readonly env: string[];
+```
+
+- *Type:* string[]
+
+A list of environment variables that this task depends on.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#env
+
+---
+
+##### `inputs`<sup>Optional</sup> <a name="inputs" id="@skyrpex/wingen.TurboWorkspaceProps.property.inputs"></a>
+
+```typescript
+public readonly inputs: string[];
+```
+
+- *Type:* string[]
+
+The set of glob patterns to consider as inputs to this task.
+
+Changes to files covered by these globs will cause a cache miss and the task will be rerun.
+
+If a file has been changed that is **not** included in the set of globs, it will not cause a cache miss.
+
+If omitted or empty, all files in the package are considered as inputs.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#inputs
+
+---
+
+##### `outputs`<sup>Optional</sup> <a name="outputs" id="@skyrpex/wingen.TurboWorkspaceProps.property.outputs"></a>
+
+```typescript
+public readonly outputs: string[];
+```
+
+- *Type:* string[]
+
+The set of glob patterns indicating a task's cacheable filesystem outputs.
+
+Turborepo captures task logs for all tasks. This enables us to cache tasks whose runs produce no artifacts other than logs (such as linters). Logs are always treated as a cacheable artifact and never need to be specified.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#outputs
+
+---
+
+##### `persistent`<sup>Optional</sup> <a name="persistent" id="@skyrpex/wingen.TurboWorkspaceProps.property.persistent"></a>
+
+```typescript
+public readonly persistent: boolean;
+```
+
+- *Type:* boolean
+
+Indicates whether the task exits or not.
+
+Setting `persistent` to `true` tells turbo that this is a long-running task and will ensure that other tasks cannot depend on it.
+
+Documentation: https://turbo.build/repo/docs/reference/configuration#persistent
+
+---
+
 ### TypescriptConfigOptions <a name="TypescriptConfigOptions" id="@skyrpex/wingen.TypescriptConfigOptions"></a>
 
 #### Initializer <a name="Initializer" id="@skyrpex/wingen.TypescriptConfigOptions.Initializer"></a>
@@ -4373,6 +4547,91 @@ Synthesizes files to the project output directory.
 ---
 
 ##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.Tsup.property.project"></a>
+
+```typescript
+public readonly project: Project;
+```
+
+- *Type:* projen.Project
+
+---
+
+
+### Turbo <a name="Turbo" id="@skyrpex/wingen.Turbo"></a>
+
+#### Initializers <a name="Initializers" id="@skyrpex/wingen.Turbo.Initializer"></a>
+
+```typescript
+import { Turbo } from '@skyrpex/wingen'
+
+new Turbo(project: NodeProject, props?: TurboProps)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.Turbo.Initializer.parameter.project">project</a></code> | <code><a href="#@skyrpex/wingen.NodeProject">NodeProject</a></code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.Turbo.Initializer.parameter.props">props</a></code> | <code><a href="#@skyrpex/wingen.TurboProps">TurboProps</a></code> | *No description.* |
+
+---
+
+##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.Turbo.Initializer.parameter.project"></a>
+
+- *Type:* <a href="#@skyrpex/wingen.NodeProject">NodeProject</a>
+
+---
+
+##### `props`<sup>Optional</sup> <a name="props" id="@skyrpex/wingen.Turbo.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#@skyrpex/wingen.TurboProps">TurboProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@skyrpex/wingen.Turbo.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
+| <code><a href="#@skyrpex/wingen.Turbo.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
+| <code><a href="#@skyrpex/wingen.Turbo.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
+
+---
+
+##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Turbo.postSynthesize"></a>
+
+```typescript
+public postSynthesize(): void
+```
+
+Called after synthesis.
+
+Order is *not* guaranteed.
+
+##### `preSynthesize` <a name="preSynthesize" id="@skyrpex/wingen.Turbo.preSynthesize"></a>
+
+```typescript
+public preSynthesize(): void
+```
+
+Called before synthesis.
+
+##### `synthesize` <a name="synthesize" id="@skyrpex/wingen.Turbo.synthesize"></a>
+
+```typescript
+public synthesize(): void
+```
+
+Synthesizes files to the project output directory.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.Turbo.property.project">project</a></code> | <code>projen.Project</code> | *No description.* |
+
+---
+
+##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.Turbo.property.project"></a>
 
 ```typescript
 public readonly project: Project;
