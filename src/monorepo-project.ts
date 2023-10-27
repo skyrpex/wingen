@@ -5,6 +5,7 @@ import { Editorconfig } from "./editorconfig";
 import { Project } from "./project";
 import { ProjenrcTs } from "./projenrc-ts";
 import { TypescriptConfig } from "./typescript-config";
+import { Turbo } from "./turbo.js";
 
 export interface MonorepoProjectOptions {
   readonly name: string;
@@ -60,22 +61,18 @@ export class MonorepoProject extends Project {
     });
 
     this.addDeps("turbo");
-    new JsonFile(this, "turbo.json", {
-      marker: false,
-      obj: {
-        $schema: "https://turborepo.org/schema.json",
-        pipeline: {
-          dev: {
-            persistent: true,
-            cache: false,
-          },
-          compile: {
-            dependsOn: ["^compile"],
-            outputs: ["lib/**"],
-          },
-          lint: {},
-          test: {},
+    new Turbo(this, {
+      pipeline: {
+        dev: {
+          persistent: true,
+          cache: false,
         },
+        compile: {
+          dependsOn: ["^compile"],
+          outputs: ["lib/**"],
+        },
+        lint: {},
+        test: {},
       },
     });
 
