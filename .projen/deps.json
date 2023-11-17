@@ -16,11 +16,12 @@
       "type": "build"
     },
     {
-      "name": "eslint-config-prettier",
+      "name": "constructs",
+      "version": "^10.0.0",
       "type": "build"
     },
     {
-      "name": "eslint-import-resolver-node",
+      "name": "eslint-config-prettier",
       "type": "build"
     },
     {
@@ -71,6 +72,7 @@
     },
     {
       "name": "projen",
+      "version": "^0.72.1",
       "type": "build"
     },
     {
