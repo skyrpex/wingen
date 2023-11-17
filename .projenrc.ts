@@ -11,8 +11,8 @@ const project = new cdk.JsiiProject({
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion: "8",
   projenrcTs: true,
-  peerDeps: ["projen"],
-  devDeps: ["projen"],
+  peerDeps: ["projen@^0.76.29"],
+  devDeps: ["projen@^0.76.29"],
   bundledDeps: ["case"],
   prettier: true,
   autoMerge: false,
@@ -21,7 +21,7 @@ const project = new cdk.JsiiProject({
   },
   minNodeVersion: "18.17.1",
   jsiiVersion: "*",
-  projenVersion: "^0.72.1"
+  // projenVersion: "^0.76.29",
 });
 
 project.addDevDeps("vitest");
