@@ -1,11 +1,11 @@
 import * as path from "node:path";
-import { JsonFile, License, YamlFile } from "projen";
+import { FileBase, JsonFile, License, YamlFile } from "projen";
 
 import { Editorconfig } from "./editorconfig";
 import { Project } from "./project";
 import { ProjenrcTs } from "./projenrc-ts";
-import { TypescriptConfig } from "./typescript-config";
 import { Turbo } from "./turbo.js";
+import { TypescriptConfig } from "./typescript-config";
 
 export interface MonorepoProjectOptions {
   readonly name: string;
@@ -55,7 +55,7 @@ export class MonorepoProject extends Project {
       obj: {
         packages: () =>
           this.subprojects.map((subproject) =>
-            path.relative(this.outdir, subproject.outdir)
+            path.relative(this.outdir, subproject.outdir),
           ),
       },
     });
@@ -120,6 +120,23 @@ export class MonorepoProject extends Project {
         copyrightOwner: options.copyrightOwner,
         copyrightPeriod: options.copyrightPeriod,
       });
+    }
+  }
+
+  preSynthesize(): void {
+    super.preSynthesize();
+
+    for (const project of [this, ...this.subprojects]) {
+      const relativeOutdir = path.relative(this.outdir, project.outdir);
+
+      for (const component of project.components) {
+        if (component instanceof FileBase) {
+          this.gitattributes.addAttributes(
+            path.join(relativeOutdir, component.path),
+            "linguist-generated=true",
+          );
+        }
+      }
     }
   }
 
