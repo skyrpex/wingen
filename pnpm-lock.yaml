@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.92.0
     version: 1.92.0
   jsii-docgen:
-    specifier: ^10.1.4
-    version: 10.1.4(jsii-rosetta@5.2.2)
+    specifier: ^10.1.5
+    version: 10.1.5(jsii-rosetta@5.2.2)
   jsii-pacmak:
     specifier: ^1.92.0
     version: 1.92.0
@@ -54,7 +54,7 @@ devDependencies:
     version: 5.2.2
   npm-check-updates:
     specifier: ^16
-    version: 16.14.6
+    version: 16.14.11
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1935,7 +1935,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.4.0-dev.20231118
+      typescript: 5.4.0-dev.20231119
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3323,8 +3323,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.1.4(jsii-rosetta@5.2.2):
-    resolution: {integrity: sha512-jMP2C5xY9O3Bcqr7M8O4BfV+Ynd0ieMjjDzgHFqu8Oo1xmaReH1ViEEA2AdYXtdYgP7pvZRuuhr4iCphgA0l9A==}
+  /jsii-docgen@10.1.5(jsii-rosetta@5.2.2):
+    resolution: {integrity: sha512-AD/I6RlV0gZfDmkJgkPM31uA6zL2rancCSR9YPHUVjwL27ONDobyAslcXgXOcA0WKIKBL1AM9RUau8NU4fDgug==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     peerDependencies:
@@ -4039,8 +4039,8 @@ packages:
       npm-normalize-package-bin: 3.0.1
     dev: true
 
-  /npm-check-updates@16.14.6:
-    resolution: {integrity: sha512-sJ6w4AmSDP7YzBXah94Ul2JhiIbjBDfx9XYgib15um2wtiQkOyjE7Lov3MNUSQ84Ry7T81mE4ynMbl/mGbK4HQ==}
+  /npm-check-updates@16.14.11:
+    resolution: {integrity: sha512-0MMWGbGci22Pu77bR9jRsy5qgxdQSJVqNtSyyFeubDPtbcU36z4gjEDITu26PMabFWPNkAoVfKF31M3uKUvzFg==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -5593,8 +5593,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.0-dev.20231118:
-    resolution: {integrity: sha512-ZrQd4CI6YXINmXfnDSNG26zo+qAAh3UXig2GREmT9wOqmxceVHE7wbeP4PU3IBIpea8P22WEcB/cP33yPsxjsA==}
+  /typescript@5.4.0-dev.20231119:
+    resolution: {integrity: sha512-a8JGI0ifhQ0VM9dJhSWWZnSKQu6Bgm16G32BHDOIhEuLcn0uWcfA2ZHeazTiqYEAzja+zsN+Y4f8yliGW0K3+A==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
