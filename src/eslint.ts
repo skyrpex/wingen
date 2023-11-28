@@ -7,7 +7,7 @@ import { NodeProject } from "./node-project";
 
 export class Eslint extends Component {
   constructor(
-    project: NodeProject // options?: EslintOptions
+    project: NodeProject, // options?: EslintOptions
   ) {
     super(project);
 
@@ -24,7 +24,7 @@ export class Eslint extends Component {
       "eslint-plugin-prettier",
       // "eslint-plugin-react",
       // "eslint-plugin-react-hooks",
-      "eslint-plugin-unicorn"
+      "eslint-plugin-unicorn",
     );
     new JsonFile(project, ".eslintrc.json", {
       marker: false,
@@ -53,7 +53,7 @@ export class Eslint extends Component {
           //   },
           // ],
           // "unicorn/prefer-module": ["off"],
-          // "unicorn/no-useless-undefined": ["error", { checkArguments: false }],
+          "unicorn/no-useless-undefined": ["error", { checkArguments: false }],
           // "unicorn/filename-case": ["off"],
           // "unicorn/prefer-event-target": ["off"],
           "import/order": [
