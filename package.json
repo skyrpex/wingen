@@ -45,7 +45,7 @@
     "eslint-plugin-prettier": "^5.1.0",
     "jsii": "~5.3.0",
     "jsii-diff": "^1.93.0",
-    "jsii-docgen": "^10.3.1",
+    "jsii-docgen": "^10.3.2",
     "jsii-pacmak": "^1.93.0",
     "jsii-rosetta": "~5.3.0",
     "npm-check-updates": "^16",
