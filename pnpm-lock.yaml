@@ -35,23 +35,23 @@ devDependencies:
     specifier: ^2.29.1
     version: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
   eslint-plugin-prettier:
-    specifier: ^5.1.1
-    version: 5.1.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
+    specifier: ^5.1.2
+    version: 5.1.2(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
   jsii:
-    specifier: ~5.3.0
-    version: 5.3.0
+    specifier: ~5.3.1
+    version: 5.3.1
   jsii-diff:
     specifier: ^1.93.0
     version: 1.93.0
   jsii-docgen:
     specifier: ^10.3.2
-    version: 10.3.2(jsii-rosetta@5.3.0)
+    version: 10.3.2(jsii-rosetta@5.3.1)
   jsii-pacmak:
     specifier: ^1.93.0
     version: 1.93.0
   jsii-rosetta:
-    specifier: ~5.3.0
-    version: 5.3.0
+    specifier: ~5.3.1
+    version: 5.3.1
   npm-check-updates:
     specifier: ^16
     version: 16.14.12
@@ -1916,7 +1916,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.4.0-dev.20231223
+      typescript: 5.4.0-dev.20231224
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -2192,8 +2192,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier@5.1.1(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1):
-    resolution: {integrity: sha512-WQpV3mSmIobb77s4qiCZu3dBrZZ0rj8ckSfBtRrgNK9Wnh2s3eiaxNTWloz1LJ1WtvqZES/PAI7PLvsrGt/CEA==}
+  /eslint-plugin-prettier@5.1.2(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1):
+    resolution: {integrity: sha512-dhlpWc9vOwohcWmClFcA+HjlvUpuyynYs0Rf+L/P6/0iQE6vlHW9l5bkfzN62/Stm9fbq8ku46qzde76T1xlSg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -2210,7 +2210,7 @@ packages:
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
       prettier: 3.1.1
       prettier-linter-helpers: 1.0.0
-      synckit: 0.8.5
+      synckit: 0.8.6
     dev: true
 
   /eslint-scope@7.2.2:
@@ -3287,7 +3287,7 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.3.2(jsii-rosetta@5.3.0):
+  /jsii-docgen@10.3.2(jsii-rosetta@5.3.1):
     resolution: {integrity: sha512-2NX6LoNzc5OMmr8jduR6TGG7r0OzbbMmQ/3AtC4KDWsFZCpUA4uADagsdMSTOsnAOywdBlMeaW7awlG69INr7w==}
     hasBin: true
     peerDependencies:
@@ -3299,7 +3299,7 @@ packages:
       glob: 8.1.0
       glob-promise: 6.0.5(glob@8.1.0)
       jsii-reflect: 1.93.0
-      jsii-rosetta: 5.3.0
+      jsii-rosetta: 5.3.1
       semver: 7.5.4
       yargs: 16.2.0
     dev: true
@@ -3360,8 +3360,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-rosetta@5.3.0:
-    resolution: {integrity: sha512-c/eZmOWKJhyD5iUaCb9q81fngKXzp92i0Qi3UbTYXbpAPd1AAiu2YQAC33e2K/DlZOHZZdWWYwnjKxeRySz8xg==}
+  /jsii-rosetta@5.3.1:
+    resolution: {integrity: sha512-/XmxD2seMM/SDyDGY9PDSMY+0DSs4gByovDY9H6lGcRaUHYKGTzfLv0HKlSm/meBkY7BRd5YJ2xvirMYeIX33A==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3371,7 +3371,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.30.0
       fast-glob: 3.3.2
-      jsii: 5.3.0
+      jsii: 5.3.1
       semver: 7.5.4
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -3404,8 +3404,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.3.0:
-    resolution: {integrity: sha512-WQSg7mV1t3EWSjobYN/CGkQgYh6DjxMoQsInZrvZBFuo2yEkKuaNuBAoCjqstS+EgY20P2Jj9Z+lMlIqcREv7A==}
+  /jsii@5.3.1:
+    resolution: {integrity: sha512-I13iHCSK8h+gR31nJYrI+V8dbo/ZLUUf9LLa5CDVKSwHPOYPRPeHnMM+ScKaxZ65jauHYn+EG4o7cmA20HGZMg==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -5299,8 +5299,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /synckit@0.8.5:
-    resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
+  /synckit@0.8.6:
+    resolution: {integrity: sha512-laHF2savN6sMeHCjLRkheIU4wo3Zg9Ln5YOjOo7sZ5dVQW8yF5pPE5SIw1dsPhq3TRp1jisKRCdPhfs/1WMqDA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.4.2
@@ -5547,8 +5547,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.0-dev.20231223:
-    resolution: {integrity: sha512-KiQgKjVULApZ0PuXCMOuPNNO3Ty4amfJPjGpbcQoh9YlU2qmYgmyyIT7I7zMHkjCtn8R8DkrvM0Eue0fP9hzjw==}
+  /typescript@5.4.0-dev.20231224:
+    resolution: {integrity: sha512-FbcuMRM2iUkY4cxHsHAGWm40kQ2fwkqmLNciqrzfBMEnuLN88t3iTEJhOAxJjVOl8LY58odFb0crTILOB/VtCw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
