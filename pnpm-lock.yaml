@@ -54,7 +54,7 @@ devDependencies:
     version: 5.3.8
   npm-check-updates:
     specifier: ^16
-    version: 16.14.12
+    version: 16.14.13
   prettier:
     specifier: ^3.2.4
     version: 3.2.4
@@ -1917,7 +1917,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.4.0-dev.20240124
+      typescript: 5.4.0-dev.20240125
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -4003,8 +4003,8 @@ packages:
       npm-normalize-package-bin: 3.0.1
     dev: true
 
-  /npm-check-updates@16.14.12:
-    resolution: {integrity: sha512-5FvqaDX8AqWWTDQFbBllgLwoRXTvzlqVIRSKl9Kg8bYZTfNwMnrp1Zlmb5e/ocf11UjPTc+ShBFjYQ7kg6FL0w==}
+  /npm-check-updates@16.14.13:
+    resolution: {integrity: sha512-vuRTJUoOElBDQ1Z5/UqqgNfExteSdrmwKNV6xuZtiyuKENFduYsy+IhDvCIC9fI1F+MD4zWtq9WCBwfOGfxy7Q==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -5548,8 +5548,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.0-dev.20240124:
-    resolution: {integrity: sha512-OAWV1z3s7OoZR1tKuVK8UokiDmv5J8EEjKJu7BtU7veEXBA9cLGQ6LEw4Jt83BidP8lWytDetVuOxmF/VtLQPg==}
+  /typescript@5.4.0-dev.20240125:
+    resolution: {integrity: sha512-/3h02nH68UOVG1hUqdAKxwHtV9JcTrxiODJCzWqJEkFmKWdVDnZ1NuGWl0KsgpXgdC4bYbEf5fIe3Or6lg91tA==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
