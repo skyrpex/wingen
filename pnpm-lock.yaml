@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.94.0
     version: 1.94.0
   jsii-docgen:
-    specifier: ^10.3.15
-    version: 10.3.15(jsii-rosetta@5.3.12)
+    specifier: ^10.3.16
+    version: 10.3.16(jsii-rosetta@5.3.12)
   jsii-pacmak:
     specifier: ^1.94.0
     version: 1.94.0
@@ -1927,7 +1927,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.4.0-dev.20240206
+      typescript: 5.4.0-dev.20240207
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3303,11 +3303,11 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.3.15(jsii-rosetta@5.3.12):
-    resolution: {integrity: sha512-mjaPmNhui2bPxt8l+UHugB0na87ratjMw+XlZdmcOTikuL2Zj/iCjiu57dlfs0BTCghq59umWbExsNXpQNxFNA==}
+  /jsii-docgen@10.3.16(jsii-rosetta@5.3.12):
+    resolution: {integrity: sha512-7FbgDK0+1KKYmLsLwfBWAKDt6qBwZNUNeWbijfODAKOwraoHS5aMdlfByFXQk5TwI7i1WdZqUB1Rkl3lUHGC9g==}
     hasBin: true
     peerDependencies:
-      jsii-rosetta: ~v1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0
+      jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0
     dependencies:
       '@jsii/spec': 1.94.0
       case: 1.6.3
@@ -5578,8 +5578,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.0-dev.20240206:
-    resolution: {integrity: sha512-8P1XYxDbG/AyGE5tB8+JpeiQfS5ye1BTvIVDZaHhoK9nJuCn4nkB0L66lvfwYB+46hA4rLo3vE3WkIToSYtqQA==}
+  /typescript@5.4.0-dev.20240207:
+    resolution: {integrity: sha512-BD7gF4QnjiTzOPqstgkgBxANkltT6VsZS6gFjXf7haPWTgrcebvCNQr1yGazb0o18RVtNXeHs6lDbXKqhJhiQQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
