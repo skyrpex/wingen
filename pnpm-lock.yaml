@@ -38,20 +38,20 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
   jsii:
-    specifier: ~5.3.21
-    version: 5.3.21
+    specifier: ~5.3.23
+    version: 5.3.23
   jsii-diff:
     specifier: ^1.94.0
     version: 1.94.0
   jsii-docgen:
     specifier: ^10.3.17
-    version: 10.3.17(jsii-rosetta@5.3.19)
+    version: 10.3.17(jsii-rosetta@5.3.21)
   jsii-pacmak:
     specifier: ^1.94.0
     version: 1.94.0
   jsii-rosetta:
-    specifier: ~5.3.19
-    version: 5.3.19
+    specifier: ~5.3.21
+    version: 5.3.21
   npm-check-updates:
     specifier: ^16
     version: 16.14.15
@@ -1927,7 +1927,7 @@ packages:
     dependencies:
       semver: 7.6.0
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240225
+      typescript: 5.5.0-dev.20240226
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3303,7 +3303,7 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.3.17(jsii-rosetta@5.3.19):
+  /jsii-docgen@10.3.17(jsii-rosetta@5.3.21):
     resolution: {integrity: sha512-EumD8CtEcs2O6m0nqXVxoVuiAqb/HSEBhEaLz9690iyItHyo8qfFo4e11qdv5i1lKdPSOgLcbgAl3EArp3cCKA==}
     hasBin: true
     peerDependencies:
@@ -3315,7 +3315,7 @@ packages:
       glob: 8.1.0
       glob-promise: 6.0.5(glob@8.1.0)
       jsii-reflect: 1.94.0
-      jsii-rosetta: 5.3.19
+      jsii-rosetta: 5.3.21
       semver: 7.6.0
       yargs: 16.2.0
     dev: true
@@ -3376,8 +3376,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-rosetta@5.3.19:
-    resolution: {integrity: sha512-+fQ62AbrgDDN7i6dC6JILVFFOppCABpnzS/eEtbGSMdSy5EF+5kfl61D3UJJEloG+an/WS3VwuiEu1POG1tVkA==}
+  /jsii-rosetta@5.3.21:
+    resolution: {integrity: sha512-xkq55t8UdRXuiphil6lxNlDggK2m5eNJ5bG/FgF+74A32EfDK/usLEZP6wC6zDeJJW3g4Ec3GABatnI0b5m72Q==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3387,7 +3387,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.0
       fast-glob: 3.3.2
-      jsii: 5.3.21
+      jsii: 5.3.23
       semver: 7.6.0
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -3420,8 +3420,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.3.21:
-    resolution: {integrity: sha512-P8ko6yoT0MaAThUhZjV1ZNuJ0NmyIQAfj+Rld2WfD0q8M49bMtkd3RoqjRJWwYBLPLeQYqI4VkHwRv8T6psCJA==}
+  /jsii@5.3.23:
+    resolution: {integrity: sha512-100e5Cu2IzP7Kp4mqDc+5skaov1NQZu004lwuhajZV0ywj7dCg7ygkP67qBh+ALXCpgPbm4oTsOKrrmp2dBjOA==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -5583,8 +5583,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240225:
-    resolution: {integrity: sha512-0Zcu9sgcrxHNKb2BiBo0wbMquDvFR7QT7yySgRtb5DlkdgzuVS+xQUL5stK48NHLb7GhHNqqVhJ3zDHgoT8SbQ==}
+  /typescript@5.5.0-dev.20240226:
+    resolution: {integrity: sha512-mLY9/pjzSCr7JLkMKHS3KQUKX+LPO9WWjiR+mRcWKcskSdMBZ0j1TPhk/zUyuBklOf3YX4orkvamNiZWZEK0CQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
