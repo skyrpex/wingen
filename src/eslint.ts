@@ -34,10 +34,12 @@ export class Eslint extends Component {
         plugins: ["@typescript-eslint", "import", "prettier"],
         parser: "@typescript-eslint/parser",
         parserOptions: {
+          project: true,
           ecmaVersion: "latest",
           sourceType: "module",
         },
         extends: [
+          "plugin:@typescript-eslint/recommended-requiring-type-checking",
           "plugin:import/typescript",
           "prettier",
           "plugin:prettier/recommended",
