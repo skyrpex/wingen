@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.95.0
     version: 1.95.0
   jsii-docgen:
-    specifier: ^10.3.22
-    version: 10.3.22(jsii-rosetta@5.3.27)
+    specifier: ^10.3.23
+    version: 10.3.23(jsii-rosetta@5.3.27)
   jsii-pacmak:
     specifier: ^1.95.0
     version: 1.95.0
@@ -54,7 +54,7 @@ devDependencies:
     version: 5.3.27
   npm-check-updates:
     specifier: ^16
-    version: 16.14.16
+    version: 16.14.17
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -1927,7 +1927,7 @@ packages:
     dependencies:
       semver: 7.6.0
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240314
+      typescript: 5.5.0-dev.20240315
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3303,8 +3303,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.3.22(jsii-rosetta@5.3.27):
-    resolution: {integrity: sha512-OxrI2szCx9K4l25MZCW0U3Gm1/bqkO+sfQEvx/idaHYVIKMhs2Ko0JIDJCgI3L4XbEd/Zgb/XiJoZ3oCSst3HA==}
+  /jsii-docgen@10.3.23(jsii-rosetta@5.3.27):
+    resolution: {integrity: sha512-9nGXVqjTlX5G48jd34S7CivKpXJ57HOrY8GCjIceoTtmwCLmd/8RuT6XTdqi8dlOne6I/397MRzuM4Z+96DoLA==}
     hasBin: true
     peerDependencies:
       jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0
@@ -4018,8 +4018,8 @@ packages:
       npm-normalize-package-bin: 3.0.1
     dev: true
 
-  /npm-check-updates@16.14.16:
-    resolution: {integrity: sha512-li7FvwreCISh4UaZogTAnDgTknzqvIUsnjibNCNMKiPWOcsnF4mhQJ6+HW2JCKWuhDctZbMOv8wMQwwpNyXvIw==}
+  /npm-check-updates@16.14.17:
+    resolution: {integrity: sha512-ElnDdXKe60f8S6RhzFeaGuH2TFJmt2cU2HjLdowldabdm27nWFCxV2ebeP3xGbQkzp2+RPDQNdW9HqU1lcY8ag==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -5584,8 +5584,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240314:
-    resolution: {integrity: sha512-8yyAVbLSgGrydN7CZWeP+GZ5zkEBh45r0LswVPgxNDjBuDx9VuKtp+ws+Ri122iwfy8vGr5b486IjeeVM49Crw==}
+  /typescript@5.5.0-dev.20240315:
+    resolution: {integrity: sha512-unbI1s+RxosUsAsJZMLheuH4p87PMzm77BS2Rh4KNKuPFKEA9qhWbsUMNZ4zu8vCzJOv1KSgISMMBEx8A+ofWg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
