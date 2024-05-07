@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@types/node':
     specifier: ^18
-    version: 18.19.31
+    version: 18.19.32
   '@typescript-eslint/eslint-plugin':
     specifier: ^6
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -38,20 +38,20 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
   jsii:
-    specifier: ~5.4.10
-    version: 5.4.10
+    specifier: ~5.4.12
+    version: 5.4.12
   jsii-diff:
     specifier: ^1.98.0
     version: 1.98.0
   jsii-docgen:
-    specifier: ^10.4.4
-    version: 10.4.4(jsii-rosetta@5.4.11)
+    specifier: ^10.4.5
+    version: 10.4.5(jsii-rosetta@5.4.14)
   jsii-pacmak:
     specifier: ^1.98.0
-    version: 1.98.0(jsii-rosetta@5.4.11)
+    version: 1.98.0(jsii-rosetta@5.4.14)
   jsii-rosetta:
-    specifier: ~5.4.11
-    version: 5.4.11
+    specifier: ~5.4.14
+    version: 5.4.14
   npm-check-updates:
     specifier: ^16
     version: 16.14.20
@@ -66,7 +66,7 @@ devDependencies:
     version: 9.5.0
   ts-node:
     specifier: ^10.9.2
-    version: 10.9.2(@types/node@18.19.31)(typescript@5.4.5)
+    version: 10.9.2(@types/node@18.19.32)(typescript@5.4.5)
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -697,7 +697,7 @@ packages:
     resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.19.31
+      '@types/node': 18.19.32
     dev: true
 
   /@types/http-cache-semantics@4.0.3:
@@ -720,8 +720,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@18.19.31:
-    resolution: {integrity: sha512-ArgCD39YpyyrtFKIqMDvjz79jto5fcI/SVUs2HwB+f0dAzq68yqOdyaSivLiLugSziTpNXLQrVb7RZFmdZzbhA==}
+  /@types/node@18.19.32:
+    resolution: {integrity: sha512-2bkg93YBSDKk8DLmmHnmj/Rwr18TLx7/n+I23BigFwgexUJoMHZOd8X1OFxuF/W3NN0S2W2E5sVabI5CPinNvA==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1931,7 +1931,7 @@ packages:
     dependencies:
       semver: 7.6.0
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240505
+      typescript: 5.5.0-dev.20240506
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3307,8 +3307,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.4.4(jsii-rosetta@5.4.11):
-    resolution: {integrity: sha512-WsrY9xRlknfGwlTCu+DQWiADpO5H317YcL4kYubGuR6b+DA8AsSdrGG3T6Xr8RfkJ5GY6maJbk3q6HbQsqhpuQ==}
+  /jsii-docgen@10.4.5(jsii-rosetta@5.4.14):
+    resolution: {integrity: sha512-FkS/SCZ+vHwJ/oEIqfq7fMWSAsJrdrDCt1TbuXqXWIr3jglpysFqQnc2eXQK+VDUWkis4yZeqPc7c399OMAcow==}
     hasBin: true
     peerDependencies:
       jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0 || ~5.4.0
@@ -3319,12 +3319,12 @@ packages:
       glob: 8.1.0
       glob-promise: 6.0.5(glob@8.1.0)
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.11
+      jsii-rosetta: 5.4.14
       semver: 7.6.0
       yargs: 16.2.0
     dev: true
 
-  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.11):
+  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.14):
     resolution: {integrity: sha512-p2H8IbiI3RNIUg+oRcJ9Xu1I7CgJUxCMpUl5IPzWAjz1qzhIKOzlkaAMGJfJZJQtib5kWI2OmZ6xBZScWg16+Q==}
     engines: {node: '>= 14.17.0'}
     hasBin: true
@@ -3339,7 +3339,7 @@ packages:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.11
+      jsii-rosetta: 5.4.14
       semver: 7.6.0
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
@@ -3359,8 +3359,8 @@ packages:
       yargs: 16.2.0
     dev: true
 
-  /jsii-rosetta@5.4.11:
-    resolution: {integrity: sha512-Vc68yfecS9zCc9KURL5TOY9t8hXqkqL/AF7Vtg/EtA3TW2N39YFUkP0toHwXu8H3O6pzeDWswmyXhF0Tmxf9BQ==}
+  /jsii-rosetta@5.4.14:
+    resolution: {integrity: sha512-SIaqWpzk33Tqr+x4M4umt9Z9CSxcr6i48pN6aTe7nzT3ELmBABsWzHHpnoCDUlLzx5OG+PKMfVdxoh7z3TX0lQ==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3370,7 +3370,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.0
       fast-glob: 3.3.2
-      jsii: 5.4.10
+      jsii: 5.4.12
       semver: 7.6.0
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -3381,8 +3381,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.4.10:
-    resolution: {integrity: sha512-pzfKF/S9gXngQcLROHgB1WhNW0qXLwpSlx3UDXuOzLBr0rcycJT9sQXHL0tQ4mHuzV2qu60Xcfgtp2HLzZaXFA==}
+  /jsii@5.4.12:
+    resolution: {integrity: sha512-/6Mw+iSS8c/s1n2qH3TO1Bqd1YUY/aR0TZ2qTfOKN2UmmU4fwhZzSxrGRerPFQbhUm8v+8RS7kWEhSOv+eGQ9Q==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -5383,7 +5383,7 @@ packages:
       typescript: 5.4.5
     dev: true
 
-  /ts-node@10.9.2(@types/node@18.19.31)(typescript@5.4.5):
+  /ts-node@10.9.2(@types/node@18.19.32)(typescript@5.4.5):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -5402,7 +5402,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 18.19.31
+      '@types/node': 18.19.32
       acorn: 8.11.2
       acorn-walk: 8.3.0
       arg: 4.1.3
@@ -5534,8 +5534,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240505:
-    resolution: {integrity: sha512-pS7FxfKdWwZcCywfyjwwVAIV/Tb6YBAcVv63WJFhSf7RclqKUTwkGbvtii/VvHtfaW50/1LdYvHU0z+Xs3xTiQ==}
+  /typescript@5.5.0-dev.20240506:
+    resolution: {integrity: sha512-0lnovJfyTASSjJvryIfT3sYDXAv1n2R0vujhtdXQiAxA+PRpCOTk7UqslELD6wl7t3s9hH5UI/+p5aPeSpmbYw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
@@ -5663,7 +5663,7 @@ packages:
       builtins: 5.0.1
     dev: true
 
-  /vite-node@0.34.6(@types/node@18.19.31):
+  /vite-node@0.34.6(@types/node@18.19.32):
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -5673,7 +5673,7 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.5.0(@types/node@18.19.31)
+      vite: 4.5.0(@types/node@18.19.32)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5685,7 +5685,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.5.0(@types/node@18.19.31):
+  /vite@4.5.0(@types/node@18.19.32):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5713,7 +5713,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.19.31
+      '@types/node': 18.19.32
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -5754,7 +5754,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.9
       '@types/chai-subset': 1.3.4
-      '@types/node': 18.19.31
+      '@types/node': 18.19.32
       '@vitest/expect': 0.34.6
       '@vitest/runner': 0.34.6
       '@vitest/snapshot': 0.34.6
@@ -5773,8 +5773,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.7.0
-      vite: 4.5.0(@types/node@18.19.31)
-      vite-node: 0.34.6(@types/node@18.19.31)
+      vite: 4.5.0(@types/node@18.19.32)
+      vite-node: 0.34.6(@types/node@18.19.32)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
