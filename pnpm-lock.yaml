@@ -38,20 +38,20 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
   jsii:
-    specifier: ~5.4.12
-    version: 5.4.12
+    specifier: ~5.4.13
+    version: 5.4.13
   jsii-diff:
     specifier: ^1.98.0
     version: 1.98.0
   jsii-docgen:
     specifier: ^10.4.8
-    version: 10.4.8(jsii-rosetta@5.4.14)
+    version: 10.4.8(jsii-rosetta@5.4.15)
   jsii-pacmak:
     specifier: ^1.98.0
-    version: 1.98.0(jsii-rosetta@5.4.14)
+    version: 1.98.0(jsii-rosetta@5.4.15)
   jsii-rosetta:
-    specifier: ~5.4.14
-    version: 5.4.14
+    specifier: ~5.4.15
+    version: 5.4.15
   npm-check-updates:
     specifier: ^16
     version: 16.14.20
@@ -1929,9 +1929,9 @@ packages:
     resolution: {integrity: sha512-vo835pntK7kzYStk7xUHDifiYJvXxVhUapt85uk2AI94gUUAQX9HNRtrcMHNSc3YHJUEHGbYIGsM99uIbgAtxw==}
     hasBin: true
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240511
+      typescript: 5.5.0-dev.20240512
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3307,7 +3307,7 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.4.8(jsii-rosetta@5.4.14):
+  /jsii-docgen@10.4.8(jsii-rosetta@5.4.15):
     resolution: {integrity: sha512-Uv3RjepWDFD7+34I6B2UPX6CYoVn9VS9sOzLBZA/PmE8avpn7g1CFORs5BumtedZqM3QLrwOJgrBmow1do/r9w==}
     hasBin: true
     peerDependencies:
@@ -3319,12 +3319,12 @@ packages:
       glob: 8.1.0
       glob-promise: 6.0.5(glob@8.1.0)
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.14
+      jsii-rosetta: 5.4.15
       semver: 7.6.2
       yargs: 16.2.0
     dev: true
 
-  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.14):
+  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.15):
     resolution: {integrity: sha512-p2H8IbiI3RNIUg+oRcJ9Xu1I7CgJUxCMpUl5IPzWAjz1qzhIKOzlkaAMGJfJZJQtib5kWI2OmZ6xBZScWg16+Q==}
     engines: {node: '>= 14.17.0'}
     hasBin: true
@@ -3339,7 +3339,7 @@ packages:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.14
+      jsii-rosetta: 5.4.15
       semver: 7.6.0
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
@@ -3359,8 +3359,8 @@ packages:
       yargs: 16.2.0
     dev: true
 
-  /jsii-rosetta@5.4.14:
-    resolution: {integrity: sha512-SIaqWpzk33Tqr+x4M4umt9Z9CSxcr6i48pN6aTe7nzT3ELmBABsWzHHpnoCDUlLzx5OG+PKMfVdxoh7z3TX0lQ==}
+  /jsii-rosetta@5.4.15:
+    resolution: {integrity: sha512-oGU468mHP1Z6KMGyV57xc5eMLSyl/UOGtohBekM3xY9t1KUtyttfVupqcUvPedEDSCBvx0uxqSf/LrDOeZ4d9g==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3370,8 +3370,8 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.0
       fast-glob: 3.3.2
-      jsii: 5.4.12
-      semver: 7.6.0
+      jsii: 5.4.13
+      semver: 7.6.2
       semver-intersect: 1.5.0
       stream-json: 1.8.0
       typescript: 5.4.5
@@ -3381,8 +3381,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.4.12:
-    resolution: {integrity: sha512-/6Mw+iSS8c/s1n2qH3TO1Bqd1YUY/aR0TZ2qTfOKN2UmmU4fwhZzSxrGRerPFQbhUm8v+8RS7kWEhSOv+eGQ9Q==}
+  /jsii@5.4.13:
+    resolution: {integrity: sha512-ns3w6In/QHuv614h1BD/TxWfrveL7hgVTtjaXlCpnaDM1y2eeSBS8nEhvBU/M1pyCPltVIHMGgX5DG917nebhw==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3393,7 +3393,7 @@ packages:
       downlevel-dts: 0.11.0
       fast-deep-equal: 3.1.3
       log4js: 6.9.1
-      semver: 7.6.0
+      semver: 7.6.2
       semver-intersect: 1.5.0
       sort-json: 2.0.1
       spdx-license-list: 6.9.0
@@ -5540,8 +5540,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240511:
-    resolution: {integrity: sha512-HnoXTTVxfe1mVRdcrnw+747CMVQyF4RzrDeDkSKc+e99TE6OqEBXcrorAwwPqvlVFfgSiD34O6XkIcFBH0WJFw==}
+  /typescript@5.5.0-dev.20240512:
+    resolution: {integrity: sha512-qaBthiey39OUkoC0p3r83WKUG4KEvgTJg968MxJ548G6lYhpsFhp1Qryxrf32BonZwzfVi46Ltb9maSHVceLMg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
