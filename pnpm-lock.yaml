@@ -38,20 +38,20 @@ devDependencies:
     specifier: ^5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
   jsii:
-    specifier: ~5.4.16
-    version: 5.4.16
+    specifier: ~5.4.18
+    version: 5.4.18
   jsii-diff:
     specifier: ^1.98.0
     version: 1.98.0
   jsii-docgen:
     specifier: ^10.4.9
-    version: 10.4.9(jsii-rosetta@5.4.17)
+    version: 10.4.9(jsii-rosetta@5.4.19)
   jsii-pacmak:
     specifier: ^1.98.0
-    version: 1.98.0(jsii-rosetta@5.4.17)
+    version: 1.98.0(jsii-rosetta@5.4.19)
   jsii-rosetta:
-    specifier: ~5.4.17
-    version: 5.4.17
+    specifier: ~5.4.19
+    version: 5.4.19
   npm-check-updates:
     specifier: ^16
     version: 16.14.20
@@ -1041,6 +1041,7 @@ packages:
   /are-we-there-yet@3.0.1:
     resolution: {integrity: sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
     dependencies:
       delegates: 1.0.0
       readable-stream: 3.6.2
@@ -1931,7 +1932,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240519
+      typescript: 5.5.0-dev.20240520
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -2571,6 +2572,7 @@ packages:
   /gauge@4.0.4:
     resolution: {integrity: sha512-f9m+BEN5jkg6a0fZjleidjN51VE1X+mPFQ2DJ0uv1V39oCLCbsGe6yjbBnp7eK7z/+GAon99a3nHuqbuuthyPg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
     dependencies:
       aproba: 2.0.0
       color-support: 1.1.3
@@ -3307,7 +3309,7 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.4.9(jsii-rosetta@5.4.17):
+  /jsii-docgen@10.4.9(jsii-rosetta@5.4.19):
     resolution: {integrity: sha512-wyMW25pEhPEsIMMwFO6GcRXKZbnDwgn5GKV/AlTLuTUKHbTSnWDzy6e0MU6U9zVgjt4frJl7vZDl/4UlIcptrg==}
     hasBin: true
     peerDependencies:
@@ -3319,12 +3321,12 @@ packages:
       glob: 8.1.0
       glob-promise: 6.0.5(glob@8.1.0)
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.17
+      jsii-rosetta: 5.4.19
       semver: 7.6.2
       yargs: 16.2.0
     dev: true
 
-  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.17):
+  /jsii-pacmak@1.98.0(jsii-rosetta@5.4.19):
     resolution: {integrity: sha512-p2H8IbiI3RNIUg+oRcJ9Xu1I7CgJUxCMpUl5IPzWAjz1qzhIKOzlkaAMGJfJZJQtib5kWI2OmZ6xBZScWg16+Q==}
     engines: {node: '>= 14.17.0'}
     hasBin: true
@@ -3339,7 +3341,7 @@ packages:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.98.0
-      jsii-rosetta: 5.4.17
+      jsii-rosetta: 5.4.19
       semver: 7.6.0
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
@@ -3359,8 +3361,8 @@ packages:
       yargs: 16.2.0
     dev: true
 
-  /jsii-rosetta@5.4.17:
-    resolution: {integrity: sha512-BFkL3y4IgOxBKVPk43OwCFgjiYwR05t41ZP9ZjQP9AZeeiCiP89NQ7Y7qrs8+A5z8RyEw6RuAtkHPke2oPtR2w==}
+  /jsii-rosetta@5.4.19:
+    resolution: {integrity: sha512-LEH/weiioP9vf4mWhqwfVSU1kRdWlC6d7In0D2HR9vNwENmzG9kx+Jy6WonUT9HsEos/RmqTxI35CRGHQ+R7Ag==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -3370,7 +3372,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.0
       fast-glob: 3.3.2
-      jsii: 5.4.16
+      jsii: 5.4.18
       semver: 7.6.2
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -3381,8 +3383,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.4.16:
-    resolution: {integrity: sha512-9+V1t9F0kraIeSq0Ojdf1nElDlrOgR5+KOSj31NgUdWLI6yVuf2aZVzx8mPW3oZK+IouOLiixNiMUkHtsuAdsw==}
+  /jsii@5.4.18:
+    resolution: {integrity: sha512-ocVGqfYmXk0SCKmygQt+OS9dfCnIMIdAfwqdyhwaY3AnNlRxN6d74Yg6Pz9GaB4zeE9skFBlOJLLtn2J+EKULQ==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -4093,6 +4095,7 @@ packages:
   /npmlog@6.0.2:
     resolution: {integrity: sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
     dependencies:
       are-we-there-yet: 3.0.1
       console-control-strings: 1.1.0
@@ -4607,6 +4610,7 @@ packages:
   /read-package-json@6.0.4:
     resolution: {integrity: sha512-AEtWXYfopBj2z5N5PbkAOeNHRPUg5q+Nen7QLxV8M2zJq1ym6/lCz3fYNTCXe19puu2d06jfHhrP7v/S2PtMMw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    deprecated: This package is no longer supported. Please use @npmcli/package-json instead.
     dependencies:
       glob: 10.3.10
       json-parse-even-better-errors: 3.0.0
@@ -5540,8 +5544,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240519:
-    resolution: {integrity: sha512-WCk836BrP8utieqEbEyKVh/4OkykqhDWO/NsjCp9g9Jm2YyK4yYI7MBOHvcDYZmo4x7e0i9/eLnu4Fcuzv/utw==}
+  /typescript@5.5.0-dev.20240520:
+    resolution: {integrity: sha512-9/N20cpApbCDGTYQ/iNsBV57Kzcu8sxEtsPs6tbup1/vKY76ZbrvruRVCed1NhHbqgIvsDIBvByJBKATA/4lgw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
