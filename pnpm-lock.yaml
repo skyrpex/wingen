@@ -1932,7 +1932,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240524
+      typescript: 5.5.0-dev.20240525
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -4778,6 +4778,7 @@ packages:
 
   /rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -5544,8 +5545,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240524:
-    resolution: {integrity: sha512-x37/rBPLFB451GxMIKP4oVm18+iMs34VzcbyoqDLHX8+TfGZdiTEIfZOi2p6nWJTV6jmd8qyIc6KnAR9tHWxsw==}
+  /typescript@5.5.0-dev.20240525:
+    resolution: {integrity: sha512-2Sf4a221Bf8unaxwurXf2QJKl4aXSnMHGl1h80eytV4Snelo84Pl14FE8WPvZCmWPWy8ZbT8m5jO/8rriR3f9Q==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
