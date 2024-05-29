@@ -1932,7 +1932,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240527
+      typescript: 5.5.0-dev.20240528
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -5548,8 +5548,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.5.0-dev.20240527:
-    resolution: {integrity: sha512-v/CrVgSolgsHvUo7FgaaqYlxX9ZGr0ma12mUnjPYZ6Wimhj95iYrhdEbN2mVPBODRDyvF10/o22eTVBXZPMiqg==}
+  /typescript@5.5.0-dev.20240528:
+    resolution: {integrity: sha512-lF9CgEwbCTMnq59hkXeSQOzUmqSxkhlTk5DuPKenvpyEVd7r1uH8q8EAgPaKhp5SO5m764uWJvE4MpvyXDKuJw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
