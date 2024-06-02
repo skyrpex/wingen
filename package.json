@@ -49,7 +49,7 @@
     "jsii-pacmak": "^1.98.0",
     "jsii-rosetta": "~5.4.20",
     "npm-check-updates": "^16",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.0",
     "projen": "0.76.29",
     "standard-version": "^9",
     "ts-node": "^10.9.2",
