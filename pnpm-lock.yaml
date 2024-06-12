@@ -36,10 +36,10 @@ devDependencies:
     version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
   eslint-plugin-prettier:
     specifier: ^5.1.3
-    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.1)
+    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.2)
   jsii:
-    specifier: ~5.4.20
-    version: 5.4.20
+    specifier: ~5.4.21
+    version: 5.4.21
   jsii-diff:
     specifier: ^1.99.0
     version: 1.99.0
@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^16
     version: 16.14.20
   prettier:
-    specifier: ^3.3.1
-    version: 3.3.1
+    specifier: ^3.3.2
+    version: 3.3.2
   projen:
     specifier: 0.76.29
     version: 0.76.29(constructs@10.3.0)
@@ -1948,7 +1948,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240610
+      typescript: 5.6.0-dev.20240611
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -2225,7 +2225,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.1):
+  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.2):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2241,7 +2241,7 @@ packages:
     dependencies:
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
-      prettier: 3.3.1
+      prettier: 3.3.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.6
     dev: true
@@ -3391,7 +3391,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.0
       fast-glob: 3.3.2
-      jsii: 5.4.20
+      jsii: 5.4.21
       semver: 7.6.2
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -3402,13 +3402,13 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.4.20:
-    resolution: {integrity: sha512-kZoopDv3Gy6wKOt6aYzPhMvEErOAnQXoeUjd3sGAODey/mUVJRvXoScYVvmmtVgKqt+120OFPhVRWzgefwio+g==}
+  /jsii@5.4.21:
+    resolution: {integrity: sha512-uCruIDzEEFHBwZRT5PiRSd2/KdsZWwHq8VWS5o8p5tngUGpz4BYdEG/jmOKYyjVz+ScVx+Ur/eN2zieTP6Ge2Q==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
-      '@jsii/check-node': 1.98.0
-      '@jsii/spec': 1.98.0
+      '@jsii/check-node': 1.99.0
+      '@jsii/spec': 1.99.0
       case: 1.6.3
       chalk: 4.1.2
       downlevel-dts: 0.11.0
@@ -4467,8 +4467,8 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier@3.3.1:
-    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
+  /prettier@3.3.2:
+    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -4577,6 +4577,10 @@ packages:
   /q@1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
     dev: true
 
   /queue-microtask@1.2.3:
@@ -5560,8 +5564,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.6.0-dev.20240610:
-    resolution: {integrity: sha512-YlcBmkI7yH/aQuG6QecaKSxJkRkWNNSMsveWtsZhR0BhoI5YwrVZrjp0gj2zi0e+BUZ8q2j3T0n7OgWBZuRwJQ==}
+  /typescript@5.6.0-dev.20240611:
+    resolution: {integrity: sha512-++hW2N7TUgGGnZpBmMth4rllhssaj9MPUO5KBRr0qrVZcTlwHJrweKfMZP4X6g/0PiCssvXuEgBxhE6fuVZm7g==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
