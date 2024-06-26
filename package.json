@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "constructs": "^10.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
@@ -48,7 +48,6 @@
     "jsii-docgen": "^10.4.16",
     "jsii-pacmak": "^1.100.0",
     "jsii-rosetta": "~5.4.23",
-    "npm-check-updates": "^16",
     "prettier": "^3.3.2",
     "projen": "0.82.8",
     "standard-version": "^9",
@@ -76,9 +75,10 @@
   },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,
@@ -108,11 +108,13 @@
         }
       ]
     ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.dev.json"
-      }
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.dev.json"
+        }
+      ]
     }
   },
   "types": "lib/index.d.ts",
