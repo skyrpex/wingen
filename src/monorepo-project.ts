@@ -60,9 +60,9 @@ export class MonorepoProject extends Project {
       },
     });
 
-    this.addDeps("turbo");
+    this.addDeps("turbo@^2");
     new Turbo(this, {
-      pipeline: {
+      tasks: {
         dev: {
           persistent: true,
           cache: false,
