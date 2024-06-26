@@ -1,5 +1,7 @@
 import { cdk, github, javascript } from "projen";
 
+const projenVersion = "0.82.8";
+
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
   author: "Cristian Pallarés",
@@ -11,8 +13,8 @@ const project = new cdk.JsiiProject({
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion: "8",
   projenrcTs: true,
-  peerDeps: ["projen@^0.76.29"],
-  devDeps: ["projen@^0.76.29"],
+  peerDeps: [`projen@^${projenVersion}`],
+  devDeps: [`projen@^${projenVersion}`],
   bundledDeps: ["case"],
   prettier: true,
   autoMerge: false,
@@ -21,7 +23,7 @@ const project = new cdk.JsiiProject({
   },
   minNodeVersion: "18.17.1",
   jsiiVersion: "*",
-  // projenVersion: "^0.76.29",
+  projenVersion: `^${projenVersion}`,
 });
 
 project.addDevDeps("vitest");
