@@ -13,6 +13,7 @@ export class Eslint extends Component {
 
     project.lintTask.exec("eslint --fix --ext .ts,.tsx .");
     project.addDevDeps(
+      "eslint@^8",
       "@cloudy-ts/eslint-plugin",
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint/parser",
