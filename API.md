@@ -6212,7 +6212,7 @@ const turboProps: TurboProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.TurboProps.property.globalEnv">globalEnv</a></code> | <code>string[]</code> | A list of environment variables for implicit global hash dependencies. |
-| <code><a href="#@skyrpex/wingen.TurboProps.property.pipeline">pipeline</a></code> | <code>{[ key: string ]: <a href="#@skyrpex/wingen.TurboWorkspaceProps">TurboWorkspaceProps</a>}</code> | An object representing the task dependency graph of your project. |
+| <code><a href="#@skyrpex/wingen.TurboProps.property.tasks">tasks</a></code> | <code>{[ key: string ]: <a href="#@skyrpex/wingen.TurboWorkspaceProps">TurboWorkspaceProps</a>}</code> | An object representing the task dependency graph of your project. |
 
 ---
 
@@ -6232,10 +6232,10 @@ Documentation: https://turbo.build/repo/docs/reference/configuration#globalenv
 
 ---
 
-##### `pipeline`<sup>Optional</sup> <a name="pipeline" id="@skyrpex/wingen.TurboProps.property.pipeline"></a>
+##### `tasks`<sup>Optional</sup> <a name="tasks" id="@skyrpex/wingen.TurboProps.property.tasks"></a>
 
 ```typescript
-public readonly pipeline: {[ key: string ]: TurboWorkspaceProps};
+public readonly tasks: {[ key: string ]: TurboWorkspaceProps};
 ```
 
 - *Type:* {[ key: string ]: <a href="#@skyrpex/wingen.TurboWorkspaceProps">TurboWorkspaceProps</a>}
@@ -6244,7 +6244,7 @@ An object representing the task dependency graph of your project.
 
 turbo interprets these conventions to schedule, execute, and cache the outputs of tasks in your project.
 
-Documentation: https://turbo.build/repo/docs/reference/configuration#pipeline
+Documentation: https://turbo.build/repo/docs/reference/configuration#tasks
 
 ---
 

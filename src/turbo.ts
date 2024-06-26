@@ -74,9 +74,9 @@ export interface TurboProps {
   /**
    * An object representing the task dependency graph of your project. turbo interprets these conventions to schedule, execute, and cache the outputs of tasks in your project.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#pipeline
+   * Documentation: https://turbo.build/repo/docs/reference/configuration#tasks
    */
-  readonly pipeline?: Record<string, TurboWorkspaceProps>;
+  readonly tasks?: Record<string, TurboWorkspaceProps>;
 }
 
 export class Turbo extends Component {
@@ -86,7 +86,7 @@ export class Turbo extends Component {
     new JsonFile(project, "turbo.json", {
       marker: false,
       obj: {
-        $schema: "https://turborepo.org/schema.json",
+        $schema: "https://turbo.build/schema.json",
         extends: project.parent ? ["//"] : undefined,
         ...props,
       },
