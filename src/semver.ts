@@ -12,7 +12,7 @@ const regExp = /^(.+?)(?:@(.+))?$/;
  * parseDesiredSemver("file:../my-package") // ["@org/package", "file:../my-package"]
  */
 export const parseDesiredSemver = (
-  dependency: string
+  dependency: string,
 ): [string, string | undefined] => {
   if (dependency.startsWith("file:") || dependency.startsWith(".")) {
     const name = execSync(`pnpm view ${dependency} name`, {

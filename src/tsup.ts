@@ -39,7 +39,7 @@ export class Tsup extends Component {
         `export default defineConfig(${JSON.stringify(
           options ?? defaultOptions,
           undefined,
-          2
+          2,
         )});`,
         "",
       ],

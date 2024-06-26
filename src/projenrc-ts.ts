@@ -82,16 +82,16 @@ export class ProjenrcTs extends ProjenrcFile {
 
     const lines = new Array<string>();
     lines.push(
-      'import { MonorepoProject, TypescriptProject } from "@skyrpex/wingen";'
+      'import { MonorepoProject, TypescriptProject } from "@skyrpex/wingen";',
     );
     lines.push("");
     lines.push(`const monorepo = new MonorepoProject(${renderedOptions});`);
     lines.push("");
     lines.push(
-      '// const lib = new TypescriptProject({ parent: monorepo, name: "@my/lib" });'
+      '// const lib = new TypescriptProject({ monorepo, name: "@my/lib" });',
     );
     lines.push(
-      '// const app = new TypescriptProject({ parent: monorepo, name: "@my/app", deps: [lib.name] });'
+      '// const app = new TypescriptProject({ monorepo, name: "@my/app", deps: [lib.name] });',
     );
     lines.push("");
     lines.push("monorepo.synth();");
@@ -99,7 +99,7 @@ export class ProjenrcTs extends ProjenrcFile {
 
     writeFileSync(rcfile, lines.join("\n"));
     this.project.logger.info(
-      `Project definition file was created at ${rcfile}`
+      `Project definition file was created at ${rcfile}`,
     );
   }
 }

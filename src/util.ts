@@ -34,7 +34,7 @@ export function getFilePermissions(options: WriteFileOptions): string {
 export function writeFile(
   filePath: string,
   data: any,
-  options: WriteFileOptions = {}
+  options: WriteFileOptions = {},
 ) {
   if (existsSync(filePath)) {
     chmodSync(filePath, "600");
@@ -64,7 +64,7 @@ export function sorted<T>(x: T) {
     }
     const result: Record<string, unknown> = {};
     for (const [key, value] of Object.entries(x).sort(([l], [r]) =>
-      l.localeCompare(r)
+      l.localeCompare(r),
     )) {
       result[key] = value;
     }
