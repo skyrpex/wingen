@@ -6,6 +6,6 @@ export class Vitest extends Component {
     super(project);
 
     project.addDevDeps("vitest");
-    project.addScript("test", "vitest run");
+    project.addScript("test", "vitest run --passWithNoTests");
   }
 }
