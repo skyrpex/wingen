@@ -48,6 +48,18 @@ export class Eslint extends Component {
           "plugin:@cloudy-ts/recommended",
         ],
         rules: {
+          "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+              args: "all",
+              argsIgnorePattern: "^_",
+              caughtErrors: "all",
+              caughtErrorsIgnorePattern: "^_",
+              destructuredArrayIgnorePattern: "^_",
+              varsIgnorePattern: "^_",
+              ignoreRestSiblings: true,
+            },
+          ],
           "unicorn/prevent-abbreviations": ["off"],
           // "unicorn/prevent-abbreviations": [
           //   "error",
