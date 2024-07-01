@@ -4268,6 +4268,7 @@ new TypescriptConfig(project: Project, options?: TypescriptConfigOptions)
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
+| <code><a href="#@skyrpex/wingen.TypescriptConfig.addInclude">addInclude</a></code> | *No description.* |
 
 ---
 
@@ -4304,6 +4305,18 @@ public synthesize(): void
 ```
 
 Synthesizes files to the project output directory.
+
+##### `addInclude` <a name="addInclude" id="@skyrpex/wingen.TypescriptConfig.addInclude"></a>
+
+```typescript
+public addInclude(include: string): void
+```
+
+###### `include`<sup>Required</sup> <a name="include" id="@skyrpex/wingen.TypescriptConfig.addInclude.parameter.include"></a>
+
+- *Type:* string
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -5377,6 +5390,162 @@ The tree node.
 ---
 
 ##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.Vitest.property.project"></a>
+
+```typescript
+public readonly project: Project;
+```
+
+- *Type:* projen.Project
+
+---
+
+
+### VitestWorkspace <a name="VitestWorkspace" id="@skyrpex/wingen.VitestWorkspace"></a>
+
+#### Initializers <a name="Initializers" id="@skyrpex/wingen.VitestWorkspace.Initializer"></a>
+
+```typescript
+import { VitestWorkspace } from '@skyrpex/wingen'
+
+new VitestWorkspace(monorepo: MonorepoProject)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.Initializer.parameter.monorepo">monorepo</a></code> | <code><a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a></code> | *No description.* |
+
+---
+
+##### `monorepo`<sup>Required</sup> <a name="monorepo" id="@skyrpex/wingen.VitestWorkspace.Initializer.parameter.monorepo"></a>
+
+- *Type:* <a href="#@skyrpex/wingen.MonorepoProject">MonorepoProject</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
+
+---
+
+##### `toString` <a name="toString" id="@skyrpex/wingen.VitestWorkspace.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.VitestWorkspace.postSynthesize"></a>
+
+```typescript
+public postSynthesize(): void
+```
+
+Called after synthesis.
+
+Order is *not* guaranteed.
+
+##### `preSynthesize` <a name="preSynthesize" id="@skyrpex/wingen.VitestWorkspace.preSynthesize"></a>
+
+```typescript
+public preSynthesize(): void
+```
+
+Called before synthesis.
+
+##### `synthesize` <a name="synthesize" id="@skyrpex/wingen.VitestWorkspace.synthesize"></a>
+
+```typescript
+public synthesize(): void
+```
+
+Synthesizes files to the project output directory.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.isComponent">isComponent</a></code> | Test whether the given construct is a component. |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="@skyrpex/wingen.VitestWorkspace.isConstruct"></a>
+
+```typescript
+import { VitestWorkspace } from '@skyrpex/wingen'
+
+VitestWorkspace.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="@skyrpex/wingen.VitestWorkspace.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isComponent` <a name="isComponent" id="@skyrpex/wingen.VitestWorkspace.isComponent"></a>
+
+```typescript
+import { VitestWorkspace } from '@skyrpex/wingen'
+
+VitestWorkspace.isComponent(x: any)
+```
+
+Test whether the given construct is a component.
+
+###### `x`<sup>Required</sup> <a name="x" id="@skyrpex/wingen.VitestWorkspace.isComponent.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.property.project">project</a></code> | <code>projen.Project</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@skyrpex/wingen.VitestWorkspace.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `project`<sup>Required</sup> <a name="project" id="@skyrpex/wingen.VitestWorkspace.property.project"></a>
 
 ```typescript
 public readonly project: Project;
