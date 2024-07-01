@@ -37,4 +37,8 @@ export class TypescriptConfig extends Component {
       },
     });
   }
+
+  public addInclude(include: string) {
+    this.include.push(include);
+  }
 }
