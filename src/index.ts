@@ -11,4 +11,5 @@ export * from "./tsup";
 export * from "./turbo";
 export * from "./typescript-config";
 export * from "./typescript-project";
+export * from "./vitest-workspace";
 export * from "./vitest";
