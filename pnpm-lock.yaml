@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^3.3.2
     version: 3.3.2
   projen:
-    specifier: 0.82.8
-    version: 0.82.8(constructs@10.3.0)
+    specifier: 0.83.1
+    version: 0.83.1(constructs@10.3.0)
   standard-version:
     specifier: ^9
     version: 9.5.0
@@ -322,6 +322,11 @@ packages:
 
   /@eslint-community/regexpp@4.10.1:
     resolution: {integrity: sha512-Zm2NGpWELsQAD1xsJzGQpYfvICSsFkEpU0jxBjfdC6uNEWXcHnfs9hScFWtXVDVl+rBQJGrl4g1vcKIejpH9dA==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+    dev: true
+
+  /@eslint-community/regexpp@4.11.0:
+    resolution: {integrity: sha512-G/M/tIiMrTAxEWRfLfQJMmGNX28IxBg4PBz8XqQhqUHLFI6TL2htpIB1iQCj144V5ee/JaKyT9/WZ0MGZWfA7A==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
@@ -619,7 +624,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@eslint-community/regexpp': 4.10.1
+      '@eslint-community/regexpp': 4.11.0
       '@typescript-eslint/parser': 7.15.0(eslint@8.57.0)(typescript@5.5.3)
       '@typescript-eslint/scope-manager': 7.15.0
       '@typescript-eslint/type-utils': 7.15.0(eslint@8.57.0)(typescript@5.5.3)
@@ -1522,7 +1527,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240703
+      typescript: 5.6.0-dev.20240704
     dev: true
 
   /emoji-regex@8.0.0:
@@ -3296,8 +3301,8 @@ packages:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
 
-  /projen@0.82.8(constructs@10.3.0):
-    resolution: {integrity: sha512-/YpYZf4g0/pck2tr34a4gpOveCV1xbCfdDT+H4Xq8qQzF0IbcDVsoV1kZXPcyzVWUyqHFT2/ORUeocV+Hka8tQ==}
+  /projen@0.83.1(constructs@10.3.0):
+    resolution: {integrity: sha512-agobaTIvfOxHllRa5pNHxFTRjH7Zxq2uus7FWQ0f+6OTLkH/hODtnV3LEA5pxVk5e0cYAD+ZZuS/mKKicAtkng==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     peerDependencies:
@@ -4055,8 +4060,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.6.0-dev.20240703:
-    resolution: {integrity: sha512-AAOGWtykhMpxB4l+5CwojT2aBVAszalz9guzYaZMavmKHWxm3HciR+cIcKqDgR22hR7fPBJHtOti7uFCo4mt4A==}
+  /typescript@5.6.0-dev.20240704:
+    resolution: {integrity: sha512-dQ7dYp9FShLdziOgRehsozaKrvgCjR0/LTtrGAUq3Ec/gx0Tf38wmd/lGyNREOqfNMJkQCbVBMMCATXdj0aa9g==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true

@@ -1,6 +1,6 @@
 import { cdk, github, javascript } from "projen";
 
-const projenVersion = "0.82.8";
+const projenVersion = "0.83.1";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",

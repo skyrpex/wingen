@@ -1,50 +1,56 @@
-import { Component, TextFile } from "projen";
+import { Component, JsonFile } from "projen";
 import { TypescriptProject } from "./typescript-project";
-
 export interface TsupOptions {
-  readonly entry: string | string[] | { [entryAlias: string]: string };
-  readonly outDir: string;
-  readonly format: ("cjs" | "esm" | "iife")[];
-  readonly target: string;
-  readonly dts: boolean;
-  readonly bundle: boolean;
-  readonly clean: boolean;
+  readonly define?: Record<string, string>;
 }
 
-const defaultOptions: TsupOptions = {
+interface TsupConfigOptions {
+  entry: string | string[] | { [entryAlias: string]: string };
+  outDir: string;
+  format: ("cjs" | "esm" | "iife")[];
+  target: string;
+  dts: boolean;
+  bundle: boolean;
+  clean: boolean;
+  define?: Record<string, string>;
+  treeshake: boolean;
+}
+
+const defaultOptions = {
   entry: ["src/**/*.ts"],
   outDir: "lib",
   format: ["esm"],
-  target: "node18",
+  target: "node20",
 
   dts: true,
   bundle: false,
   clean: true,
-};
+
+  treeshake: true,
+} satisfies TsupConfigOptions;
 
 export class Tsup extends Component {
+  private options: TsupConfigOptions;
+
   constructor(project: TypescriptProject, options?: TsupOptions) {
     super(project);
 
-    project.tsConfig.addInclude("tsup.config.ts");
+    this.options = {
+      ...defaultOptions,
+      ...options,
+    };
 
     project.addDevDeps("tsup");
     project.addGitIgnore("/lib");
-    project.addScript("dev", "tsup --watch");
-    // project.addScript("compile", "tsup");
+    project.devTask.exec("tsup --watch");
     project.compileTask.exec("tsup");
-    new TextFile(project, "tsup.config.ts", {
-      lines: [
-        "/* eslint-disable prettier/prettier */",
-        'import { defineConfig } from "tsup";',
-        "",
-        `export default defineConfig(${JSON.stringify(
-          options ?? defaultOptions,
-          undefined,
-          2,
-        )});`,
-        "",
-      ],
+
+    new JsonFile(project, "tsup.config.json", {
+      obj: () => this.options,
     });
+  }
+
+  public addDefine(define: Record<string, string>) {
+    this.options.define = { ...this.options.define, ...define };
   }
 }
