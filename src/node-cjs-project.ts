@@ -1,4 +1,4 @@
-import { SampleFile } from "projen";
+import { Project, SampleFile } from "projen";
 
 import { MonorepoProject } from "./monorepo-project";
 import { NodeProject } from "./node-project";
@@ -8,9 +8,9 @@ export interface NodeCjsProjectOptions {
   readonly description?: string;
   readonly outdir?: string;
   readonly monorepo: MonorepoProject;
-  readonly deps?: string[];
-  readonly devDeps?: string[];
-  readonly peerDeps?: string[];
+  readonly deps?: (string | Project)[];
+  readonly devDeps?: (string | Project)[];
+  readonly peerDeps?: (string | Project)[];
   readonly bundledDeps?: string[];
   // readonly eslint?: EslintOptions;
   readonly bin?: Record<string, string>;

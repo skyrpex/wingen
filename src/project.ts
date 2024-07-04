@@ -25,9 +25,9 @@ export interface ProjectOptions {
   readonly bin?: Record<string, string>;
   readonly outdir?: string;
   readonly parent?: ProjenProject;
-  readonly deps?: string[];
-  readonly devDeps?: string[];
-  readonly peerDeps?: string[];
+  readonly deps?: (string | ProjenProject)[];
+  readonly devDeps?: (string | ProjenProject)[];
+  readonly peerDeps?: (string | ProjenProject)[];
   readonly bundledDeps?: string[];
   readonly projenCommand?: string;
 }
@@ -49,9 +49,15 @@ export class Project extends ProjenProject {
     this.addGitIgnore("/.turbo");
 
     this.nodePackage = new NodePackage(this, {
-      deps: options.deps,
-      devDeps: options.devDeps,
-      peerDeps: options.peerDeps,
+      deps: options.deps?.map((dep) =>
+        dep instanceof ProjenProject ? dep.name : dep,
+      ),
+      devDeps: options.devDeps?.map((dep) =>
+        dep instanceof ProjenProject ? dep.name : dep,
+      ),
+      peerDeps: options.peerDeps?.map((dep) =>
+        dep instanceof ProjenProject ? dep.name : dep,
+      ),
       bundledDeps: options.bundledDeps,
       bin: options.bin,
     });
