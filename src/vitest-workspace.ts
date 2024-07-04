@@ -7,8 +7,8 @@ export class VitestWorkspace extends Component {
   constructor(monorepo: MonorepoProject) {
     super(monorepo);
 
-    monorepo.addDevDeps("vitest");
-    monorepo.testTask.reset("vitest run --passWithNoTests");
+    monorepo.addDevDeps("vitest", "@vitest/coverage-v8");
+    monorepo.testTask.exec("vitest run --passWithNoTests --coverage");
     new JsonFile(monorepo, "vitest.workspace.json", {
       obj: () =>
         monorepo.subprojects
