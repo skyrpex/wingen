@@ -54,6 +54,41 @@ const getPostInstallVersions = (
   return deps;
 };
 
+const removeLeadingPnpmExec = (command: string): string => {
+  if (command.startsWith("pnpm exec ")) {
+    return command.substring("pnpm exec ".length);
+  }
+  return command;
+};
+
+/**
+ * Returns a simplified version of a task, if possible.
+ */
+const simplifyTask = (task: Task): string | undefined => {
+  if (task.name.match(/^(compile|pre-compile|post-compile)/)) {
+    return;
+  }
+
+  if (task.condition) {
+    return;
+  }
+
+  if (task.steps.length !== 1) {
+    return;
+  }
+
+  const [step] = task.steps;
+
+  // If task step has other properties than exec different than undefined, continue.
+  for (const [key, value] of Object.entries(step)) {
+    if (key !== "exec" && value !== undefined) {
+      return;
+    }
+  }
+
+  return step.exec ? removeLeadingPnpmExec(step.exec) : undefined;
+};
+
 export interface NodePackageOptions {
   readonly deps?: string[];
   readonly devDeps?: string[];
@@ -127,8 +162,10 @@ export class NodePackage extends Component {
         const scripts: Record<string, string> = {
           ...this.scripts,
         };
-        for (const task of this.project.tasks.all) {
-          if (task.name === "install" || task.name === "install:ci") {
+        for (const task of this.project.tasks.all.sort((a, b) =>
+          a.name.localeCompare(b.name),
+        )) {
+          if (task.name.match(/^(install|install:ci|default|eject)$/)) {
             continue;
           }
 
@@ -136,7 +173,7 @@ export class NodePackage extends Component {
             continue;
           }
 
-          scripts[task.name] = `projen ${task.name}`;
+          scripts[task.name] = simplifyTask(task) ?? `projen ${task.name}`;
         }
         return scripts;
       },
