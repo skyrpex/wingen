@@ -4,14 +4,18 @@ import { MonorepoProject } from "./monorepo-project.js";
 import { Vitest } from "./vitest.js";
 
 export class VitestWorkspace extends Component {
+  static readonly TEST_EXEC = "vitest --passWithNoTests";
+  static readonly TEST_COVERAGE_EXEC =
+    'vitest run --passWithNoTests --coverage --coverage.exclude=.projenrc.ts --coverage.exclude="**/lib/**" --coverage.exclude="**/coverage/**"';
+
   constructor(monorepo: MonorepoProject) {
     super(monorepo);
 
     monorepo.addDevDeps("vitest", "@vitest/coverage-v8");
-    monorepo.testTask.exec("pnpm exec vitest --passWithNoTests");
+    monorepo.testTask.exec(`pnpm exec ${VitestWorkspace.TEST_EXEC}`);
 
     monorepo.addTask("test-coverage", {
-      exec: 'pnpm exec vitest run --passWithNoTests --coverage --coverage.exclude=.projenrc.ts --coverage.exclude="**/lib/**" --coverage.exclude="**/coverage/**"',
+      exec: `pnpm exec ${VitestWorkspace.TEST_COVERAGE_EXEC}`,
     });
 
     new JsonFile(monorepo, "vitest.workspace.json", {
