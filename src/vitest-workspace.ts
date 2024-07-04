@@ -8,7 +8,12 @@ export class VitestWorkspace extends Component {
     super(monorepo);
 
     monorepo.addDevDeps("vitest", "@vitest/coverage-v8");
-    monorepo.testTask.exec("vitest run --passWithNoTests --coverage");
+    monorepo.testTask.exec("pnpm exec vitest --passWithNoTests");
+
+    monorepo.addTask("test-coverage", {
+      exec: 'pnpm exec vitest run --passWithNoTests --coverage --coverage.exclude=.projenrc.ts --coverage.exclude="**/lib/**" --coverage.exclude="**/coverage/**"',
+    });
+
     new JsonFile(monorepo, "vitest.workspace.json", {
       obj: () =>
         monorepo.subprojects
@@ -16,7 +21,10 @@ export class VitestWorkspace extends Component {
             project.components.find((component) => component instanceof Vitest),
           )
           .filter((vitest): vitest is Vitest => vitest !== undefined)
-          .map((vitest) => path.relative(process.cwd(), vitest.project.outdir)),
+          .map(
+            (vitest) =>
+              `${path.relative(process.cwd(), vitest.project.outdir)}/vitest.config.ts`,
+          ),
     });
 
     monorepo.addGitIgnore("/coverage/");
