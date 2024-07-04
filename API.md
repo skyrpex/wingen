@@ -5581,6 +5581,34 @@ public readonly project: Project;
 
 ---
 
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.property.TEST_COVERAGE_EXEC">TEST_COVERAGE_EXEC</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.property.TEST_EXEC">TEST_EXEC</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `TEST_COVERAGE_EXEC`<sup>Required</sup> <a name="TEST_COVERAGE_EXEC" id="@skyrpex/wingen.VitestWorkspace.property.TEST_COVERAGE_EXEC"></a>
+
+```typescript
+public readonly TEST_COVERAGE_EXEC: string;
+```
+
+- *Type:* string
+
+---
+
+##### `TEST_EXEC`<sup>Required</sup> <a name="TEST_EXEC" id="@skyrpex/wingen.VitestWorkspace.property.TEST_EXEC"></a>
+
+```typescript
+public readonly TEST_EXEC: string;
+```
+
+- *Type:* string
+
+---
 
 ## Structs <a name="Structs" id="Structs"></a>
 
