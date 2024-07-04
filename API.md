@@ -3942,6 +3942,7 @@ new Tsup(project: TypescriptProject, options?: TsupOptions)
 | <code><a href="#@skyrpex/wingen.Tsup.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Tsup.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Tsup.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
+| <code><a href="#@skyrpex/wingen.Tsup.addDefine">addDefine</a></code> | *No description.* |
 
 ---
 
@@ -3978,6 +3979,18 @@ public synthesize(): void
 ```
 
 Synthesizes files to the project output directory.
+
+##### `addDefine` <a name="addDefine" id="@skyrpex/wingen.Tsup.addDefine"></a>
+
+```typescript
+public addDefine(define: {[ key: string ]: string}): void
+```
+
+###### `define`<sup>Required</sup> <a name="define" id="@skyrpex/wingen.Tsup.addDefine.parameter.define"></a>
+
+- *Type:* {[ key: string ]: string}
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -4269,6 +4282,7 @@ new TypescriptConfig(project: Project, options?: TypescriptConfigOptions)
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.addInclude">addInclude</a></code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptConfig.addTypes">addTypes</a></code> | *No description.* |
 
 ---
 
@@ -4313,6 +4327,18 @@ public addInclude(include: string): void
 ```
 
 ###### `include`<sup>Required</sup> <a name="include" id="@skyrpex/wingen.TypescriptConfig.addInclude.parameter.include"></a>
+
+- *Type:* string
+
+---
+
+##### `addTypes` <a name="addTypes" id="@skyrpex/wingen.TypescriptConfig.addTypes"></a>
+
+```typescript
+public addTypes(types: string): void
+```
+
+###### `types`<sup>Required</sup> <a name="types" id="@skyrpex/wingen.TypescriptConfig.addTypes.parameter.types"></a>
 
 - *Type:* string
 
@@ -5717,11 +5743,11 @@ const nodeCjsProjectOptions: NodeCjsProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.deps">deps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps">devDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 
 ---
 
@@ -5806,10 +5832,10 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string[];
+public readonly deps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -5826,10 +5852,10 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string[];
+public readonly devDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -5846,10 +5872,10 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string[];
+public readonly peerDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -5874,11 +5900,11 @@ const nodeEsmProjectOptions: NodeEsmProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
 | <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.deps">deps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.devDeps">devDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeEsmProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 
 ---
 
@@ -5963,10 +5989,10 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string[];
+public readonly deps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -5983,10 +6009,10 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string[];
+public readonly devDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6003,10 +6029,10 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string[];
+public readonly peerDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6103,13 +6129,13 @@ const nodeProjectOptions: NodeProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.deps">deps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.devDeps">devDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.exports">exports</a></code> | <code>string \| {[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.files">files</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.NodeProjectOptions.property.projenCommand">projenCommand</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -6195,10 +6221,10 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string[];
+public readonly deps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6215,10 +6241,10 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string[];
+public readonly devDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6255,10 +6281,10 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string[];
+public readonly peerDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6286,83 +6312,17 @@ const tsupOptions: TsupOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.bundle">bundle</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.clean">clean</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.dts">dts</a></code> | <code>boolean</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.entry">entry</a></code> | <code>string \| string[] \| {[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.format">format</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.outDir">outDir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TsupOptions.property.target">target</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TsupOptions.property.define">define</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 
 ---
 
-##### `bundle`<sup>Required</sup> <a name="bundle" id="@skyrpex/wingen.TsupOptions.property.bundle"></a>
+##### `define`<sup>Optional</sup> <a name="define" id="@skyrpex/wingen.TsupOptions.property.define"></a>
 
 ```typescript
-public readonly bundle: boolean;
+public readonly define: {[ key: string ]: string};
 ```
 
-- *Type:* boolean
-
----
-
-##### `clean`<sup>Required</sup> <a name="clean" id="@skyrpex/wingen.TsupOptions.property.clean"></a>
-
-```typescript
-public readonly clean: boolean;
-```
-
-- *Type:* boolean
-
----
-
-##### `dts`<sup>Required</sup> <a name="dts" id="@skyrpex/wingen.TsupOptions.property.dts"></a>
-
-```typescript
-public readonly dts: boolean;
-```
-
-- *Type:* boolean
-
----
-
-##### `entry`<sup>Required</sup> <a name="entry" id="@skyrpex/wingen.TsupOptions.property.entry"></a>
-
-```typescript
-public readonly entry: string | string[] | {[ key: string ]: string};
-```
-
-- *Type:* string | string[] | {[ key: string ]: string}
-
----
-
-##### `format`<sup>Required</sup> <a name="format" id="@skyrpex/wingen.TsupOptions.property.format"></a>
-
-```typescript
-public readonly format: string[];
-```
-
-- *Type:* string[]
-
----
-
-##### `outDir`<sup>Required</sup> <a name="outDir" id="@skyrpex/wingen.TsupOptions.property.outDir"></a>
-
-```typescript
-public readonly outDir: string;
-```
-
-- *Type:* string
-
----
-
-##### `target`<sup>Required</sup> <a name="target" id="@skyrpex/wingen.TsupOptions.property.target"></a>
-
-```typescript
-public readonly target: string;
-```
-
-- *Type:* string
+- *Type:* {[ key: string ]: string}
 
 ---
 
@@ -6570,6 +6530,7 @@ const typescriptConfigOptions: TypescriptConfigOptions = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.TypescriptConfigOptions.property.include">include</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptConfigOptions.property.types">types</a></code> | <code>string[]</code> | *No description.* |
 
 ---
 
@@ -6577,6 +6538,16 @@ const typescriptConfigOptions: TypescriptConfigOptions = { ... }
 
 ```typescript
 public readonly include: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `types`<sup>Optional</sup> <a name="types" id="@skyrpex/wingen.TypescriptConfigOptions.property.types"></a>
+
+```typescript
+public readonly types: string[];
 ```
 
 - *Type:* string[]
@@ -6604,11 +6575,11 @@ const typescriptProjectOptions: TypescriptProjectOptions = { ... }
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.authorOrganization">authorOrganization</a></code> | <code>boolean</code> | Whether the author is an organization. |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.bin">bin</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.bundledDeps">bundledDeps</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.deps">deps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.deps">deps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.description">description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.devDeps">devDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.devDeps">devDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps">peerDeps</a></code> | <code>string \| projen.Project[]</code> | *No description.* |
 | <code><a href="#@skyrpex/wingen.TypescriptProjectOptions.property.tsup">tsup</a></code> | <code><a href="#@skyrpex/wingen.TsupOptions">TsupOptions</a></code> | *No description.* |
 
 ---
@@ -6694,10 +6665,10 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.TypescriptProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string[];
+public readonly deps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6714,10 +6685,10 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string[];
+public readonly devDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 
@@ -6734,10 +6705,10 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string[];
+public readonly peerDeps: string | Project[];
 ```
 
-- *Type:* string[]
+- *Type:* string | projen.Project[]
 
 ---
 

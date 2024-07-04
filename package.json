@@ -49,14 +49,14 @@
     "jsii-pacmak": "^1.101.0",
     "jsii-rosetta": "~5.4.24",
     "prettier": "^3.3.2",
-    "projen": "0.82.8",
+    "projen": "0.83.1",
     "standard-version": "^9",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
-    "projen": "^0.82.8"
+    "projen": "^0.83.1"
   },
   "dependencies": {
     "case": "^1.6.3"

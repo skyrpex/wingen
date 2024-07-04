@@ -2,15 +2,19 @@ import { Component, JsonFile, Project } from "projen";
 
 export interface TypescriptConfigOptions {
   readonly include?: string[];
+  readonly types?: string[];
 }
 
 export class TypescriptConfig extends Component {
   private include: string[];
 
+  private types: string[] | undefined;
+
   constructor(project: Project, options?: TypescriptConfigOptions) {
     super(project);
 
     this.include = options?.include ?? [];
+    this.types = options?.types;
 
     new JsonFile(this.project, "tsconfig.json", {
       allowComments: true,
@@ -30,15 +34,18 @@ export class TypescriptConfig extends Component {
           noEmit: true,
           downlevelIteration: true,
           verbatimModuleSyntax: true,
+          types: () => this.types,
         },
-        include: () => {
-          return this.include;
-        },
+        include: () => this.include,
       },
     });
   }
 
   public addInclude(include: string) {
     this.include.push(include);
+  }
+
+  public addTypes(types: string) {
+    this.types = [...(this.types ?? []), types];
   }
 }
