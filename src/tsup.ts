@@ -26,6 +26,8 @@ export class Tsup extends Component {
   constructor(project: TypescriptProject, options?: TsupOptions) {
     super(project);
 
+    project.tsConfig.addInclude("tsup.config.ts");
+
     project.addDevDeps("tsup");
     project.addGitIgnore("/lib");
     project.addScript("dev", "tsup --watch");
