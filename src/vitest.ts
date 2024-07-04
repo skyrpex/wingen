@@ -8,7 +8,6 @@ export class Vitest extends Component {
     super(project);
 
     project.addDevDeps("vitest");
-    // project.addScript("test", "vitest run --passWithNoTests");
     project.testTask.exec("vitest run --passWithNoTests");
 
     const config = new SourceCode(project, "vitest.config.ts");
