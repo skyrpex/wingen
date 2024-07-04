@@ -1,5 +1,3 @@
-// import { License } from "projen";
-
 import { License } from "projen";
 import { MonorepoProject } from "./monorepo-project";
 import { Project, ProjectOptions } from "./project";
