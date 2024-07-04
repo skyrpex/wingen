@@ -17,13 +17,13 @@ interface TsupConfigOptions {
 }
 
 const defaultOptions = {
-  entry: ["src/**/*.ts"],
+  entry: ["src/index.ts"],
   outDir: "lib",
   format: ["esm"],
   target: "node20",
 
   dts: true,
-  bundle: false,
+  bundle: true,
   clean: true,
 
   treeshake: true,
