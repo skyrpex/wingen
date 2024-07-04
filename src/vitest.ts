@@ -1,7 +1,6 @@
 import { Component, SourceCode } from "projen";
 import { Tsup } from "./tsup.js";
 import { TypescriptProject } from "./typescript-project";
-// import { VitestWorkspace } from "./vitest-workspace.js";
 
 export class Vitest extends Component {
   constructor(project: TypescriptProject) {
