@@ -18,5 +18,7 @@ export class VitestWorkspace extends Component {
           .filter((vitest): vitest is Vitest => vitest !== undefined)
           .map((vitest) => path.relative(process.cwd(), vitest.project.outdir)),
     });
+
+    monorepo.addGitIgnore("/coverage/");
   }
 }
