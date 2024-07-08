@@ -40,7 +40,9 @@ export class Eslint extends Component {
           sourceType: "module",
         },
         extends: [
-          "plugin:@typescript-eslint/recommended-requiring-type-checking",
+          "plugin:@typescript-eslint/strict-type-checked",
+          "plugin:@typescript-eslint/stylistic-type-checked",
+          "plugin:import/recommended",
           "plugin:import/typescript",
           "prettier",
           "plugin:prettier/recommended",
