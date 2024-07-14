@@ -36,7 +36,7 @@ devDependencies:
     version: 2.29.1(@typescript-eslint/parser@7.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
   eslint-plugin-prettier:
     specifier: ^5.1.3
-    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.2)
+    version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.3)
   jsii:
     specifier: ~5.4.26
     version: 5.4.26
@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.101.0
     version: 1.101.0
   jsii-docgen:
-    specifier: ^10.4.17
-    version: 10.4.17(jsii-rosetta@5.4.25)
+    specifier: ^10.4.18
+    version: 10.4.18(jsii-rosetta@5.4.25)
   jsii-pacmak:
     specifier: ^1.101.0
     version: 1.101.0(jsii-rosetta@5.4.25)
@@ -53,8 +53,8 @@ devDependencies:
     specifier: ~5.4.25
     version: 5.4.25
   prettier:
-    specifier: ^3.3.2
-    version: 3.3.2
+    specifier: ^3.3.3
+    version: 3.3.3
   projen:
     specifier: 0.83.1
     version: 0.83.1(constructs@10.3.0)
@@ -1522,7 +1522,7 @@ packages:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240712
+      typescript: 5.6.0-dev.20240713
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1796,7 +1796,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.2):
+  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.3):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1812,7 +1812,7 @@ packages:
     dependencies:
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
-      prettier: 3.3.2
+      prettier: 3.3.3
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
     dev: true
@@ -2584,8 +2584,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.4.17(jsii-rosetta@5.4.25):
-    resolution: {integrity: sha512-wW/icqHbjif+sdoC3ZIvk4Mc5RehV93I/fT11onxWO6RgOOhab1qTybP+1u1JdtRbjTNC0LmdyBlHkxTUsXeKA==}
+  /jsii-docgen@10.4.18(jsii-rosetta@5.4.25):
+    resolution: {integrity: sha512-8AVPU+ryUgFDTpLmOqFN4yl/TAq1Ftq03cTDiFbnjwAeOQ7TrwPHfTfZq7Fd97OIMfm6IxryD/CgK65Nv89u0w==}
     hasBin: true
     peerDependencies:
       jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0 || ~5.4.0
@@ -3277,8 +3277,8 @@ packages:
       fast-diff: 1.3.0
     dev: true
 
-  /prettier@3.3.2:
-    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -4055,8 +4055,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.6.0-dev.20240712:
-    resolution: {integrity: sha512-8Iu/vFdWrjtqSm31Dcp4rFgybCNdjMJVZFoWF6PlzEYE6M6eiA+TeKGgygspCbnErrBRjHgWrEMdP3LavHtQ+w==}
+  /typescript@5.6.0-dev.20240713:
+    resolution: {integrity: sha512-J+4LjdEKAKO95oQ2Ff870vHVxa57ZMVSbfpyL0L5daYrnu48lQiMsXNDiG9IPT2RWF221Qt+LGxjug74XbeseQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
