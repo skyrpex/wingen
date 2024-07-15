@@ -26,6 +26,10 @@ const project = new cdk.JsiiProject({
   projenVersion: `^${projenVersion}`,
 });
 
+project.addFields({
+  packageManager: "pnpm@9.5.0",
+});
+
 project.addDevDeps("vitest");
 project.testTask.reset("vitest run");
 project.deps.removeDependency("ts-jest");
