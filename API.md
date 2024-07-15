@@ -6393,7 +6393,6 @@ const turboWorkspaceProps: TurboWorkspaceProps = { ... }
 | --- | --- | --- |
 | <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.cache">cache</a></code> | <code>boolean</code> | Whether or not to cache the outputs of the task. |
 | <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | The list of tasks that this task depends on. |
-| <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.dotEnv">dotEnv</a></code> | <code>string[]</code> | A priority-ordered (most-significant to least-significant) array of workspace-anchored Unix-style paths to `.env` files to include in the task hash. |
 | <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.env">env</a></code> | <code>string[]</code> | A list of environment variables that this task depends on. |
 | <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.inputs">inputs</a></code> | <code>string[]</code> | The set of glob patterns to consider as inputs to this task. |
 | <code><a href="#@skyrpex/wingen.TurboWorkspaceProps.property.outputs">outputs</a></code> | <code>string[]</code> | The set of glob patterns indicating a task's cacheable filesystem outputs. |
@@ -6432,20 +6431,6 @@ Prefixing an item in dependsOn with a ^ prefix tells turbo that this task depend
 Items in dependsOn without a ^ prefix express the relationships between tasks within the same package (e.g. "A package's test and lint commands depend on its own build being completed first.")
 
 Documentation: https://turbo.build/repo/docs/reference/configuration#dependson
-
----
-
-##### `dotEnv`<sup>Optional</sup> <a name="dotEnv" id="@skyrpex/wingen.TurboWorkspaceProps.property.dotEnv"></a>
-
-```typescript
-public readonly dotEnv: string[];
-```
-
-- *Type:* string[]
-
-A priority-ordered (most-significant to least-significant) array of workspace-anchored Unix-style paths to `.env` files to include in the task hash.
-
-Documentation: https://turbo.build/repo/docs/reference/configuration#dotEnv
 
 ---
 
