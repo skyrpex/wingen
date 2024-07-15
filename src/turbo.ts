@@ -52,13 +52,6 @@ export interface TurboWorkspaceProps {
    * Documentation: https://turbo.build/repo/docs/reference/configuration#env
    */
   readonly env?: string[];
-
-  /**
-   * A priority-ordered (most-significant to least-significant) array of workspace-anchored Unix-style paths to `.env` files to include in the task hash.
-   *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#dotEnv
-   */
-  readonly dotEnv?: string[];
 }
 
 export interface TurboProps {
