@@ -1534,7 +1534,7 @@ packages:
     dependencies:
       semver: 7.6.3
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240730
+      typescript: 5.6.0-dev.20240731
     dev: true
 
   /emoji-regex@8.0.0:
@@ -4077,8 +4077,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.6.0-dev.20240730:
-    resolution: {integrity: sha512-i0xbpbeqFm+j2FGOU9ghel5U2nK6FP9mKLbdvms41n1mIjh56sGdexxjHNUUCmQr1rHGZtChRhLkxDcHmj72EA==}
+  /typescript@5.6.0-dev.20240731:
+    resolution: {integrity: sha512-XNueWVxo4buZCEMor0GB/x7ZpzbPzowRNc42fznRinFzGipR+v+Dgelpd6cJvdkN7/TSFASN2M2jQxDeZnk95A==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
