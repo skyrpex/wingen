@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.3)
   jsii:
-    specifier: ~5.4.30
-    version: 5.4.30
+    specifier: ~5.4.31
+    version: 5.4.31
   jsii-diff:
     specifier: ^1.102.0
     version: 1.102.0
@@ -1533,7 +1533,7 @@ packages:
     dependencies:
       semver: 7.6.3
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240804
+      typescript: 5.6.0-dev.20240805
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2662,7 +2662,7 @@ packages:
       chalk: 4.1.2
       commonmark: 0.31.1
       fast-glob: 3.3.2
-      jsii: 5.4.30
+      jsii: 5.4.31
       semver: 7.6.3
       semver-intersect: 1.5.0
       stream-json: 1.8.0
@@ -2673,8 +2673,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.4.30:
-    resolution: {integrity: sha512-7B62Ld0fL5+n51/+G2RzzAnFihpDdXrBV9dPQc467Vq+jalgf1WgzA9jt17tJemtk5OeCgp0aMYlwwWqcW/Heg==}
+  /jsii@5.4.31:
+    resolution: {integrity: sha512-qxiV/NMucgvHHupZJ36QACejcgZ3qY1FzjVHMOBmDHm+dISZ39p7dH7Hiq2ErMEwCDzdvQgR1OwCsUnrBH6oVQ==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -4063,8 +4063,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.6.0-dev.20240804:
-    resolution: {integrity: sha512-ceiGncJ10hB9IgD3BxGc5e9Ug+4a/JVQKZFQR+ctQGzktWKH/vUZZNwg+PadUipPk/EH4WLFUc7infEUCNOtLQ==}
+  /typescript@5.6.0-dev.20240805:
+    resolution: {integrity: sha512-M+pWeLKA2huCTB2GLE0/0U/ezJh51Wdmm6J3BS1UxieKcnx1Kz2/NivXOnmCZY40gY6ItpMlLjnJIMXprNG9UQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
