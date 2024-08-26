@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.3)
   jsii:
-    specifier: ~5.5.0
-    version: 5.5.0
+    specifier: ~5.5.1
+    version: 5.5.1
   jsii-diff:
     specifier: ^1.102.0
     version: 1.102.0
@@ -1533,7 +1533,7 @@ packages:
     dependencies:
       semver: 7.6.3
       shelljs: 0.8.5
-      typescript: 5.7.0-dev.20240824
+      typescript: 5.7.0-dev.20240825
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2695,8 +2695,8 @@ packages:
       - supports-color
     dev: true
 
-  /jsii@5.5.0:
-    resolution: {integrity: sha512-Tp5juy2ESGOt3sUv0x3YIVggL5cYJnViqHCOTsjsK2KkBC2JDq3N0P5ncUzfWpZWH4l2GrpVXOYXD7F5TfnWxQ==}
+  /jsii@5.5.1:
+    resolution: {integrity: sha512-YEkXUyCLU97geGu0pv5l2gP1P1S0ZMvanYI4FKvmsSHCtNXV//jIBI0Q80yjdUi7k5XQL1ECs+m4+IZHAEb92w==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     dependencies:
@@ -4085,8 +4085,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.7.0-dev.20240824:
-    resolution: {integrity: sha512-aLD0C4cCh+o+FpXa74BnC95w0oFvBL/D7tHz03X6MzYtLCmfeI2zu2NMhqPxjPADcm/UUYSO+rTXXyjQVvbVwA==}
+  /typescript@5.7.0-dev.20240825:
+    resolution: {integrity: sha512-Jvp8aTJ4RVnO3WFg89Cc1TN6MHGGWifrVoOyQD3OwKfIYqXqvhD+8iUNHJAOJCgp3FtVY+qtxwuLiH6MQ3XpqQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
