@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^1.103.0
     version: 1.103.0
   jsii-docgen:
-    specifier: ^10.5.1
-    version: 10.5.1(jsii-rosetta@5.5.3)
+    specifier: ^10.5.2
+    version: 10.5.2(jsii-rosetta@5.5.3)
   jsii-pacmak:
     specifier: ^1.103.0
     version: 1.103.0(jsii-rosetta@5.5.3)
@@ -1553,7 +1553,7 @@ packages:
     dependencies:
       semver: 7.6.3
       shelljs: 0.8.5
-      typescript: 5.7.0-dev.20240828
+      typescript: 5.7.0-dev.20240829
     dev: true
 
   /emoji-regex@8.0.0:
@@ -2308,7 +2308,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.19.2
+      uglify-js: 3.19.3
     dev: true
 
   /hard-rejection@2.1.0:
@@ -2632,18 +2632,18 @@ packages:
       - supports-color
     dev: true
 
-  /jsii-docgen@10.5.1(jsii-rosetta@5.5.3):
-    resolution: {integrity: sha512-NTDejLbHOAMHvK7WZFSI8QMyPNZ0/fwsK9RW8Hdvb0KtZZ2ol54rIcE9Y+0J5KaNRdgYsoiHCMr04c48dnFGNA==}
+  /jsii-docgen@10.5.2(jsii-rosetta@5.5.3):
+    resolution: {integrity: sha512-1qDMCvd22f5WnQRYqfexvyA/60KLPdPl2YqY1P5kqzfU3ImyPRNKKe2/KZxGZb2h78SEkXyvdaJvIdDto2Z+IQ==}
     hasBin: true
     peerDependencies:
       jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0 || ~5.4.0 || ~5.5.0
     dependencies:
-      '@jsii/spec': 1.102.0
+      '@jsii/spec': 1.103.0
       case: 1.6.3
       fs-extra: 10.1.0
       glob: 8.1.0
       glob-promise: 6.0.7(glob@8.1.0)
-      jsii-reflect: 1.102.0
+      jsii-reflect: 1.103.0
       jsii-rosetta: 5.5.3
       semver: 7.6.3
       yargs: 16.2.0
@@ -2668,19 +2668,6 @@ packages:
       semver: 7.6.3
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
-      yargs: 16.2.0
-    dev: true
-
-  /jsii-reflect@1.102.0:
-    resolution: {integrity: sha512-Lf2l8z3HSRSyouFGpDddfheP2LznKvFDKVlUWEzO+jDnQFOJOYTv4x617Yy5JIeIa9D8f70drRelOqove6hZtQ==}
-    engines: {node: '>= 14.17.0'}
-    hasBin: true
-    dependencies:
-      '@jsii/check-node': 1.102.0
-      '@jsii/spec': 1.102.0
-      chalk: 4.1.2
-      fs-extra: 10.1.0
-      oo-ascii-tree: 1.102.0
       yargs: 16.2.0
     dev: true
 
@@ -3126,11 +3113,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       mimic-fn: 4.0.0
-    dev: true
-
-  /oo-ascii-tree@1.102.0:
-    resolution: {integrity: sha512-SNcZNfqtov0Af+6hx+qnliUhTOIxPUfboX/zQnc2EdmGHLXKQ3eSPQ40NopCgv4canzl5EvKGlCJaMCvk2viCQ==}
-    engines: {node: '>= 14.17.0'}
     dev: true
 
   /oo-ascii-tree@1.103.0:
@@ -4108,8 +4090,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.7.0-dev.20240828:
-    resolution: {integrity: sha512-ErCxPl/V/LAmiULX17il/1qONClDF5dKH3A7ltOVj6Rsj+fSSXYiimnDAZShs7iFfMpo87oWv97hjkX7sG1edg==}
+  /typescript@5.7.0-dev.20240829:
+    resolution: {integrity: sha512-F9kcFC/YWjYhecieA4GmXEu8IDrRtfONo3Pw61UZb9aQYDhbrfqpoz5ixfEt6O9rrSFvzdh1i0o1MRY2Bt/BLg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
@@ -4118,8 +4100,8 @@ packages:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
     dev: true
 
-  /uglify-js@3.19.2:
-    resolution: {integrity: sha512-S8KA6DDI47nQXJSi2ctQ629YzwOVs+bQML6DAtvy0wgNdpi+0ySpQK0g2pxBq2xfF2z3YCscu7NNA8nXT9PlIQ==}
+  /uglify-js@3.19.3:
+    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
