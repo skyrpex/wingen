@@ -1,6 +1,7 @@
 import { cdk, github, javascript } from "projen";
 
 const projenVersion = "0.83.1";
+const pnpmVersion = "9.10.0";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
@@ -11,7 +12,7 @@ const project = new cdk.JsiiProject({
   repositoryUrl: "https://github.com/skyrpex/wingen.git",
   npmAccess: javascript.NpmAccess.PUBLIC,
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion: "8",
+  pnpmVersion,
   projenrcTs: true,
   peerDeps: [`projen@^${projenVersion}`],
   devDeps: [`projen@^${projenVersion}`],
@@ -27,7 +28,7 @@ const project = new cdk.JsiiProject({
 });
 
 project.addFields({
-  packageManager: "pnpm@9.5.0",
+  packageManager: `pnpm@${pnpmVersion}`,
 });
 
 project.addDevDeps("vitest");
