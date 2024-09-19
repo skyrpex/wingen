@@ -374,7 +374,7 @@ Returns a string representation of this construct.
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.MonorepoProject.addExcludeFromCleanup"></a>
 
 ```typescript
-public addExcludeFromCleanup(globs: string): void
+public addExcludeFromCleanup(globs: ...string[]): void
 ```
 
 Exclude the matching files from pre-synth cleanup.
@@ -384,7 +384,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 ###### `globs`<sup>Required</sup> <a name="globs" id="@skyrpex/wingen.MonorepoProject.addExcludeFromCleanup.parameter.globs"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The glob patterns to match.
 
@@ -628,24 +628,24 @@ resolved from the root of _this_ project.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.MonorepoProject.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.MonorepoProject.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.MonorepoProject.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.MonorepoProject.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
@@ -1266,7 +1266,7 @@ Returns a string representation of this construct.
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeCjsProject.addExcludeFromCleanup"></a>
 
 ```typescript
-public addExcludeFromCleanup(globs: string): void
+public addExcludeFromCleanup(globs: ...string[]): void
 ```
 
 Exclude the matching files from pre-synth cleanup.
@@ -1276,7 +1276,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 ###### `globs`<sup>Required</sup> <a name="globs" id="@skyrpex/wingen.NodeCjsProject.addExcludeFromCleanup.parameter.globs"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The glob patterns to match.
 
@@ -1520,24 +1520,24 @@ resolved from the root of _this_ project.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.NodeCjsProject.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.NodeCjsProject.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.NodeCjsProject.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.NodeCjsProject.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
@@ -2092,7 +2092,7 @@ Returns a string representation of this construct.
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeEsmProject.addExcludeFromCleanup"></a>
 
 ```typescript
-public addExcludeFromCleanup(globs: string): void
+public addExcludeFromCleanup(globs: ...string[]): void
 ```
 
 Exclude the matching files from pre-synth cleanup.
@@ -2102,7 +2102,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 ###### `globs`<sup>Required</sup> <a name="globs" id="@skyrpex/wingen.NodeEsmProject.addExcludeFromCleanup.parameter.globs"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The glob patterns to match.
 
@@ -2346,24 +2346,24 @@ resolved from the root of _this_ project.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.NodeEsmProject.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.NodeEsmProject.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.NodeEsmProject.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.NodeEsmProject.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
@@ -2939,24 +2939,24 @@ Synthesizes files to the project output directory.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.NodePackage.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.NodePackage.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.NodePackage.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.NodePackage.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
@@ -3139,7 +3139,7 @@ Returns a string representation of this construct.
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeProject.addExcludeFromCleanup"></a>
 
 ```typescript
-public addExcludeFromCleanup(globs: string): void
+public addExcludeFromCleanup(globs: ...string[]): void
 ```
 
 Exclude the matching files from pre-synth cleanup.
@@ -3149,7 +3149,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 ###### `globs`<sup>Required</sup> <a name="globs" id="@skyrpex/wingen.NodeProject.addExcludeFromCleanup.parameter.globs"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The glob patterns to match.
 
@@ -3393,24 +3393,24 @@ resolved from the root of _this_ project.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.NodeProject.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.NodeProject.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.NodeProject.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.NodeProject.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
@@ -4493,7 +4493,7 @@ Returns a string representation of this construct.
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.TypescriptProject.addExcludeFromCleanup"></a>
 
 ```typescript
-public addExcludeFromCleanup(globs: string): void
+public addExcludeFromCleanup(globs: ...string[]): void
 ```
 
 Exclude the matching files from pre-synth cleanup.
@@ -4503,7 +4503,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 ###### `globs`<sup>Required</sup> <a name="globs" id="@skyrpex/wingen.TypescriptProject.addExcludeFromCleanup.parameter.globs"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 The glob patterns to match.
 
@@ -4747,24 +4747,24 @@ resolved from the root of _this_ project.
 ##### `addDeps` <a name="addDeps" id="@skyrpex/wingen.TypescriptProject.addDeps"></a>
 
 ```typescript
-public addDeps(deps: string): void
+public addDeps(deps: ...string[]): void
 ```
 
 ###### `deps`<sup>Required</sup> <a name="deps" id="@skyrpex/wingen.TypescriptProject.addDeps.parameter.deps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 
 ##### `addDevDeps` <a name="addDevDeps" id="@skyrpex/wingen.TypescriptProject.addDevDeps"></a>
 
 ```typescript
-public addDevDeps(devDeps: string): void
+public addDevDeps(devDeps: ...string[]): void
 ```
 
 ###### `devDeps`<sup>Required</sup> <a name="devDeps" id="@skyrpex/wingen.TypescriptProject.addDevDeps.parameter.devDeps"></a>
 
-- *Type:* string
+- *Type:* ...string[]
 
 ---
 

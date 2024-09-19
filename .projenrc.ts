@@ -31,6 +31,8 @@ project.addFields({
   packageManager: `pnpm@${pnpmVersion}`,
 });
 
+project.npmrc.addConfig("node-linker", "hoisted");
+
 project.addDevDeps("vitest");
 project.testTask.reset("vitest run");
 project.deps.removeDependency("ts-jest");
