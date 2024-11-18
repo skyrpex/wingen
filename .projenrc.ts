@@ -1,7 +1,7 @@
 import { cdk, github, javascript } from "projen";
 
-const projenVersion = "0.83.1";
-const pnpmVersion = "9.10.0";
+const projenVersion = "0.90.3";
+const pnpmVersion = "9.13.2";
 
 const project = new cdk.JsiiProject({
   name: "@skyrpex/wingen",
