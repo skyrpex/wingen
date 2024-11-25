@@ -44,7 +44,7 @@
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "jsii": "~5.6.0",
+    "jsii": "~5.6.1",
     "jsii-diff": "^1.105.0",
     "jsii-docgen": "^10.5.7",
     "jsii-pacmak": "^1.105.0",

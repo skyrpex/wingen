@@ -43,8 +43,8 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1(eslint-config-prettier@9.1.0(eslint@9.15.0))(eslint@9.15.0)(prettier@3.3.3)
       jsii:
-        specifier: ~5.6.0
-        version: 5.6.0
+        specifier: ~5.6.1
+        version: 5.6.1
       jsii-diff:
         specifier: ^1.105.0
         version: 1.105.0
@@ -296,10 +296,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
-
-  '@jsii/check-node@1.104.0':
-    resolution: {integrity: sha512-5rAn4y11APxq69DmTKtAACmDuOymcTiz29CE7s0AeWA5jzpxBRhkaj8xwixiSQtkoBFk+Vpoi2eNctCvwLdFaw==}
-    engines: {node: '>= 14.17.0'}
 
   '@jsii/check-node@1.105.0':
     resolution: {integrity: sha512-7QIzioc9//TwRjLhGMllcTBfIvJ0h6OeGVUEYdXB1DpCNtMbr8Xcj5KaeKHRAF9iRjB1d0IGzKm4A8fRUzIf+Q==}
@@ -1575,8 +1571,8 @@ packages:
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
-  jsii@5.6.0:
-    resolution: {integrity: sha512-XBXAF9a4UF2HE+LMSa+WDuYRNpmZlBxHrXaTVIFumo0oAuKb9eauPd4slwgQnCftyP5iyk8zX/Z2y4I3yQVcfA==}
+  jsii@5.6.1:
+    resolution: {integrity: sha512-pEVWmhlzQvoO3SH05QP6l9740gMNUOoohXR2gldd0uJEshGpdIwNyrrGYTdGSYC+t/I2sSQF5ag6jRQVPhW/bQ==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -2317,8 +2313,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.8.0-dev.20241123:
-    resolution: {integrity: sha512-9+P/Jtdlzl8CkmGg80mFnyjyqVEccRfQZYwvL1rRBctJ2PN3OfeuDq9YFJcv5tRZ3Y59+AuHiADSJpoRUKvVaQ==}
+  typescript@5.8.0-dev.20241124:
+    resolution: {integrity: sha512-Fzhs8HlySpOUTwYE/AkzPN2eCe9xruwgrAGPYCB9StYqOJiro8zxe3rdej0tkqrSBGbSpXaZ9t6Gv/omZv4new==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2679,11 +2675,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
-
-  '@jsii/check-node@1.104.0':
-    dependencies:
-      chalk: 4.1.2
-      semver: 7.6.3
 
   '@jsii/check-node@1.105.0':
     dependencies:
@@ -3364,7 +3355,7 @@ snapshots:
     dependencies:
       semver: 7.6.3
       shelljs: 0.8.5
-      typescript: 5.8.0-dev.20241123
+      typescript: 5.8.0-dev.20241124
 
   emoji-regex@8.0.0: {}
 
@@ -4138,9 +4129,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii@5.6.0:
+  jsii@5.6.1:
     dependencies:
-      '@jsii/check-node': 1.104.0
+      '@jsii/check-node': 1.105.0
       '@jsii/spec': 1.105.0
       case: 1.6.3
       chalk: 4.1.2
@@ -4891,7 +4882,7 @@ snapshots:
 
   typescript@5.7.2: {}
 
-  typescript@5.8.0-dev.20241123: {}
+  typescript@5.8.0-dev.20241124: {}
 
   uglify-js@3.19.3:
     optional: true
