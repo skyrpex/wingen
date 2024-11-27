@@ -49,11 +49,11 @@
     "jsii-docgen": "^10.5.7",
     "jsii-pacmak": "^1.105.0",
     "jsii-rosetta": "~5.5.15",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "projen": "0.90.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.5"
+    "vitest": "^2.1.6"
   },
   "peerDependencies": {
     "projen": "^0.90.3"
