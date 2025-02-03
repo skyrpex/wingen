@@ -43,20 +43,20 @@ importers:
         specifier: ^5.2.3
         version: 5.2.3(eslint-config-prettier@9.1.0(eslint@9.19.0))(eslint@9.19.0)(prettier@3.4.2)
       jsii:
-        specifier: ~5.7.4
-        version: 5.7.4
+        specifier: ~5.7.5
+        version: 5.7.5
       jsii-diff:
         specifier: ^1.106.0
         version: 1.106.0
       jsii-docgen:
         specifier: ^10.6.5
-        version: 10.6.5(jsii-rosetta@5.7.2)
+        version: 10.6.5(jsii-rosetta@5.7.3)
       jsii-pacmak:
         specifier: ^1.106.0
-        version: 1.106.0(jsii-rosetta@5.7.2)
+        version: 1.106.0(jsii-rosetta@5.7.3)
       jsii-rosetta:
-        specifier: ~5.7.2
-        version: 5.7.2
+        specifier: ~5.7.3
+        version: 5.7.3
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -517,8 +517,8 @@ packages:
   '@vitest/utils@2.1.8':
     resolution: {integrity: sha512-dwSoui6djdwbfFmIgbIjX2ZhIoG7Ex/+xpxyiEgIGzjliY8xGkcpITKTlp6B4MgtGkF2ilvm97cPM96XZaAgcA==}
 
-  '@xmldom/xmldom@0.9.6':
-    resolution: {integrity: sha512-Su4xcxR0CPGwlDHNmVP09fqET9YxbyDXHaSob6JlBH7L6reTYaeim6zbk9o08UarO0L5GTRo3uzl0D+9lSxmvw==}
+  '@xmldom/xmldom@0.9.7':
+    resolution: {integrity: sha512-syvR8iIJjpTZ/stv7l89UAViwGFh6lbheeOaqSxkYx9YNmIVvPTRH+CT/fpykFtUx5N+8eSMDRvggF9J8GEPzQ==}
     engines: {node: '>=14.6'}
 
   JSONStream@1.3.5:
@@ -1517,13 +1517,13 @@ packages:
     engines: {node: '>= 14.17.0'}
     hasBin: true
 
-  jsii-rosetta@5.7.2:
-    resolution: {integrity: sha512-03OVxIEj7aI+yTkO0TT8Jg6PgKOYnceTka6ZN1CMScItpJJt+JA91Qr/4G/0DYQzfBwTORoctbF4uJksQIDvYQ==}
+  jsii-rosetta@5.7.3:
+    resolution: {integrity: sha512-sjTJPNPIkXYPC5x+DH0T5nd6yYQwjIAChbkvsXTZ8hXOoud7M/51XptKgpcsRYuLzWIvLUfz+0hBvgdqtAnvAQ==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
-  jsii@5.7.4:
-    resolution: {integrity: sha512-L2JWl4ETXjXCe25t8vg0lFQ0ycqtMuGDd0j0kSxKNFO/g19c3mW5wcClPZF1YD1fG5VIHG4t9ZGJ8ZU8H7tZMg==}
+  jsii@5.7.5:
+    resolution: {integrity: sha512-3cEcpDjiA3bunGbEejnst43y7Oi/MoQECaAcj+m6Pn3JJhk1DZY0M+SuOlKv2z8FxPR1ODf7+ZdwXZOMj5xVMg==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -2827,7 +2827,7 @@ snapshots:
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
-  '@xmldom/xmldom@0.9.6': {}
+  '@xmldom/xmldom@0.9.7': {}
 
   JSONStream@1.3.5:
     dependencies:
@@ -3964,7 +3964,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii-docgen@10.6.5(jsii-rosetta@5.7.2):
+  jsii-docgen@10.6.5(jsii-rosetta@5.7.3):
     dependencies:
       '@jsii/spec': 1.106.0
       case: 1.6.3
@@ -3972,11 +3972,11 @@ snapshots:
       glob: 8.1.0
       glob-promise: 6.0.7(glob@8.1.0)
       jsii-reflect: 1.106.0
-      jsii-rosetta: 5.7.2
+      jsii-rosetta: 5.7.3
       semver: 7.7.0
       yargs: 16.2.0
 
-  jsii-pacmak@1.106.0(jsii-rosetta@5.7.2):
+  jsii-pacmak@1.106.0(jsii-rosetta@5.7.3):
     dependencies:
       '@jsii/check-node': 1.106.0
       '@jsii/spec': 1.106.0
@@ -3986,7 +3986,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.106.0
-      jsii-rosetta: 5.7.2
+      jsii-rosetta: 5.7.3
       semver: 7.6.3
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
@@ -4001,16 +4001,16 @@ snapshots:
       oo-ascii-tree: 1.106.0
       yargs: 16.2.0
 
-  jsii-rosetta@5.7.2:
+  jsii-rosetta@5.7.3:
     dependencies:
       '@jsii/check-node': 1.106.0
       '@jsii/spec': 1.106.0
-      '@xmldom/xmldom': 0.9.6
+      '@xmldom/xmldom': 0.9.7
       chalk: 4.1.2
       commonmark: 0.31.2
-      fast-glob: 3.3.2
-      jsii: 5.7.4
-      semver: 7.6.3
+      fast-glob: 3.3.3
+      jsii: 5.7.5
+      semver: 7.7.0
       semver-intersect: 1.5.0
       stream-json: 1.9.1
       typescript: 5.7.3
@@ -4019,7 +4019,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii@5.7.4:
+  jsii@5.7.5:
     dependencies:
       '@jsii/check-node': 1.106.0
       '@jsii/spec': 1.106.0
@@ -4027,7 +4027,7 @@ snapshots:
       chalk: 4.1.2
       fast-deep-equal: 3.1.3
       log4js: 6.9.1
-      semver: 7.6.3
+      semver: 7.7.0
       semver-intersect: 1.5.0
       sort-json: 2.0.1
       spdx-license-list: 6.9.0
