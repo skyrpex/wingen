@@ -50,13 +50,13 @@ importers:
         version: 1.106.0
       jsii-docgen:
         specifier: ^10.6.6
-        version: 10.6.6(jsii-rosetta@5.7.4)
+        version: 10.6.6(jsii-rosetta@5.7.5)
       jsii-pacmak:
         specifier: ^1.106.0
-        version: 1.106.0(jsii-rosetta@5.7.4)
+        version: 1.106.0(jsii-rosetta@5.7.5)
       jsii-rosetta:
-        specifier: ~5.7.4
-        version: 5.7.4
+        specifier: ~5.7.5
+        version: 5.7.5
       prettier:
         specifier: ^3.5.1
         version: 3.5.1
@@ -1516,8 +1516,8 @@ packages:
     engines: {node: '>= 14.17.0'}
     hasBin: true
 
-  jsii-rosetta@5.7.4:
-    resolution: {integrity: sha512-7wBOpEWUofrdxn+9iG2GW85fZ6M+LDjJDm3pG5eTvbPOK0ip5u7ec4C3ZhTkuAh/z22Xo29+qNndvUI169siyg==}
+  jsii-rosetta@5.7.5:
+    resolution: {integrity: sha512-oUNH1DOcRCdQeA3BzJ15kFJaXrnfOR+IF6xANVFR0gcafL2IdqaH3eqa7elJqQo4QZW3PG4TPyur6M/h9hxRtA==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -3967,7 +3967,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii-docgen@10.6.6(jsii-rosetta@5.7.4):
+  jsii-docgen@10.6.6(jsii-rosetta@5.7.5):
     dependencies:
       '@jsii/spec': 1.106.0
       case: 1.6.3
@@ -3975,11 +3975,11 @@ snapshots:
       glob: 8.1.0
       glob-promise: 6.0.7(glob@8.1.0)
       jsii-reflect: 1.106.0
-      jsii-rosetta: 5.7.4
+      jsii-rosetta: 5.7.5
       semver: 7.7.1
       yargs: 16.2.0
 
-  jsii-pacmak@1.106.0(jsii-rosetta@5.7.4):
+  jsii-pacmak@1.106.0(jsii-rosetta@5.7.5):
     dependencies:
       '@jsii/check-node': 1.106.0
       '@jsii/spec': 1.106.0
@@ -3989,7 +3989,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       fs-extra: 10.1.0
       jsii-reflect: 1.106.0
-      jsii-rosetta: 5.7.4
+      jsii-rosetta: 5.7.5
       semver: 7.6.3
       spdx-license-list: 6.9.0
       xmlbuilder: 15.1.1
@@ -4004,7 +4004,7 @@ snapshots:
       oo-ascii-tree: 1.106.0
       yargs: 16.2.0
 
-  jsii-rosetta@5.7.4:
+  jsii-rosetta@5.7.5:
     dependencies:
       '@jsii/check-node': 1.106.0
       '@jsii/spec': 1.106.0
