@@ -43,8 +43,8 @@ importers:
         specifier: ^5.2.3
         version: 5.2.3(eslint-config-prettier@9.1.0(eslint@9.23.0))(eslint@9.23.0)(prettier@3.5.3)
       jsii:
-        specifier: ~5.8.1
-        version: 5.8.1
+        specifier: ~5.8.2
+        version: 5.8.2
       jsii-diff:
         specifier: ^1.110.0
         version: 1.110.0
@@ -1595,8 +1595,8 @@ packages:
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
-  jsii@5.8.1:
-    resolution: {integrity: sha512-h3K9z0NOlxe+/vqnbG2Axy00TYN70UasxVCQ3/qAUb4qSI1yWjPbqclGNw493xySB4EYG/fyXtLC9ZbkpuDGmg==}
+  jsii@5.8.2:
+    resolution: {integrity: sha512-qfTGAoMRBLYoRF03cxKsBgI+1llJC8jc3hQQD5aVK1TwQDKtBi8Km6YQ4oeJqhSgWcdSr3sghRuN1sGKA6dcSA==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
 
@@ -4141,7 +4141,7 @@ snapshots:
       chalk: 4.1.2
       commonmark: 0.31.2
       fast-glob: 3.3.3
-      jsii: 5.8.1
+      jsii: 5.8.2
       semver: 7.7.1
       semver-intersect: 1.5.0
       stream-json: 1.9.1
@@ -4151,10 +4151,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  jsii@5.8.1:
+  jsii@5.8.2:
     dependencies:
-      '@jsii/check-node': 1.109.0
-      '@jsii/spec': 1.109.0
+      '@jsii/check-node': 1.110.0
+      '@jsii/spec': 1.110.0
       case: 1.6.3
       chalk: 4.1.2
       fast-deep-equal: 3.1.3
