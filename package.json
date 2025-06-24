@@ -49,7 +49,7 @@
     "jsii-docgen": "^10.7.5",
     "jsii-pacmak": "^1.112.0",
     "jsii-rosetta": "~5.8.9",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "projen": "0.90.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
