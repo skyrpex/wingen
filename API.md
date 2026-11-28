@@ -4,6 +4,8 @@
 
 ### Editorconfig <a name="Editorconfig" id="@skyrpex/wingen.Editorconfig"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Editorconfig.Initializer"></a>
 
 ```typescript
@@ -29,6 +31,7 @@ new Editorconfig(project: Project)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.Editorconfig.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.Editorconfig.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.Editorconfig.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Editorconfig.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Editorconfig.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -42,6 +45,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.Editorconfig.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.Editorconfig.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Editorconfig.postSynthesize"></a>
 
@@ -160,6 +184,8 @@ public readonly project: Project;
 
 ### Eslint <a name="Eslint" id="@skyrpex/wingen.Eslint"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Eslint.Initializer"></a>
 
 ```typescript
@@ -185,6 +211,7 @@ new Eslint(project: NodeProject)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.Eslint.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.Eslint.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.Eslint.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Eslint.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Eslint.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -198,6 +225,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.Eslint.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.Eslint.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Eslint.postSynthesize"></a>
 
@@ -316,6 +364,8 @@ public readonly project: Project;
 
 ### MonorepoProject <a name="MonorepoProject" id="@skyrpex/wingen.MonorepoProject"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.MonorepoProject.Initializer"></a>
 
 ```typescript
@@ -341,6 +391,7 @@ new MonorepoProject(options: MonorepoProjectOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.MonorepoProject.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
 | <code><a href="#@skyrpex/wingen.MonorepoProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
@@ -370,6 +421,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.MonorepoProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.MonorepoProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.MonorepoProject.addExcludeFromCleanup"></a>
 
@@ -1208,6 +1280,8 @@ this task should synthesize the project files.
 
 ### NodeCjsProject <a name="NodeCjsProject" id="@skyrpex/wingen.NodeCjsProject"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.NodeCjsProject.Initializer"></a>
 
 ```typescript
@@ -1233,6 +1307,7 @@ new NodeCjsProject(options: NodeCjsProjectOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.NodeCjsProject.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
 | <code><a href="#@skyrpex/wingen.NodeCjsProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
@@ -1262,6 +1337,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.NodeCjsProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.NodeCjsProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeCjsProject.addExcludeFromCleanup"></a>
 
@@ -2034,6 +2130,8 @@ this task should synthesize the project files.
 
 ### NodeEsmProject <a name="NodeEsmProject" id="@skyrpex/wingen.NodeEsmProject"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.NodeEsmProject.Initializer"></a>
 
 ```typescript
@@ -2059,6 +2157,7 @@ new NodeEsmProject(options: NodeEsmProjectOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodeEsmProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.NodeEsmProject.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.NodeEsmProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
 | <code><a href="#@skyrpex/wingen.NodeEsmProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
 | <code><a href="#@skyrpex/wingen.NodeEsmProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
@@ -2088,6 +2187,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.NodeEsmProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.NodeEsmProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeEsmProject.addExcludeFromCleanup"></a>
 
@@ -2860,6 +2980,8 @@ this task should synthesize the project files.
 
 ### NodePackage <a name="NodePackage" id="@skyrpex/wingen.NodePackage"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.NodePackage.Initializer"></a>
 
 ```typescript
@@ -2892,6 +3014,7 @@ new NodePackage(project: Project, options?: NodePackageOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodePackage.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.NodePackage.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.NodePackage.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.NodePackage.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.NodePackage.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -2909,6 +3032,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.NodePackage.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.NodePackage.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.NodePackage.postSynthesize"></a>
 
@@ -3081,6 +3225,8 @@ public readonly project: Project;
 
 ### NodeProject <a name="NodeProject" id="@skyrpex/wingen.NodeProject"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.NodeProject.Initializer"></a>
 
 ```typescript
@@ -3106,6 +3252,7 @@ new NodeProject(options: NodeProjectOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.NodeProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.NodeProject.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.NodeProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
 | <code><a href="#@skyrpex/wingen.NodeProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
 | <code><a href="#@skyrpex/wingen.NodeProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
@@ -3135,6 +3282,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.NodeProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.NodeProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.NodeProject.addExcludeFromCleanup"></a>
 
@@ -3907,6 +4075,8 @@ this task should synthesize the project files.
 
 ### Tsup <a name="Tsup" id="@skyrpex/wingen.Tsup"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Tsup.Initializer"></a>
 
 ```typescript
@@ -3939,6 +4109,7 @@ new Tsup(project: TypescriptProject, options?: TsupOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.Tsup.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.Tsup.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.Tsup.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Tsup.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Tsup.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -3953,6 +4124,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.Tsup.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.Tsup.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Tsup.postSynthesize"></a>
 
@@ -4083,6 +4275,8 @@ public readonly project: Project;
 
 ### Turbo <a name="Turbo" id="@skyrpex/wingen.Turbo"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Turbo.Initializer"></a>
 
 ```typescript
@@ -4115,6 +4309,7 @@ new Turbo(project: NodeProject, props?: TurboProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.Turbo.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.Turbo.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.Turbo.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Turbo.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Turbo.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -4128,6 +4323,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.Turbo.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.Turbo.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Turbo.postSynthesize"></a>
 
@@ -4246,6 +4462,8 @@ public readonly project: Project;
 
 ### TypescriptConfig <a name="TypescriptConfig" id="@skyrpex/wingen.TypescriptConfig"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.TypescriptConfig.Initializer"></a>
 
 ```typescript
@@ -4278,6 +4496,7 @@ new TypescriptConfig(project: Project, options?: TypescriptConfigOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.TypescriptConfig.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.TypescriptConfig.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -4293,6 +4512,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.TypescriptConfig.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.TypescriptConfig.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.TypescriptConfig.postSynthesize"></a>
 
@@ -4435,6 +4675,8 @@ public readonly project: Project;
 
 ### TypescriptProject <a name="TypescriptProject" id="@skyrpex/wingen.TypescriptProject"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.TypescriptProject.Initializer"></a>
 
 ```typescript
@@ -4460,6 +4702,7 @@ new TypescriptProject(options: TypescriptProjectOptions)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.TypescriptProject.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.addExcludeFromCleanup">addExcludeFromCleanup</a></code> | Exclude the matching files from pre-synth cleanup. |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.addGitIgnore">addGitIgnore</a></code> | Adds a .gitignore pattern. |
 | <code><a href="#@skyrpex/wingen.TypescriptProject.addPackageIgnore">addPackageIgnore</a></code> | Exclude these files from the bundled package. |
@@ -4489,6 +4732,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.TypescriptProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.TypescriptProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `addExcludeFromCleanup` <a name="addExcludeFromCleanup" id="@skyrpex/wingen.TypescriptProject.addExcludeFromCleanup"></a>
 
@@ -5272,6 +5536,8 @@ this task should synthesize the project files.
 
 ### Vitest <a name="Vitest" id="@skyrpex/wingen.Vitest"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.Vitest.Initializer"></a>
 
 ```typescript
@@ -5297,6 +5563,7 @@ new Vitest(project: TypescriptProject)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.Vitest.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.Vitest.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.Vitest.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.Vitest.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.Vitest.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -5310,6 +5577,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.Vitest.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.Vitest.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.Vitest.postSynthesize"></a>
 
@@ -5428,6 +5716,8 @@ public readonly project: Project;
 
 ### VitestWorkspace <a name="VitestWorkspace" id="@skyrpex/wingen.VitestWorkspace"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@skyrpex/wingen.VitestWorkspace.Initializer"></a>
 
 ```typescript
@@ -5453,6 +5743,7 @@ new VitestWorkspace(monorepo: MonorepoProject)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@skyrpex/wingen.VitestWorkspace.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@skyrpex/wingen.VitestWorkspace.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@skyrpex/wingen.VitestWorkspace.postSynthesize">postSynthesize</a></code> | Called after synthesis. |
 | <code><a href="#@skyrpex/wingen.VitestWorkspace.preSynthesize">preSynthesize</a></code> | Called before synthesis. |
 | <code><a href="#@skyrpex/wingen.VitestWorkspace.synthesize">synthesize</a></code> | Synthesizes files to the project output directory. |
@@ -5466,6 +5757,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@skyrpex/wingen.VitestWorkspace.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@skyrpex/wingen.VitestWorkspace.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `postSynthesize` <a name="postSynthesize" id="@skyrpex/wingen.VitestWorkspace.postSynthesize"></a>
 
@@ -5832,7 +6144,7 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string | Project[];
+public readonly deps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -5852,7 +6164,7 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string | Project[];
+public readonly devDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -5872,7 +6184,7 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeCjsProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string | Project[];
+public readonly peerDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -5989,7 +6301,7 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string | Project[];
+public readonly deps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6009,7 +6321,7 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string | Project[];
+public readonly devDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6029,7 +6341,7 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeEsmProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string | Project[];
+public readonly peerDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6221,7 +6533,7 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.NodeProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string | Project[];
+public readonly deps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6241,7 +6553,7 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.NodeProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string | Project[];
+public readonly devDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6281,7 +6593,7 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.NodeProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string | Project[];
+public readonly peerDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6650,7 +6962,7 @@ public readonly bundledDeps: string[];
 ##### `deps`<sup>Optional</sup> <a name="deps" id="@skyrpex/wingen.TypescriptProjectOptions.property.deps"></a>
 
 ```typescript
-public readonly deps: string | Project[];
+public readonly deps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6670,7 +6982,7 @@ public readonly description: string;
 ##### `devDeps`<sup>Optional</sup> <a name="devDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.devDeps"></a>
 
 ```typescript
-public readonly devDeps: string | Project[];
+public readonly devDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
@@ -6690,7 +7002,7 @@ public readonly outdir: string;
 ##### `peerDeps`<sup>Optional</sup> <a name="peerDeps" id="@skyrpex/wingen.TypescriptProjectOptions.property.peerDeps"></a>
 
 ```typescript
-public readonly peerDeps: string | Project[];
+public readonly peerDeps: (string | Project)[];
 ```
 
 - *Type:* string | projen.Project[]
